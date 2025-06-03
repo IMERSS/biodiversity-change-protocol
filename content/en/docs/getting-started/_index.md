@@ -1,35 +1,67 @@
 ---
-title: Getting Started
-description: What does your user need to know to try your project?
+title: Baseline Analysis
+description: First Pass Approach to Biodiversity Change Assessment
 categories: [Examples, Placeholders]
 tags: [test, docs]
 weight: 2
 ---
 
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
+## Early assesment of local exinction risk
 
-Information in this section helps your user try your project themselves.
+Baseline analyses offer a simple but effective approach to preliminary assessments of potential biodiversity change.
+By comparing historical collections data with contemporary "big biodiversity data"", we can identify species or populations that are 
+potentially at risk of local extinction. 
 
-* What do your users need to do to start using your project? This could include downloading/installation instructions, including any prerequisites or system requirements.
+## Combination of heterogeneous (unstructured) data in baseline analyses
 
-* Introductory “Hello World” example, if appropriate. More complex tutorials should live in the Tutorials section.
+Statistical approaches are often paralyzed by various limitations and deficiencies inherent in biodiversity data.
 
-Consider using the headings below for your getting started page. You can delete any that are not applicable to your project.
+* Data are commonly unstructured, or heterogeneous
+* They are often biased toward detection of positive sightings or occurrences
+* They may be collected in ways that violate the assumptions of statistical models
+* Data may be sparse, with few or perhaps only singleton records to vouch for historical populations, especially at local scales
 
-## Prerequisites
+A practical approach to this difficult situation is to forego any advanced modeling practices *ab initio*
+and begin instead with a simple baseline analysis of historical *vs* contemporary sources of biodiversity data.
 
-Are there any system requirements for using your project? What languages are supported (if any)? Do users need to already have any software or tools installed?
+```
+### Integrate biodiversity data and summarize 
 
-## Installation
+```
 
-Where can your user find your project code? How can they install it (binaries, installable package, build from source)? Are there multiple options/versions they can install and how should they choose the right one for them?
+## The difference that makes the difference
 
-## Setup
+Differences between historical baseline and contemporary biodiversity data could potential indicate change in the system:
 
-Is there any initial setup users need to do after installation to try your project?
+* In conservation assessments, species that have not been seen within XX years are often considered 'historical populations' (XXXX).
+* Conversely, species that suddenly appear in a biodiversity record may signal changing communities or population dynamics
 
-## Try it out!
+Populations or species that have gone undetected for many years may be considered at risk of extirpation.
 
-Can your users test their installation, for example by running a command or deploying a Hello World example?
+```
+# Not seen in the last 20 years
+```
+
+## Open-ended assessments of potential change
+
+Through this process, there may emerge many potential target species or populations of concern.
+On a first pass approach, however, it is notable that this system is blind to any conservation priorities we may have,
+which present potential biases.
+
+Nevertheless, to proceed, it is sensible to set certain criteria on what species might be considered vulnerable, which can be targeted for population assessments.
+
+First, we may only be concerned with the disappearance of native plants from the landscape.
+
+```
+# Filter native species
+# 
+```
+
+Biological specimens are the strongest evidence we have for biodiversity change assessments.
+
+```
+# Filter voucher specimens
+# 
+```
+
+## Example studies in biodiversity change that build on historical biodiversity data

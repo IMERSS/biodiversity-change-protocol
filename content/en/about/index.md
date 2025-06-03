@@ -1,22 +1,21 @@
 ---
-title: About Goldydocs
+title: About IMERSS
 linkTitle: About
 menu: {main: {weight: 10}}
 ---
 
-{{% blocks/cover title="About Goldydocs" image_anchor="bottom" height="auto" %}}
+{{% blocks/cover title="About IMERSS" image_anchor="bottom" height="auto" %}}
 
-A sample site using the Docsy Hugo theme.
+Institute for Multidisciplinary Ecological Research in the Salish Sea
 {.mt-5}
 
 {{% /blocks/cover %}}
 
 {{% blocks/lead %}}
 
-Goldydocs is a sample site using the [Docsy](https://github.com/google/docsy)
-Hugo theme that shows what it can do and provides you with a template site
-structure. It’s designed for you to clone and edit as much as you like. See the
-different sections of the documentation and site for more ideas.
+IMERSS is a multidisciplinary, cross–cultural, and transboundary community of practice dedicated to long-term ecological research in the Salish Sea. 
+We strive to foster open access to science, scholarship, technology and art, encouraging individuals to play active roles attending to changes in the ecosystems that surround us.  
+
 
 {{% /blocks/lead %}}
 
