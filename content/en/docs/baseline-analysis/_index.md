@@ -1,6 +1,6 @@
 ---
 title: Baseline Analysis
-description: First Pass Approach to Biodiversity Change Assessment
+description: A first pass approach to biodiversity change assessments
 categories: [Examples, Placeholders]
 tags: [test, docs]
 weight: 3
@@ -8,61 +8,10 @@ weight: 3
 
 ## Early assessment of local exinction risk
 
-Baseline analyses offer a simple but effective approach to preliminary assessments of potential biodiversity change.
-By comparing historical collections data with contemporary "big biodiversity data"", we can identify species or populations that are 
-potentially at risk of local extinction. 
-
-
-## Combination of heterogeneous (unstructured) data in baseline analyses
-
-Statistical approaches are often paralyzed by various limitations and deficiencies inherent in biodiversity data.
-
-* Data are commonly unstructured, or heterogeneous
-* They are often biased toward detection of positive sightings or occurrences
-* They may be collected in ways that violate the assumptions of statistical models
-* Data may be sparse, with few or perhaps only singleton records to vouch for historical populations, especially at local scales
-
-A practical approach to this difficult situation is to forego any advanced modeling practices *ab initio*
-and begin instead with a simple baseline analysis of historical *vs* contemporary sources of biodiversity data.
-
-```
-### Integrate biodiversity data and summarize 
-
-```
-
-## The difference that makes the difference
-
-Differences between historical baseline and contemporary biodiversity data could potential indicate change in the system:
-
-* In conservation assessments, species that have not been seen within XX years are often considered 'historical populations' (XXXX).
-* Conversely, species that suddenly appear in a biodiversity record may signal changing communities or population dynamics
-
-Populations or species that have gone undetected for many years may be considered at risk of extirpation.
-
-```
-# Not seen in the last 20 years
-```
-
-## Open-ended assessments of potential change
-
-Through this process, there may emerge many potential target species or populations of concern.
-On a first pass approach, however, it is notable that this system is blind to any conservation priorities we may have,
-which present potential biases.
-
-Nevertheless, to proceed, it is sensible to set certain criteria on what species might be considered vulnerable, which can be targeted for population assessments.
-
-First, we may only be concerned with the disappearance of native plants from the landscape.
-
-```
-# Filter native species
-# 
-```
-
-Biological specimens are the strongest evidence we have for biodiversity change assessments.
-
-```
-# Filter voucher specimens
-# 
-```
-
-## Example studies in biodiversity change that build on historical biodiversity data
+Baseline analyses offer a simple but useful preliminary approach to assessing 
+biodiversity change. By comparing historical collections data with contemporary 
+"big biodiversity data", such as those available via the Global Biodiversity 
+Information Facility or iNaturalist, we can identify species or populations that 
+may potentially be at risk of local extinction. Keeping this approach simple, we can 
+overcome some of the immediate challenges posed by the analysis of complex 
+biodiversity data sets.
