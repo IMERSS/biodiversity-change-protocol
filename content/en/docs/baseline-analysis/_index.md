@@ -3,14 +3,15 @@ title: Baseline Analysis
 description: First Pass Approach to Biodiversity Change Assessment
 categories: [Examples, Placeholders]
 tags: [test, docs]
-weight: 2
+weight: 3
 ---
 
-## Early assesment of local exinction risk
+## Early assessment of local exinction risk
 
 Baseline analyses offer a simple but effective approach to preliminary assessments of potential biodiversity change.
 By comparing historical collections data with contemporary "big biodiversity data"", we can identify species or populations that are 
 potentially at risk of local extinction. 
+
 
 ## Combination of heterogeneous (unstructured) data in baseline analyses
 

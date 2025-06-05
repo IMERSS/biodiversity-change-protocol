@@ -1,8 +1,8 @@
 ---
-title: Examples
-description: See your project in action!
-date: 2017-01-05
-weight: 3
+title: Example - Bellhouse Park
+description: ''
+date: 2025-06-04
+weight: 1
 ---
 
 {{% pageinfo %}}

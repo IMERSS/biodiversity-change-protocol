@@ -2,7 +2,7 @@
 title: Advancing a protocol for the detection of extirpation
 ---
 
-{{< blocks/cover title="Supporting Community Efforts to Detect Biodiversity Change" image_anchor="top" height="full" >}}
+{{< blocks/cover title="Supporting Community Biodiversity Monitoring Efforts" image_anchor="top" height="full" >}}
 <a class="btn btn-lg btn-primary me-3 mb-4" href="/docs/">
   Learn More <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
