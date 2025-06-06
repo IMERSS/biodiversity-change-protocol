@@ -1,5 +1,5 @@
 ---
-title: Baseline Analysis
+title: Baseline analysis
 description: A first pass approach to biodiversity change assessments
 categories: [Examples, Placeholders]
 tags: [test, docs]

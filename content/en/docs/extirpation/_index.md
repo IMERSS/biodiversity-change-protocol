@@ -1,9 +1,10 @@
 ---
-title: Inferring extirpation in historical habitat
+title: Inferring extirpation
 description: Updating the posterior based on search effort
+math: true
 categories: [Examples, Placeholders]
 tags: [test, docs]
-weight: 7
+weight: 6
 ---
 
 ## Intersecting search effort with gridded habitat

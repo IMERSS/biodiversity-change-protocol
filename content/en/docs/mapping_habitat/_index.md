@@ -14,11 +14,11 @@ In this tutorial, we use high resolution () site classification mapping to map h
 This spatial data takes the shape of polygons circumscribing different ecosystem types or areas of land use.
 For many regions, there are many databases where this type of spatial data can be accessed. 
 
-## Filtering site classification mapping based on habitat types for target species
+### Filtering site classification mapping based on habitat types for target species
 
 XXXXXXX
 
-## Converting polygons to gridded representation of habitat
+### Converting polygons to gridded representation of habitat
 
 XXXXX
 
@@ -30,7 +30,7 @@ corresponds with precision in features representing search effort.
 
 ```
 
-## Calculate proportional representation of habitat within grid cells
+### Calculate proportional representation of habitat within grid cells
 
 ```
 ## Calculate prop. of habitat falling within grid cells

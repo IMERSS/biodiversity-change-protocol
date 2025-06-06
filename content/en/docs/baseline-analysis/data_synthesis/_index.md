@@ -11,7 +11,7 @@ weight: 2
 Statistical approaches to modeling biodiversity change are often paralyzed by various limitations and deficiencies inherent
 in biodiversity data—especially when historical and contemporary data are combined from multiple sources.
 
-* Data are commonly unstructured, or heterogeneous, lacking consistent metadata
+* Data are commonly unstructured, or heterogeneous, lacking consistent attributes or metadata
 * Data are often biased toward positive detections (lacking absence information)
 * Data may be collected in ways that violate the assumptions of statistical models
 * Georeferencing is often generalized based on vague locality information

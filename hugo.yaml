@@ -89,6 +89,9 @@ outputs:
   section: [HTML, print, RSS]
 
 params:
+  katex:
+    enable: true
+    
   taxonomy:
     # set taxonomyCloud = [] to hide taxonomy clouds
     taxonomyCloud: [tags, categories]

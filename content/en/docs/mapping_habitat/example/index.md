@@ -1,5 +1,5 @@
 ---
-title: Example - Bellhouse Park
+title: Example
 description: ''
 date: 2025-06-04
 weight: 3
