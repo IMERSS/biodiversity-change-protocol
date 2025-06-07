@@ -1,6 +1,6 @@
 ---
 title: Inferring extirpation risk
-description: Calculating probability of extirpation based on sighting rates
+description: Detection frequency as key metric for population assessments
 categories: [Examples, Placeholders]
 tags: [test, docs]
 weight: 3
@@ -8,4 +8,16 @@ weight: 3
 
 ## Detection frequency
 
-Another 
+Another metric that might be considered in evaluating extirpation risk is detection
+frequency or sighting rate. Whether a species was observed only once historically,
+or multiple times, before going unreported, might affect our prior belief in the 
+likelihood of its persistence or extirpation.
+
+* If there are many records vouching for a species' historical occurrence, we might have
+greater confidence that it was a well established population.
+
+* If a species is only reported once or twice, it may have been poorly, or perhaps it is 
+simply rare and overlooked.
+
+Sighting rate as prior knowledge is very useful and can be used to calculate extinction probabilities.
+

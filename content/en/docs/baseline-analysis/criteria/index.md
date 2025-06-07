@@ -79,6 +79,3 @@ This prior knowledge can help to inform our assessment of the vulnerability of s
 # Tabulate species record counts
 #
 ```
-
-Occurrence frequency is sometimes referred to as a sighting rate. This prior knowledge can be used to calculate extinction probabilities.
-

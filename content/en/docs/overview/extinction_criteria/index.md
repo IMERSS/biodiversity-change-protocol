@@ -1,5 +1,5 @@
 ---
-title: IUCN Extinction Criteria
+title: IUCN extinction criteria
 description: Operationalizing a protocol for the detection of local extinction
 weight: 1
 ---
@@ -13,7 +13,13 @@ locally extinct) “when exhaustive surveys in known and/or expected habitat, at
 appropriate times (diurnal, seasonal, annual), throughout its historic range have 
 failed to record an individual.” 
 
-However, it remains a major challenge to determine the evidentiary thresholds implied by these criteria (‘exhaustive’, ‘expected’, 
-‘appropriate’), not only to clarify the formal requirements for claims regarding 
-extirpation but also to inform effective search methods and to assess the feasibility 
+However, it remains a major challenge to determine the evidentiary thresholds implied by these 
+criteria (‘exhaustive’, ‘expected’, ‘appropriate’), not only to clarify the formal requirements 
+for claims regarding extirpation but also to inform effective search methods and to assess the feasibility 
 of meeting these requirements.
+
+Our goal is to transform the abstract problem of assessing extinction into a structured, 
+measurable, and actionable process. With that goal in mind, the following 
+documentation seeks to clarify the steps and assumptions embedded within IUCN extinction 
+criteria—assumptions that often present challenges for communities seeking to 
+apply them in practice.

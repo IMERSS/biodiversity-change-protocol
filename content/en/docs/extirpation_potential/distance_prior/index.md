@@ -8,6 +8,8 @@ weight: 1
 
 ## XXXX
 
+{{% imgproc distance_weight Fill "6000x4000" %}}
+{{% /imgproc %}}
 
 
 ```

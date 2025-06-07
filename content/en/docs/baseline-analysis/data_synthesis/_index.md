@@ -8,7 +8,7 @@ weight: 2
 
 ## Combination of heterogeneous data in baseline analyses
 
-Statistical approaches to modeling biodiversity change are often paralyzed by various limitations and deficiencies inherent
+Statistical approaches to modeling biodiversity change are often paralyzed by limitations and deficiencies inherent
 in biodiversity data—especially when historical and contemporary data are combined from multiple sources.
 
 * Data are commonly unstructured, or heterogeneous, lacking consistent attributes or metadata
@@ -21,8 +21,12 @@ in biodiversity data—especially when historical and contemporary data are comb
 
 A practical approach to this difficult situation is to forego any advanced modeling practices *ab initio*
 and begin instead with a simple baseline analysis of historical *vs* contemporary sources of biodiversity data.
-This depends on normalization of species occurrence data to establish a one-to-one correspondence 
-between historical and contemporary records.
+This depends on normalization of species occurrence data to support the comparison of historical and contemporary species records.
+
+{{% pageinfo %}}
+What sounds like a straightforward task here is a thorny enough issue in its own right, and not treated here. For this
+tutorial we assume that names are in alignment and any synonymy is resolved between the data being compared.
+{{% /pageinfo %}}
 
 * Best practices are to adhere to the Darwin Core standard for species occurrence data.
 * Different communities may prefer to adhere to different taxonomic databases. Any taxonomic standard can be observed, as 
