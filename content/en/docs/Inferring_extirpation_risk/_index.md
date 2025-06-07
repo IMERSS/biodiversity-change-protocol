@@ -10,14 +10,14 @@ weight: 3
 
 Another metric that might be considered in evaluating extirpation risk is detection
 frequency or sighting rate. Whether a species was observed only once historically,
-or multiple times, before going unreported, might affect our prior belief in the 
+or multiple times, before going unreported, might influence our prior belief in the 
 likelihood of its persistence or extirpation.
 
 * If there are many records vouching for a species' historical occurrence, we might have
-greater confidence that it was a well established population.
+greater confidence that it was a well established population
 
-* If a species is only reported once or twice, it may have been poorly, or perhaps it is 
-simply rare and overlooked.
+* If a species is only reported once or twice, historical populations may have been small or non-viable, or perhaps the species 
+is simply rare and overlooked
 
-Sighting rate as prior knowledge is very useful and can be used to calculate extinction probabilities.
+Sighting rates constitute useful prior knowledge and can be used to calculate extinction probabilities.
 

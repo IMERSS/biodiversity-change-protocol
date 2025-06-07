@@ -8,11 +8,12 @@ weight: 4
 
 ## Mapping habitat
 
-Habitat can be represented in many ways, ranging from complex species distribution models to relatively simple ecosystem mapping or site classification data.
+Habitat can be represented in many ways, ranging from complex species distribution models 
+to relatively simple ecosystem mapping or site classification data.
 
 In this tutorial, we use high resolution () site classification mapping to map habitat for our target species.
 This spatial data takes the shape of polygons circumscribing different ecosystem types or areas of land use.
-For many regions, there are many databases where this type of spatial data can be accessed. 
+For many regions, there exist databases where this type of spatial data can be accessed. 
 
 ### Filtering site classification mapping based on habitat types for target species
 

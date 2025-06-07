@@ -13,7 +13,7 @@ useful criteria to focus our attention (and limited resources) on species that a
 
 Depending on the criteria we set, there may emerge many potential target species or populations of concern.
 On the first pass, however, it is notable that this decision-making process is blind to any conservation priorities we may have,
-which can bias biodiversity change assessments. We should be mindful of those biases!
+which can bias biodiversity change assessments.
 
 {{% pageinfo %}}
 "Conservation programs often prioritize species-at-risk, even while many common species may undergo the highest relative losses."
@@ -26,7 +26,7 @@ which can bias biodiversity change assessments. We should be mindful of those bi
 
 Geographic coordinates represent one of the most crucial pieces of information for biodiversity change assessments.
 
-* Often we are confronted with limited locality information, which imposes constraints on representation of historical habitat patches.
+* Often we are confronted with limited locality information, which imposes constraints on representation of historical habitat
 * Sometimes, the information is good enough to map species occurrences to precise locations (*e.g.*, 30x30m2 grid cell)
 * Sometimes, the information is good enough to specify a discrete location or habitat patch
 * Sometimes, coordinates are generalized to the geometric centre (centroid) of a given area, with a wide radius of coordinate uncertainty
