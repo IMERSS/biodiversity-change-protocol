@@ -24,8 +24,8 @@ and begin instead with a simple baseline analysis of historical *vs* contemporar
 This depends on normalization of species occurrence data to support the comparison of historical and contemporary species records.
 
 {{% pageinfo %}}
-What sounds like a straightforward task here is a thorny enough issue in its own right, and not treated here. For this
-tutorial we assume that names are in alignment and any synonymy is resolved between the data being compared.
+Normalization of biodiversity data is a thorny enough problem in its own right and not treated here. For this
+tutorial we assume that names are aligned and any synonymy is resolved between the data being compared.
 {{% /pageinfo %}}
 
 * Best practices are to adhere to the Darwin Core standard for species occurrence data.
