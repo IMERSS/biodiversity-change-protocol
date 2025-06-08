@@ -7,7 +7,7 @@ tags: [test, docs]
 weight: 2
 ---
 
-## Solow Calculation
+## Inferring local extinction based on limited occurrence data
 
 XXXXXXX
 <p>
