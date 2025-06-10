@@ -4,3 +4,8 @@ node_modules/
 package-lock.json
 .hugo_build.lock
 .Rproj.user
+.Rhistory
+.idea
+
+.DS_Store
+
