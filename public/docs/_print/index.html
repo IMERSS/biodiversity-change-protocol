@@ -325,6 +325,22 @@ This is the multi-page printable view of this section.
 
     
   
+    
+    
+	
+<li>6.2: <a href="#pg-c266c061a3ed2f532f0df01bcea291aa">Effective search effort</a></li>
+
+
+    
+  
+    
+    
+	
+<li>6.3: <a href="#pg-0558f0f733f163859faa7be5b161aa44">Pooling search effort</a></li>
+
+
+    
+  
 
     </ul>
     
@@ -347,23 +363,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>7.1: <a href="#pg-2d909973d31ec56bc568fa453397d26b">Effective search effort</a></li>
-
-
-    
-  
-    
-    
-	
-<li>7.2: <a href="#pg-27ac589569d62578ba9382eb1d2c9e70">Pooling search effort</a></li>
-
-
-    
-  
-    
-    
-	
-<li>7.3: <a href="#pg-d7f0573925b80558cd075b437c659be1">Example</a></li>
+<li>7.1: <a href="#pg-d7f0573925b80558cd075b437c659be1">Example</a></li>
 
 
     
@@ -995,10 +995,24 @@ or elsewhere? Link to your examples here.</p>
     
 	<h1 id="pg-05f41eb4ae8fcaf19362e9a8c0722542">5 - Search effort</h1>
     <div class="lead">Incorporating search effort</div>
-	<h2 id="intersecting-search-effort-with-gridded-habitat">Intersecting search effort with gridded habitat<a class="td-heading-self-link" href="#intersecting-search-effort-with-gridded-habitat" aria-label="Heading self-link"></a></h2>
-<p>XXXXXX</p>
-<pre tabindex="0"><code>## Convert polygons to grid
-</code></pre>
+	<p>Search effort is represented as a per-observer search time per gridded cell
+represented in ksec. Search effort is applied only to valid potential
+or historical habitat for the target taxon. Where the habitat model indicates
+that only part of a grid cell is valid habitat, the imputed search effort
+is scaled up proportionally.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># From Analyse.R, </span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Assemble the cells which truly lie within the habitat together with their proportion of overlap</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">analyse_target</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">thisTarget</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">detected</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">FALSE</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">....</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">effortCells_intersect</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#000">st_intersection</span><span style="color:#000;font-weight:bold">((</span><span style="color:#000">accepted_grouped_sf</span> <span style="color:#ce5c00;font-weight:bold">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>     <span style="color:#000">filter</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">search_effort</span> <span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">)),</span> <span style="color:#000">allHabitat</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>     <span style="color:#000">mutate</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">area</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">st_area</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">.)</span> <span style="color:#ce5c00;font-weight:bold">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>     <span style="color:#000">as.numeric</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">area_prop</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">area</span> <span style="color:#ce5c00;font-weight:bold">/</span> <span style="color:#000">oneArea</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#000">select</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">cell_id</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">area</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">area_prop</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>     <span style="color:#000">st_drop_geometry</span><span style="color:#000;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div>
 </div>
 
 
@@ -1027,10 +1041,16 @@ or elsewhere? Link to your examples here.</p>
     
 	<h1 id="pg-88d8bdee105278bc1e8007f4431ffc42">6 - Inferring extirpation</h1>
     <div class="lead">Updating the posterior based on search effort</div>
-	<h2 id="intersecting-search-effort-with-gridded-habitat">Intersecting search effort with gridded habitat<a class="td-heading-self-link" href="#intersecting-search-effort-with-gridded-habitat" aria-label="Heading self-link"></a></h2>
-<p>XXXXXX</p>
-<pre tabindex="0"><code>## Convert polygons to grid
-</code></pre>
+	<p>After a gridded search effort density dataframe has been assembled,
+inference of extirpation risk proceeds in two stages.</p>
+<p>In the first stage, we infer an posterior distribution for extirpation
+probability for each cell in historical and potential habitat.</p>
+<p>In the second stage, these per-cell estimates are pooled into regional
+estimates for extirpation, forming quantified proxies for the IUCN
+extinction criteria, complete with uncertainty estimates.</p>
+<p>At both stages, prior and posterior estimates of extirpation are modelled using
+Bayesian inference on distributions from the beta family.</p>
+
 </div>
 
 
@@ -1051,21 +1071,31 @@ or elsewhere? Link to your examples here.</p>
 	
     
 
-<div class="td-content" style="">
+<div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-6404b82fd6929ae6cdfbd6ddee57466d">6.1 - The beta distribution</h1>
     <div class="lead">Representing extirpation probabilities</div>
-	<h2 id="xxxx">XXXX<a class="td-heading-self-link" href="#xxxx" aria-label="Heading self-link"></a></h2>
-<p>XXXXXX</p>
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 1440px">
-<img class="card-img-top" src="../../docs/extirpation/beta/beta_hu_e29669c2a9424164.jpg" width="1430" height="1176">
-<figcaption class="card-body px-0 pt-2 pb-0">
-<p class="card-text">
+	<h2 id="a-convenient-choice-for-rapid-bayesian-inference">A convenient choice for rapid Bayesian inference<a class="td-heading-self-link" href="#a-convenient-choice-for-rapid-bayesian-inference" aria-label="Heading self-link"></a></h2>
+<p>The beta distribution is a convenient choice for representing Bayesian inference on
+a probabilistic quantity such as probability of extirpation or probability of sighting.
+It is a distribution on the interval \([0, 1]\) which allows us to quickly estimate
+these probabilities and also summarise our confidence of these estimates, represented
+by how peaked the distribution is around its maximum.
 </p>
-</figcaption>
-</figure>
-<pre tabindex="0"><code>## XXXX
-</code></pre><p>
+<p><img src="../../docs/extirpation/beta/beta.jpg" alt="beta distribution"></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#000">make_beta</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">prob</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">weight</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">c</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">prob</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">weight</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#000">prob</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">weight</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Beta distribution statistics from https://en.wikipedia.org/wiki/Beta_distribution</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">beta_mean</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">bf</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">bf</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">alpha</span> <span style="color:#ce5c00;font-weight:bold">/</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">bf</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">alpha</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">bf</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">beta</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">beta_variance</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">bf</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">bf</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">alpha</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">bf</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">beta</span> <span style="color:#ce5c00;font-weight:bold">/</span> <span style="color:#000;font-weight:bold">((</span><span style="color:#000">bf</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">alpha</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">bf</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">beta</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000">^2</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">bf</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">alpha</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">bf</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">beta</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>
   <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Expand for mathematical details
   </a>
@@ -1090,6 +1120,112 @@ This is a convenient choice because, under the Bayesian framework, we can select
 </p>
   </div>
 </div>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-c266c061a3ed2f532f0df01bcea291aa">6.2 - Effective search effort</h1>
+    <div class="lead">Calculating the posterior distribution for one cell</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>The IUCN defines a taxon as ‘presumed extinct’ “when <em>exhaustive surveys</em> in known and/or expected habitat &hellip;
+have failed to record an individual.”</p>
+
+</div>
+
+<h2 id="what-constitutes-a-complete-search">What constitutes a complete search?<a class="td-heading-self-link" href="#what-constitutes-a-complete-search" aria-label="Heading self-link"></a></h2>
+<p>Imagine yourself in a \(30×30m\) area (better yet, get out into the field to think this through!)
+How much time do you think you need to adequately search this area?</p>
+<p>There are many factors to consider here, including the size of the target organism, the complexity of its environment,
+search conditions, the surveyor&rsquo;s efficacy, <em>etc</em>..</p>
+<p>This is not a simple geometric problem, or challenge of covering every \(m^2\) of an area.
+Best practices for species inventory and rare species surveys recommend
+the &ldquo;intuitive search&rdquo; as the most effective approach, because species often occupy
+specific niches that are unevenly distributed across the landscape.</p>
+<p>Unless one has data to calculate detection probabilities, it is not possible to fit a fully probabilistic model
+to solve this problem. Hence, we must resort to a heuristic: how much effort do we
+need to exhaust in an area before we are satisfied that our search is complete?</p>
+<p>Our method incorporates a search weight parameter \(W_s\) that must be defined to infer
+extirpation probability for a given cell. We propose this parameter as a necessary heuristic,
+which provides a means of overcoming the impasse posed by alternative modeling approaches
+(e.g., MCMC), which are data hungry and cannot be satisfied in this context.</p>
+<p>This parameter should ideally be assigned a priori with careful consideration for the
+study system or target organism.</p>
+<p><img src="../../docs/extirpation/single_cells/beta_sweep.jpg" alt="Sweep of beta distribution points for search weighting"></p>
+<p>
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Expand for mathematical details
+  </a>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+<p>
+ Under Bayesian inference, our beta distribution parameters on an unsuccessful 
+ Bernoulli trial (representing a failure to observe) will update from \((α,β)\) to \((α,β+1)\). 
+ However, given the search is a continuous process, we have a free parameter representing 
+ the quantity of search effort that represents a discrete “trial”—our search effort \(S_t\)
+ in a particular cell results in a posterior update to \((α,β+S_t W_s)\) where \(W_s\) 
+ represents the weighting applied to search effort. 
+ </p>
+ <p>
+ This weighting depends on many factors influencing the efficacy of initial 
+ intuitively reasoned search efforts, including the searcher's efficiency, 
+ the species' detectability, or the search conditions. 
+ Hence, this free parameter should be considered in relation to \(W_p\). 
+ Our weighting was set by eliciting a defensible level of confidence in extirpation 
+ given varying amounts of search effort within a single \(900m^2\) cell, leading to a value 
+ \(W_s\) of \(15\) (Supplementary Materials).
+</p
+  </div>
+</div>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-0558f0f733f163859faa7be5b161aa44">6.3 - Pooling search effort</h1>
+    <div class="lead">Calculating the posterior distribution for a region</div>
+	<p>Having arrived at individual values for the beta parameters for each
+cell in a region (historical or potential), we then transfer these
+into beta parameters for a regional distribution using moment matching:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Compute beta parameters given moments</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Taken from https://stats.stackexchange.com/a/12239</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">beta_params_from_moments</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">mu</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">var</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">alpha</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#000;font-weight:bold">((</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#000">mu</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">/</span> <span style="color:#000">var</span> <span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#ce5c00;font-weight:bold">/</span> <span style="color:#000">mu</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">mu</span> <span style="color:#000">^</span> <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">beta</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#000">alpha</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#ce5c00;font-weight:bold">/</span> <span style="color:#000">mu</span> <span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">params</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">list</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">alpha</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">alpha</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">beta</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">beta</span><span style="color:#000;font-weight:bold">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">apply_region_moments</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">stats</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">mu</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">var</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">params</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#000">beta_params_from_moments</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">mu</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">var</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#000">hdi</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#000">hdiBeta</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">params</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">alpha</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">params</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">beta</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">0.9</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">fields</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#000">list</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Central</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">rp</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#000">mu</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#000">Low</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">rp</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#000">hdi[2]</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#000">High</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">rp</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#000">hdi[1]</span><span style="color:#000;font-weight:bold">),</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000">alpha</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">rv</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">params</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">alpha</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#000">beta</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">rv</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">params</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">beta</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#000">mu</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">mu</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">var</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">var</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">modifyList</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">stats</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">fields</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div>
 </div>
 
 
@@ -1136,109 +1272,7 @@ This is a convenient choice because, under the Bayesian framework, we can select
 
 <div class="td-content" style="">
     
-	<h1 id="pg-2d909973d31ec56bc568fa453397d26b">7.1 - Effective search effort</h1>
-    <div class="lead">Calculating the posterior distribution for one cell</div>
-	
-
-<div class="pageinfo pageinfo-primary">
-<p>The IUCN defines a taxon as ‘presumed extinct’ “when <em>exhaustive surveys</em> in known and/or expected habitat &hellip;
-have failed to record an individual.”</p>
-
-</div>
-
-<h2 id="what-constitutes-a-complete-search">What constitutes a complete search?<a class="td-heading-self-link" href="#what-constitutes-a-complete-search" aria-label="Heading self-link"></a></h2>
-<p>
-Imagine yourself in a \(30×30m\) area (better yet, get out into the field to think this through!)
-How much time do you think you need to adequately search this area?
-</p>
-<p>There are many factors to consider here, including the size of the target organism, the complexity of its environment,
-search conditions, the surveyor&rsquo;s efficacy, <em>etc</em>..</p>
-<p>
-This is not a simple geometric problem, or challenge of covering every \(m^2\) of an area.
-Best practices for species inventory and rare species surveys recommend 
-the "intuitive search" as the most effective approach, because species often occupy
-specific niches that are unevenly distributed across the landscape.
-</p>
-<p>Unless one has data to calculate detection probabilities, it is not possible to fit a fully probabilistic model
-to solve this problem. Hence, we must resort to a heuristic: how much effort do we
-need to exhaust in an area before we are satisfied that our search is complete?</p>
-<p>
-Our method incorporates a search weight parameter \(Ws\) that must be defined to infer
-extirpation probability for a given cell. We propose this parameter as a necessary heuristic,
-which provides a means of overcoming the impasse posed by alternative modeling approaches
-(e.g., MCMC), which are data hungry and cannot be satisfied in this context.
-</p>
-<p>This parameter should ideally be assigned a priori with careful consideration for the
-study system or target organism.</p>
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 6010px">
-<img class="card-img-top" src="../../docs/extirpation_historical/single_cells/beta_sweep_hu_b9549f2585e56905.jpg" width="6000" height="4000">
-<figcaption class="card-body px-0 pt-2 pb-0">
-<p class="card-text">
-</p>
-</figcaption>
-</figure>
-<p>
-  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-    Expand for mathematical details
-  </a>
-</p>
-<div class="collapse" id="collapseExample">
-  <div class="card card-body">
-<p>
- Under Bayesian inference, our beta distribution parameters on an unsuccessful 
- Bernoulli trial (representing a failure to observe) will update from \((α,β)\) to \((α,β+1)\). 
- However, given the search is a continuous process, we have a free parameter representing 
- the quantity of search effort that represents a discrete “trial”—our search effort \(St\)
- in a particular cell results in a posterior update to \((α,β+S_t W_s)\) where \(Ws\) 
- represents the weighting applied to search effort. 
- </p>
- <p>
- This weighting depends on many factors influencing the efficacy of initial 
- intuitively reasoned search efforts, including the searcher's efficiency, 
- the species' detectability, or the search conditions. 
- Hence, this free parameter should be considered in relation to \(Wp\). 
- Our weighting was set by eliciting a defensible level of confidence in extirpation 
- given varying amounts of search effort within a single \(900m^2\) cell, leading to a value 
- \(Ws\) of \(15\) (Supplementary Materials).
-</p
-  </div>
-</div>
-<pre tabindex="0"><code>## Calibrating
-</code></pre>
-</div>
-
-
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-27ac589569d62578ba9382eb1d2c9e70">7.2 - Pooling search effort</h1>
-    <div class="lead">Calculating the posterior distribution for a region</div>
-	<h2 id="xxxx">XXXX<a class="td-heading-self-link" href="#xxxx" aria-label="Heading self-link"></a></h2>
-<pre tabindex="0"><code>## Calibrating
-</code></pre>
-</div>
-
-
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-d7f0573925b80558cd075b437c659be1">7.3 - Example</h1>
+	<h1 id="pg-d7f0573925b80558cd075b437c659be1">7.1 - Example</h1>
     
 	<p>Before the beginning of the BioGaliano project in 2015, a total of 607 vascular plant species were reported for Galiano Island, represented by 1,698 records, including 446 herbarium specimens (Fig. 1).
 After five years of concerted search effort, amounting to &gt;18,000 observations, we documented 560 species on the project, confirming 433/607 historical species reports (71% of the historically reported diversity) and adding 127 new species to the list.</p>
@@ -1263,10 +1297,12 @@ After five years of concerted search effort, amounting to &gt;18,000 observation
     
 	<h1 id="pg-6ec4294808cf513f3fc95f4aa29d368a">8 - Inferring extirpation in potential habitat</h1>
     <div class="lead">Updating the posterior based on search effort</div>
-	<h2 id="intersecting-search-effort-with-gridded-habitat">Intersecting search effort with gridded habitat<a class="td-heading-self-link" href="#intersecting-search-effort-with-gridded-habitat" aria-label="Heading self-link"></a></h2>
-<p>XXXXXX</p>
-<pre tabindex="0"><code>## Convert polygons to grid
-</code></pre>
+	<p>Inference of extirpation in potential habitat proceeds as with inference
+for historical habitat, with the additional element to the analysis that our
+prior probability of extirpation is modified by a distance kernel, which assigns
+decreasing probability of persistence with increasing distance from historical
+habitat.</p>
+
 </div>
 
 
@@ -1291,16 +1327,12 @@ After five years of concerted search effort, amounting to &gt;18,000 observation
     
 	<h1 id="pg-081820f0d9d1f424bc13b5e5ec0af9f3">8.1 - Inverse distance prior</h1>
     <div class="lead">Insights from metapopulation theory</div>
-	<h2 id="xxxx">XXXX<a class="td-heading-self-link" href="#xxxx" aria-label="Heading self-link"></a></h2>
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 6010px">
-<img class="card-img-top" src="../../docs/extirpation_potential/distance_prior/distance_weight_hu_428162d9a02f47d2.jpg" width="6000" height="4000">
-<figcaption class="card-body px-0 pt-2 pb-0">
-<p class="card-text">
+	<p>Estimating the likelihood of a plant’s occurrence beyond the extent of its historical habitat presents a Wallacean dilemma, as species often exhibit restricted distributions despite the apparent availability of suitable habitat (Lomolino, Riddle and Brown., 2006). To address this dilemma, we applied the negative exponential distance weighting system widely used in metapopulation ecology to model patch-occupancy dynamics (Hanski, 1994; Hanski et al., 2017; Yeiser et al., 2021; Hanski & Ovaskainen, 2002). This method was chosen for its analytical simplicity, based on the assumption that patch occupancy probabilities decrease with varying distance from historical source populations, depending on the rarity patterns of target plants.</p>
+<p>
+We selected kernel values by linking them with rarity types (Kruckeberg and Rabinowitz, 1985; Crisfield et al., 2024) and then assigning typologies to target species. Kernel assignments were justified by comparing plotted distance decay rates with regional distribution patterns of target plants. Validation was also drawn from comparisons with the observed distance decay rates of detected targets relative to the position of first historical records (Supplementary Materials). This gives rise to a distance-based prior distribution for presence Pd = exp(-d) where d represents the distance of the patch from a historical record and  represents the kernel value. 
 </p>
-</figcaption>
-</figure>
-<pre tabindex="0"><code>## Calibrating
-</code></pre>
+<p><img src="../../docs/extirpation_potential/distance_prior/distance_weight.jpg" alt="Illustration of different kernel distance weightings"></p>
+
 </div>
 
 
@@ -1336,7 +1368,8 @@ After five years of concerted search effort, amounting to &gt;18,000 observation
     
 	<h1 id="pg-3f7c5a8199dced5422d801b29375cb81">8.3 - Kernel validation</h1>
     <div class="lead">Insights from metapopulation theory</div>
-	<h2 id="xxxx">XXXX<a class="td-heading-self-link" href="#xxxx" aria-label="Heading self-link"></a></h2>
+	<p>For detected species, negative-exponential kernels were estimated empirically by regressing the distances of species detections from the position of initial records, against the background of unsuccessful detections. This was done with the brms package (Bürkner, 2017) using Markov Chain Monte Carlo sampling in STAN. Our regression applies the Bernoulli distribution family to the target detection via a modelling function
+\(occupancy_i 〜 q .exp( d_i) \) where  is the kernel width, q scales the overall detection rate (not of interest to this analysis) and di is the distance from historical habitat of occupancy observation \(occupancy_i\).</p>
 <pre tabindex="0"><code>## Calibrating
 </code></pre>
 </div>

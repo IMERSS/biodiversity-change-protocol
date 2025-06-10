@@ -17,27 +17,25 @@
 <link rel="icon" type="image/png" href="../../../favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="../../../favicons/android-192x192.png" sizes="192x192">
 
-<title>Data synthesis | IMERSS</title>
-<meta name="description" content="Dealing with messy data">
-<meta property="og:url" content="/docs/baseline-analysis/data_synthesis/">
+<title>Effective search effort | IMERSS</title>
+<meta name="description" content="Calculating the posterior distribution for one cell">
+<meta property="og:url" content="/docs/extirpation/single_cells/">
   <meta property="og:site_name" content="IMERSS">
-  <meta property="og:title" content="Data synthesis">
-  <meta property="og:description" content="Dealing with messy data">
+  <meta property="og:title" content="Effective search effort">
+  <meta property="og:description" content="Calculating the posterior distribution for one cell">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
-    <meta property="article:modified_time" content="2025-06-08T11:36:42-02:30">
     <meta property="article:tag" content="Test">
     <meta property="article:tag" content="Docs">
 
-  <meta itemprop="name" content="Data synthesis">
-  <meta itemprop="description" content="Dealing with messy data">
-  <meta itemprop="dateModified" content="2025-06-08T11:36:42-02:30">
-  <meta itemprop="wordCount" content="237">
+  <meta itemprop="name" content="Effective search effort">
+  <meta itemprop="description" content="Calculating the posterior distribution for one cell">
+  <meta itemprop="wordCount" content="396">
   <meta itemprop="keywords" content="Test,Docs">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Data synthesis">
-  <meta name="twitter:description" content="Dealing with messy data">
+  <meta name="twitter:title" content="Effective search effort">
+  <meta name="twitter:description" content="Calculating the posterior distribution for one cell">
 <link rel="preload" href="../../../scss/main.min.6c0ab20cfeb11b67fd4c1e29a9c26cb743b7f22670386f8fae1066506b5ac33c.css" as="style" integrity="sha256-bAqyDP6xG2f9TB4pqcJst0O38iZwOG&#43;PrhBmUGtawzw=" crossorigin="anonymous">
 <link href="../../../scss/main.min.6c0ab20cfeb11b67fd4c1e29a9c26cb743b7f22670386f8fae1066506b5ac33c.css" rel="stylesheet" integrity="sha256-bAqyDP6xG2f9TB4pqcJst0O38iZwOG&#43;PrhBmUGtawzw=" crossorigin="anonymous">
 <script
@@ -101,11 +99,11 @@
   <a href="../../../docs/overview/extinction_criteria/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsoverviewextinction_criteria"><span class="">IUCN extinction criteria</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsbaseline-analysis-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsbaseline-analysis-li">
   <a href="../../../docs/baseline-analysis/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsbaseline-analysis"><span class="">Baseline analysis</span></a>
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsbaseline-analysisdata_synthesis-li">
-  <a href="../../../docs/baseline-analysis/data_synthesis/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-docsbaseline-analysisdata_synthesis"><span class="td-sidebar-nav-active-item">Data synthesis</span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbaseline-analysisdata_synthesis-li">
+  <a href="../../../docs/baseline-analysis/data_synthesis/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsbaseline-analysisdata_synthesis"><span class="">Data synthesis</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbaseline-analysisdifferences-li">
   <a href="../../../docs/baseline-analysis/differences/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsbaseline-analysisdifferences"><span class="">Comparing data</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbaseline-analysiscriteria-li">
@@ -136,13 +134,13 @@
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docssearch_effort-li">
   <a href="../../../docs/search_effort/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docssearch_effort"><span class="">Search effort</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsextirpation-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsextirpation-li">
   <a href="../../../docs/extirpation/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsextirpation"><span class="">Inferring extirpation</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsextirpationbeta-li">
   <a href="../../../docs/extirpation/beta/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsextirpationbeta"><span class="">The beta distribution</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsextirpationsingle_cells-li">
-  <a href="../../../docs/extirpation/single_cells/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsextirpationsingle_cells"><span class="">Effective search effort</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsextirpationsingle_cells-li">
+  <a href="../../../docs/extirpation/single_cells/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-docsextirpationsingle_cells"><span class="td-sidebar-nav-active-item">Effective search effort</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsextirpationregion-li">
   <a href="../../../docs/extirpation/region/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsextirpationregion"><span class="">Pooling search effort</span></a>
 </li>
@@ -179,20 +177,19 @@
           </aside>
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
-<a href="https://github.com/google/docsy-example/tree/main/content/en/docs/baseline-analysis/data_synthesis/index.md" class="td-page-meta--view td-page-meta__view" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines fa-fw"></i> View page source</a>
-  <a href="https://github.com/google/docsy-example/edit/main/content/en/docs/baseline-analysis/data_synthesis/index.md" class="td-page-meta--edit td-page-meta__edit" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Edit this page</a>
-  <a href="https://github.com/google/docsy-example/new/main/content/en/docs/baseline-analysis/data_synthesis?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child td-page-meta__child" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Create child page</a>
-  <a href="https://github.com/google/docsy-example/issues/new?title=Data%20synthesis" class="td-page-meta--issue td-page-meta__issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create documentation issue</a>
+<a href="https://github.com/google/docsy-example/tree/main/content/en/docs/extirpation/single_cells/index.md" class="td-page-meta--view td-page-meta__view" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines fa-fw"></i> View page source</a>
+  <a href="https://github.com/google/docsy-example/edit/main/content/en/docs/extirpation/single_cells/index.md" class="td-page-meta--edit td-page-meta__edit" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Edit this page</a>
+  <a href="https://github.com/google/docsy-example/new/main/content/en/docs/extirpation/single_cells?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child td-page-meta__child" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Create child page</a>
+  <a href="https://github.com/google/docsy-example/issues/new?title=Effective%20search%20effort" class="td-page-meta--issue td-page-meta__issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create documentation issue</a>
   <a href="https://github.com/google/docsy/issues/new" class="td-page-meta--project td-page-meta__project-issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create project issue</a>
-  <a id="print" href="../../../docs/baseline-analysis/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
+  <a id="print" href="../../../docs/extirpation/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
 
 </div>
 
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#combination-of-heterogeneous-data-in-baseline-analyses">Combination of heterogeneous data in baseline analyses</a></li>
-    <li><a href="#baseline-analyses-offer-a-practical-approach">Baseline analyses offer a practical approach</a></li>
+    <li><a href="#what-constitutes-a-complete-search">What constitutes a complete search?</a></li>
   </ul>
 </nav>
       </div>
@@ -223,14 +220,14 @@
   <li class="breadcrumb-item">
     <a href="../../../docs/">Docs</a></li>
   <li class="breadcrumb-item">
-    <a href="../../../docs/baseline-analysis/">Baseline analysis</a></li>
+    <a href="../../../docs/extirpation/">Inferring extirpation</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    Data synthesis</li>
+    Effective search effort</li>
   </ol>
 </nav>
 <div class="td-content">
-	<h1>Data synthesis</h1>
-	<div class="lead">Dealing with messy data</div>
+	<h1>Effective search effort</h1>
+	<div class="lead">Calculating the posterior distribution for one cell</div>
 	<header class="article-meta">
 		<div class="taxonomy taxonomy-terms-article taxo-tags">
   <h5 class="taxonomy-title">Tags:</h5>
@@ -248,35 +245,60 @@
 </div>
 
   </header>
-	<h2 id="combination-of-heterogeneous-data-in-baseline-analyses">Combination of heterogeneous data in baseline analyses<a class="td-heading-self-link" href="#combination-of-heterogeneous-data-in-baseline-analyses" aria-label="Heading self-link"></a></h2>
-<p>Statistical approaches to modeling biodiversity change are often paralyzed by limitations and deficiencies inherent
-in biodiversity data—especially when historical and contemporary data are combined from multiple sources.</p>
-<ul>
-<li>Data are commonly unstructured, or heterogeneous, lacking consistent attributes or metadata</li>
-<li>Data are often biased toward positive detections (lacking absence information)</li>
-<li>Data may be collected in ways that violate the assumptions of statistical models</li>
-<li>Georeferencing is often generalized based on vague locality information</li>
-<li>Data may be sparse, with few or perhaps only singleton records to vouch for historical populations, especially at local scales</li>
-</ul>
-<h2 id="baseline-analyses-offer-a-practical-approach">Baseline analyses offer a practical approach<a class="td-heading-self-link" href="#baseline-analyses-offer-a-practical-approach" aria-label="Heading self-link"></a></h2>
-<p>A practical approach to this difficult situation is to forego any advanced modeling practices <em>ab initio</em>
-and begin instead with a simple baseline analysis of historical <em>vs</em> contemporary sources of biodiversity data.
-This depends on normalization of species occurrence data to support the comparison of historical and contemporary species records.</p>
-
+	
 
 <div class="pageinfo pageinfo-primary">
-<p>Normalization of biodiversity data is a thorny enough problem in its own right and not treated here. For this
-tutorial we assume that names are aligned and any synonymy is resolved between the data being compared.</p>
+<p>The IUCN defines a taxon as ‘presumed extinct’ “when <em>exhaustive surveys</em> in known and/or expected habitat &hellip;
+have failed to record an individual.”</p>
 
 </div>
 
-<ul>
-<li>Best practices are to adhere to the Darwin Core standard for species occurrence data.</li>
-<li>Different communities may prefer to adhere to different taxonomic databases. Any taxonomic standard can be observed, as
-long as it results in consistent mapping of taxa between datasets.</li>
-</ul>
-<pre tabindex="0"><code>### Integrate biodiversity data and summarize 
-</code></pre>
+<h2 id="what-constitutes-a-complete-search">What constitutes a complete search?<a class="td-heading-self-link" href="#what-constitutes-a-complete-search" aria-label="Heading self-link"></a></h2>
+<p>Imagine yourself in a \(30×30m\) area (better yet, get out into the field to think this through!)
+How much time do you think you need to adequately search this area?</p>
+<p>There are many factors to consider here, including the size of the target organism, the complexity of its environment,
+search conditions, the surveyor&rsquo;s efficacy, <em>etc</em>..</p>
+<p>This is not a simple geometric problem, or challenge of covering every \(m^2\) of an area.
+Best practices for species inventory and rare species surveys recommend
+the &ldquo;intuitive search&rdquo; as the most effective approach, because species often occupy
+specific niches that are unevenly distributed across the landscape.</p>
+<p>Unless one has data to calculate detection probabilities, it is not possible to fit a fully probabilistic model
+to solve this problem. Hence, we must resort to a heuristic: how much effort do we
+need to exhaust in an area before we are satisfied that our search is complete?</p>
+<p>Our method incorporates a search weight parameter \(W_s\) that must be defined to infer
+extirpation probability for a given cell. We propose this parameter as a necessary heuristic,
+which provides a means of overcoming the impasse posed by alternative modeling approaches
+(e.g., MCMC), which are data hungry and cannot be satisfied in this context.</p>
+<p>This parameter should ideally be assigned a priori with careful consideration for the
+study system or target organism.</p>
+<p><img src="../../../docs/extirpation/single_cells/beta_sweep.jpg" alt="Sweep of beta distribution points for search weighting"></p>
+<p>
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Expand for mathematical details
+  </a>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+<p>
+ Under Bayesian inference, our beta distribution parameters on an unsuccessful 
+ Bernoulli trial (representing a failure to observe) will update from \((α,β)\) to \((α,β+1)\). 
+ However, given the search is a continuous process, we have a free parameter representing 
+ the quantity of search effort that represents a discrete “trial”—our search effort \(S_t\)
+ in a particular cell results in a posterior update to \((α,β+S_t W_s)\) where \(W_s\) 
+ represents the weighting applied to search effort. 
+ </p>
+ <p>
+ This weighting depends on many factors influencing the efficacy of initial 
+ intuitively reasoned search efforts, including the searcher's efficiency, 
+ the species' detectability, or the search conditions. 
+ Hence, this free parameter should be considered in relation to \(W_p\). 
+ Our weighting was set by eliciting a defensible level of confidence in extirpation 
+ given varying amounts of search effort within a single \(900m^2\) cell, leading to a value 
+ \(W_s\) of \(15\) (Supplementary Materials).
+</p
+  </div>
+</div>
+
 	<style>
   .feedback--answer {
     display: inline-block;
@@ -333,9 +355,6 @@ long as it results in consistent mapping of taxa between datasets.</li>
   });
 </script>
 <br />
-<div class="td-page-meta__lastmod">
-  Last modified June 8, 2025: <a data-proofer-ignore href="https://github.com/google/docsy-example/commit/00e379a5f0bce6cc0c383297767bea20dd07007a">updated documentation (00e379a)</a>
-</div>
 
 </div>
 

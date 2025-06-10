@@ -33,7 +33,7 @@
   <meta itemprop="name" content="Inverse distance prior">
   <meta itemprop="description" content="Insights from metapopulation theory">
   <meta itemprop="dateModified" content="2025-06-06T22:17:09-02:30">
-  <meta itemprop="wordCount" content="3">
+  <meta itemprop="wordCount" content="200">
   <meta itemprop="keywords" content="Test,Docs">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Inverse distance prior">
@@ -141,16 +141,16 @@
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsextirpationbeta-li">
   <a href="../../../docs/extirpation/beta/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsextirpationbeta"><span class="">The beta distribution</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsextirpationsingle_cells-li">
+  <a href="../../../docs/extirpation/single_cells/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsextirpationsingle_cells"><span class="">Effective search effort</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsextirpationregion-li">
+  <a href="../../../docs/extirpation/region/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsextirpationregion"><span class="">Pooling search effort</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsextirpation_historical-li">
   <a href="../../../docs/extirpation_historical/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsextirpation_historical"><span class="">Inferring extirpation in historical habitat</span></a>
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsextirpation_historicalsingle_cells-li">
-  <a href="../../../docs/extirpation_historical/single_cells/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsextirpation_historicalsingle_cells"><span class="">Effective search effort</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsextirpation_historicalregion-li">
-  <a href="../../../docs/extirpation_historical/region/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsextirpation_historicalregion"><span class="">Pooling search effort</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsextirpation_historicalexample-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsextirpation_historicalexample-li">
   <a href="../../../docs/extirpation_historical/example/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsextirpation_historicalexample"><span class="">Example</span></a>
 </li>
   </ul>
@@ -188,14 +188,7 @@
 
 </div>
 
-            <div class="td-toc">
-        <nav id="TableOfContents">
-  <ul>
-    <li><a href="#xxxx">XXXX</a></li>
-  </ul>
-</nav>
-      </div>
-    
+            
             <div class="taxonomy taxonomy-terms-cloud taxo-tags">
       <h5 class="taxonomy-title">Tag Cloud</h5>
       <ul class="taxonomy-terms">
@@ -247,16 +240,12 @@
 </div>
 
   </header>
-	<h2 id="xxxx">XXXX<a class="td-heading-self-link" href="#xxxx" aria-label="Heading self-link"></a></h2>
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 6010px">
-<img class="card-img-top" src="../../../docs/extirpation_potential/distance_prior/distance_weight_hu_428162d9a02f47d2.jpg" width="6000" height="4000">
-<figcaption class="card-body px-0 pt-2 pb-0">
-<p class="card-text">
+	<p>Estimating the likelihood of a plant’s occurrence beyond the extent of its historical habitat presents a Wallacean dilemma, as species often exhibit restricted distributions despite the apparent availability of suitable habitat (Lomolino, Riddle and Brown., 2006). To address this dilemma, we applied the negative exponential distance weighting system widely used in metapopulation ecology to model patch-occupancy dynamics (Hanski, 1994; Hanski et al., 2017; Yeiser et al., 2021; Hanski & Ovaskainen, 2002). This method was chosen for its analytical simplicity, based on the assumption that patch occupancy probabilities decrease with varying distance from historical source populations, depending on the rarity patterns of target plants.</p>
+<p>
+We selected kernel values by linking them with rarity types (Kruckeberg and Rabinowitz, 1985; Crisfield et al., 2024) and then assigning typologies to target species. Kernel assignments were justified by comparing plotted distance decay rates with regional distribution patterns of target plants. Validation was also drawn from comparisons with the observed distance decay rates of detected targets relative to the position of first historical records (Supplementary Materials). This gives rise to a distance-based prior distribution for presence Pd = exp(-d) where d represents the distance of the patch from a historical record and  represents the kernel value. 
 </p>
-</figcaption>
-</figure>
-<pre tabindex="0"><code>## Calibrating
-</code></pre>
+<p><img src="../../../docs/extirpation_potential/distance_prior/distance_weight.jpg" alt="Illustration of different kernel distance weightings"></p>
+
 	<style>
   .feedback--answer {
     display: inline-block;

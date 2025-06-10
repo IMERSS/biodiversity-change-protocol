@@ -12,7 +12,7 @@
       <link>/docs/extirpation_potential/distance_prior/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/docs/extirpation_potential/distance_prior/</guid>
-      <description>&lt;h2 id=&#34;xxxx&#34;&gt;XXXX&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#xxxx&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 6010px&#34;&gt;&#xA;&lt;img class=&#34;card-img-top&#34; src=&#34;../../docs/extirpation_potential/distance_prior/distance_weight_hu_428162d9a02f47d2.jpg&#34; width=&#34;6000&#34; height=&#34;4000&#34;&gt;&#xA;&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;&#xA;&lt;p class=&#34;card-text&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## Calibrating&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+      <description>&lt;p&gt;Estimating the likelihood of a plant’s occurrence beyond the extent of its historical habitat presents a Wallacean dilemma, as species often exhibit restricted distributions despite the apparent availability of suitable habitat (Lomolino, Riddle and Brown., 2006). To address this dilemma, we applied the negative exponential distance weighting system widely used in metapopulation ecology to model patch-occupancy dynamics (Hanski, 1994; Hanski et al., 2017; Yeiser et al., 2021; Hanski &amp; Ovaskainen, 2002). This method was chosen for its analytical simplicity, based on the assumption that patch occupancy probabilities decrease with varying distance from historical source populations, depending on the rarity patterns of target plants.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Rarity types</title>
@@ -26,7 +26,7 @@
       <link>/docs/extirpation_potential/kernel_validation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/docs/extirpation_potential/kernel_validation/</guid>
-      <description>&lt;h2 id=&#34;xxxx&#34;&gt;XXXX&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#xxxx&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## Calibrating&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+      <description>&lt;p&gt;For detected species, negative-exponential kernels were estimated empirically by regressing the distances of species detections from the position of initial records, against the background of unsuccessful detections. This was done with the brms package (Bürkner, 2017) using Markov Chain Monte Carlo sampling in STAN. Our regression applies the Bernoulli distribution family to the target detection via a modelling function&#xA;\(occupancy_i 〜 q .exp( d_i) \) where  is the kernel width, q scales the overall detection rate (not of interest to this analysis) and di is the distance from historical habitat of occupancy observation \(occupancy_i\).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Example</title>

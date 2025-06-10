@@ -31,7 +31,7 @@
   <meta itemprop="name" content="Search effort">
   <meta itemprop="description" content="Incorporating search effort">
   <meta itemprop="dateModified" content="2025-06-05T16:07:28-04:00">
-  <meta itemprop="wordCount" content="12">
+  <meta itemprop="wordCount" content="107">
   <meta itemprop="keywords" content="Test,Docs">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Search effort">
@@ -114,10 +114,24 @@ This is the multi-page printable view of this section.
 
 
 <div class="content">
-      <h2 id="intersecting-search-effort-with-gridded-habitat">Intersecting search effort with gridded habitat<a class="td-heading-self-link" href="#intersecting-search-effort-with-gridded-habitat" aria-label="Heading self-link"></a></h2>
-<p>XXXXXX</p>
-<pre tabindex="0"><code>## Convert polygons to grid
-</code></pre>
+      <p>Search effort is represented as a per-observer search time per gridded cell
+represented in ksec. Search effort is applied only to valid potential
+or historical habitat for the target taxon. Where the habitat model indicates
+that only part of a grid cell is valid habitat, the imputed search effort
+is scaled up proportionally.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># From Analyse.R, </span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Assemble the cells which truly lie within the habitat together with their proportion of overlap</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">analyse_target</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">thisTarget</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">detected</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">FALSE</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">....</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">effortCells_intersect</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#000">st_intersection</span><span style="color:#000;font-weight:bold">((</span><span style="color:#000">accepted_grouped_sf</span> <span style="color:#ce5c00;font-weight:bold">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>     <span style="color:#000">filter</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">search_effort</span> <span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">)),</span> <span style="color:#000">allHabitat</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>     <span style="color:#000">mutate</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">area</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">st_area</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">.)</span> <span style="color:#ce5c00;font-weight:bold">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>     <span style="color:#000">as.numeric</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">area_prop</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">area</span> <span style="color:#ce5c00;font-weight:bold">/</span> <span style="color:#000">oneArea</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#000">select</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">cell_id</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">area</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">area_prop</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>     <span style="color:#000">st_drop_geometry</span><span style="color:#000;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div>
 </div>
 </div>
 

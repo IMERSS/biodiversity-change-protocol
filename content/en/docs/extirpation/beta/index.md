@@ -4,19 +4,33 @@ description: Representing extirpation probabilities
 categories: [Examples, Placeholders]
 math: true
 tags: [test, docs]
-weight: 6
+weight: 1
 ---
 
-## XXXX
+## A convenient choice for rapid Bayesian inference
 
-XXXXXX
+<p>The beta distribution is a convenient choice for representing Bayesian inference on
+a probabilistic quantity such as probability of extirpation or probability of sighting.
+It is a distribution on the interval \([0, 1]\) which allows us to quickly estimate
+these probabilities and also summarise our confidence of these estimates, represented
+by how peaked the distribution is around its maximum.
+</p>
 
-{{% imgproc beta Fill "1430x1176" %}}
-{{% /imgproc %}}
+![beta distribution](beta.jpg)
 
-```
-## XXXX
+```R
+make_beta <- function (prob, weight) {
+  c(prob * weight, (1 - prob) * weight)
+}
 
+# Beta distribution statistics from https://en.wikipedia.org/wiki/Beta_distribution
+beta_mean <- function (bf) {
+  bf$alpha / (bf$alpha + bf$beta)
+}
+
+beta_variance <- function (bf) {
+  bf$alpha * bf$beta / ((bf$alpha + bf$beta)^2 * (bf$alpha + bf$beta + 1))
+}
 ```
 
 <p>

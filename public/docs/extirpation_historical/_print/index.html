@@ -112,23 +112,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-2d909973d31ec56bc568fa453397d26b">Effective search effort</a></li>
-
-
-    
-  
-    
-    
-	
-<li>2: <a href="#pg-27ac589569d62578ba9382eb1d2c9e70">Pooling search effort</a></li>
-
-
-    
-  
-    
-    
-	
-<li>3: <a href="#pg-d7f0573925b80558cd075b437c659be1">Example</a></li>
+<li>1: <a href="#pg-d7f0573925b80558cd075b437c659be1">Example</a></li>
 
 
     
@@ -162,109 +146,7 @@ This is the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-2d909973d31ec56bc568fa453397d26b">1 - Effective search effort</h1>
-    <div class="lead">Calculating the posterior distribution for one cell</div>
-	
-
-<div class="pageinfo pageinfo-primary">
-<p>The IUCN defines a taxon as ‘presumed extinct’ “when <em>exhaustive surveys</em> in known and/or expected habitat &hellip;
-have failed to record an individual.”</p>
-
-</div>
-
-<h2 id="what-constitutes-a-complete-search">What constitutes a complete search?<a class="td-heading-self-link" href="#what-constitutes-a-complete-search" aria-label="Heading self-link"></a></h2>
-<p>
-Imagine yourself in a \(30×30m\) area (better yet, get out into the field to think this through!)
-How much time do you think you need to adequately search this area?
-</p>
-<p>There are many factors to consider here, including the size of the target organism, the complexity of its environment,
-search conditions, the surveyor&rsquo;s efficacy, <em>etc</em>..</p>
-<p>
-This is not a simple geometric problem, or challenge of covering every \(m^2\) of an area.
-Best practices for species inventory and rare species surveys recommend 
-the "intuitive search" as the most effective approach, because species often occupy
-specific niches that are unevenly distributed across the landscape.
-</p>
-<p>Unless one has data to calculate detection probabilities, it is not possible to fit a fully probabilistic model
-to solve this problem. Hence, we must resort to a heuristic: how much effort do we
-need to exhaust in an area before we are satisfied that our search is complete?</p>
-<p>
-Our method incorporates a search weight parameter \(Ws\) that must be defined to infer
-extirpation probability for a given cell. We propose this parameter as a necessary heuristic,
-which provides a means of overcoming the impasse posed by alternative modeling approaches
-(e.g., MCMC), which are data hungry and cannot be satisfied in this context.
-</p>
-<p>This parameter should ideally be assigned a priori with careful consideration for the
-study system or target organism.</p>
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 6010px">
-<img class="card-img-top" src="../../../docs/extirpation_historical/single_cells/beta_sweep_hu_b9549f2585e56905.jpg" width="6000" height="4000">
-<figcaption class="card-body px-0 pt-2 pb-0">
-<p class="card-text">
-</p>
-</figcaption>
-</figure>
-<p>
-  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-    Expand for mathematical details
-  </a>
-</p>
-<div class="collapse" id="collapseExample">
-  <div class="card card-body">
-<p>
- Under Bayesian inference, our beta distribution parameters on an unsuccessful 
- Bernoulli trial (representing a failure to observe) will update from \((α,β)\) to \((α,β+1)\). 
- However, given the search is a continuous process, we have a free parameter representing 
- the quantity of search effort that represents a discrete “trial”—our search effort \(St\)
- in a particular cell results in a posterior update to \((α,β+S_t W_s)\) where \(Ws\) 
- represents the weighting applied to search effort. 
- </p>
- <p>
- This weighting depends on many factors influencing the efficacy of initial 
- intuitively reasoned search efforts, including the searcher's efficiency, 
- the species' detectability, or the search conditions. 
- Hence, this free parameter should be considered in relation to \(Wp\). 
- Our weighting was set by eliciting a defensible level of confidence in extirpation 
- given varying amounts of search effort within a single \(900m^2\) cell, leading to a value 
- \(Ws\) of \(15\) (Supplementary Materials).
-</p
-  </div>
-</div>
-<pre tabindex="0"><code>## Calibrating
-</code></pre>
-</div>
-
-
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-27ac589569d62578ba9382eb1d2c9e70">2 - Pooling search effort</h1>
-    <div class="lead">Calculating the posterior distribution for a region</div>
-	<h2 id="xxxx">XXXX<a class="td-heading-self-link" href="#xxxx" aria-label="Heading self-link"></a></h2>
-<pre tabindex="0"><code>## Calibrating
-</code></pre>
-</div>
-
-
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-d7f0573925b80558cd075b437c659be1">3 - Example</h1>
+	<h1 id="pg-d7f0573925b80558cd075b437c659be1">1 - Example</h1>
     
 	<p>Before the beginning of the BioGaliano project in 2015, a total of 607 vascular plant species were reported for Galiano Island, represented by 1,698 records, including 446 herbarium specimens (Fig. 1).
 After five years of concerted search effort, amounting to &gt;18,000 observations, we documented 560 species on the project, confirming 433/607 historical species reports (71% of the historically reported diversity) and adding 127 new species to the list.</p>

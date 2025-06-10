@@ -31,7 +31,7 @@
   <meta itemprop="name" content="Inferring extirpation in potential habitat">
   <meta itemprop="description" content="Updating the posterior based on search effort">
   <meta itemprop="dateModified" content="2025-06-06T22:17:09-02:30">
-  <meta itemprop="wordCount" content="12">
+  <meta itemprop="wordCount" content="44">
   <meta itemprop="keywords" content="Test,Docs">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Inferring extirpation in potential habitat">
@@ -146,10 +146,12 @@ This is the multi-page printable view of this section.
 
 
 <div class="content">
-      <h2 id="intersecting-search-effort-with-gridded-habitat">Intersecting search effort with gridded habitat<a class="td-heading-self-link" href="#intersecting-search-effort-with-gridded-habitat" aria-label="Heading self-link"></a></h2>
-<p>XXXXXX</p>
-<pre tabindex="0"><code>## Convert polygons to grid
-</code></pre>
+      <p>Inference of extirpation in potential habitat proceeds as with inference
+for historical habitat, with the additional element to the analysis that our
+prior probability of extirpation is modified by a distance kernel, which assigns
+decreasing probability of persistence with increasing distance from historical
+habitat.</p>
+
 </div>
 </div>
 
@@ -172,16 +174,12 @@ This is the multi-page printable view of this section.
     
 	<h1 id="pg-081820f0d9d1f424bc13b5e5ec0af9f3">1 - Inverse distance prior</h1>
     <div class="lead">Insights from metapopulation theory</div>
-	<h2 id="xxxx">XXXX<a class="td-heading-self-link" href="#xxxx" aria-label="Heading self-link"></a></h2>
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 6010px">
-<img class="card-img-top" src="../../../docs/extirpation_potential/distance_prior/distance_weight_hu_428162d9a02f47d2.jpg" width="6000" height="4000">
-<figcaption class="card-body px-0 pt-2 pb-0">
-<p class="card-text">
+	<p>Estimating the likelihood of a plant’s occurrence beyond the extent of its historical habitat presents a Wallacean dilemma, as species often exhibit restricted distributions despite the apparent availability of suitable habitat (Lomolino, Riddle and Brown., 2006). To address this dilemma, we applied the negative exponential distance weighting system widely used in metapopulation ecology to model patch-occupancy dynamics (Hanski, 1994; Hanski et al., 2017; Yeiser et al., 2021; Hanski & Ovaskainen, 2002). This method was chosen for its analytical simplicity, based on the assumption that patch occupancy probabilities decrease with varying distance from historical source populations, depending on the rarity patterns of target plants.</p>
+<p>
+We selected kernel values by linking them with rarity types (Kruckeberg and Rabinowitz, 1985; Crisfield et al., 2024) and then assigning typologies to target species. Kernel assignments were justified by comparing plotted distance decay rates with regional distribution patterns of target plants. Validation was also drawn from comparisons with the observed distance decay rates of detected targets relative to the position of first historical records (Supplementary Materials). This gives rise to a distance-based prior distribution for presence Pd = exp(-d) where d represents the distance of the patch from a historical record and  represents the kernel value. 
 </p>
-</figcaption>
-</figure>
-<pre tabindex="0"><code>## Calibrating
-</code></pre>
+<p><img src="../../../docs/extirpation_potential/distance_prior/distance_weight.jpg" alt="Illustration of different kernel distance weightings"></p>
+
 </div>
 
 
@@ -217,7 +215,8 @@ This is the multi-page printable view of this section.
     
 	<h1 id="pg-3f7c5a8199dced5422d801b29375cb81">3 - Kernel validation</h1>
     <div class="lead">Insights from metapopulation theory</div>
-	<h2 id="xxxx">XXXX<a class="td-heading-self-link" href="#xxxx" aria-label="Heading self-link"></a></h2>
+	<p>For detected species, negative-exponential kernels were estimated empirically by regressing the distances of species detections from the position of initial records, against the background of unsuccessful detections. This was done with the brms package (Bürkner, 2017) using Markov Chain Monte Carlo sampling in STAN. Our regression applies the Bernoulli distribution family to the target detection via a modelling function
+\(occupancy_i 〜 q .exp( d_i) \) where  is the kernel width, q scales the overall detection rate (not of interest to this analysis) and di is the distance from historical habitat of occupancy observation \(occupancy_i\).</p>
 <pre tabindex="0"><code>## Calibrating
 </code></pre>
 </div>

@@ -33,7 +33,7 @@
   <meta itemprop="name" content="The beta distribution">
   <meta itemprop="description" content="Representing extirpation probabilities">
   <meta itemprop="dateModified" content="2025-06-05T21:21:11-04:00">
-  <meta itemprop="wordCount" content="161">
+  <meta itemprop="wordCount" content="274">
   <meta itemprop="keywords" content="Test,Docs">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="The beta distribution">
@@ -141,16 +141,16 @@
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsextirpationbeta-li">
   <a href="../../../docs/extirpation/beta/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-docsextirpationbeta"><span class="td-sidebar-nav-active-item">The beta distribution</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsextirpationsingle_cells-li">
+  <a href="../../../docs/extirpation/single_cells/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsextirpationsingle_cells"><span class="">Effective search effort</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsextirpationregion-li">
+  <a href="../../../docs/extirpation/region/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsextirpationregion"><span class="">Pooling search effort</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsextirpation_historical-li">
   <a href="../../../docs/extirpation_historical/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsextirpation_historical"><span class="">Inferring extirpation in historical habitat</span></a>
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsextirpation_historicalsingle_cells-li">
-  <a href="../../../docs/extirpation_historical/single_cells/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsextirpation_historicalsingle_cells"><span class="">Effective search effort</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsextirpation_historicalregion-li">
-  <a href="../../../docs/extirpation_historical/region/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsextirpation_historicalregion"><span class="">Pooling search effort</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsextirpation_historicalexample-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsextirpation_historicalexample-li">
   <a href="../../../docs/extirpation_historical/example/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsextirpation_historicalexample"><span class="">Example</span></a>
 </li>
   </ul>
@@ -191,7 +191,7 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#xxxx">XXXX</a></li>
+    <li><a href="#a-convenient-choice-for-rapid-bayesian-inference">A convenient choice for rapid Bayesian inference</a></li>
   </ul>
 </nav>
       </div>
@@ -247,17 +247,27 @@
 </div>
 
   </header>
-	<h2 id="xxxx">XXXX<a class="td-heading-self-link" href="#xxxx" aria-label="Heading self-link"></a></h2>
-<p>XXXXXX</p>
-<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 1440px">
-<img class="card-img-top" src="../../../docs/extirpation/beta/beta_hu_e29669c2a9424164.jpg" width="1430" height="1176">
-<figcaption class="card-body px-0 pt-2 pb-0">
-<p class="card-text">
+	<h2 id="a-convenient-choice-for-rapid-bayesian-inference">A convenient choice for rapid Bayesian inference<a class="td-heading-self-link" href="#a-convenient-choice-for-rapid-bayesian-inference" aria-label="Heading self-link"></a></h2>
+<p>The beta distribution is a convenient choice for representing Bayesian inference on
+a probabilistic quantity such as probability of extirpation or probability of sighting.
+It is a distribution on the interval \([0, 1]\) which allows us to quickly estimate
+these probabilities and also summarise our confidence of these estimates, represented
+by how peaked the distribution is around its maximum.
 </p>
-</figcaption>
-</figure>
-<pre tabindex="0"><code>## XXXX
-</code></pre><p>
+<p><img src="../../../docs/extirpation/beta/beta.jpg" alt="beta distribution"></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#000">make_beta</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">prob</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">weight</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">c</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">prob</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">weight</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#000">prob</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">weight</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Beta distribution statistics from https://en.wikipedia.org/wiki/Beta_distribution</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">beta_mean</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">bf</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">bf</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">alpha</span> <span style="color:#ce5c00;font-weight:bold">/</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">bf</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">alpha</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">bf</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">beta</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">beta_variance</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">bf</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">bf</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">alpha</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">bf</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">beta</span> <span style="color:#ce5c00;font-weight:bold">/</span> <span style="color:#000;font-weight:bold">((</span><span style="color:#000">bf</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">alpha</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">bf</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">beta</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000">^2</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">bf</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">alpha</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">bf</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">beta</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>
   <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Expand for mathematical details
   </a>

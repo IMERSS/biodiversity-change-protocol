@@ -33,7 +33,7 @@
   <meta itemprop="name" content="Pooling search effort">
   <meta itemprop="description" content="Calculating the posterior distribution for a region">
   <meta itemprop="dateModified" content="2025-06-06T22:17:09-02:30">
-  <meta itemprop="wordCount" content="3">
+  <meta itemprop="wordCount" content="132">
   <meta itemprop="keywords" content="Test,Docs">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Pooling search effort">
@@ -188,14 +188,7 @@
 
 </div>
 
-            <div class="td-toc">
-        <nav id="TableOfContents">
-  <ul>
-    <li><a href="#xxxx">XXXX</a></li>
-  </ul>
-</nav>
-      </div>
-    
+            
             <div class="taxonomy taxonomy-terms-cloud taxo-tags">
       <h5 class="taxonomy-title">Tag Cloud</h5>
       <ul class="taxonomy-terms">
@@ -247,9 +240,26 @@
 </div>
 
   </header>
-	<h2 id="xxxx">XXXX<a class="td-heading-self-link" href="#xxxx" aria-label="Heading self-link"></a></h2>
-<pre tabindex="0"><code>## Calibrating
-</code></pre>
+	<p>Having arrived at individual values for the beta parameters for each
+cell in a region (historical or potential), we then transfer these
+into beta parameters for a regional distribution using moment matching:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Compute beta parameters given moments</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Taken from https://stats.stackexchange.com/a/12239</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">beta_params_from_moments</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">mu</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">var</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">alpha</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#000;font-weight:bold">((</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#000">mu</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">/</span> <span style="color:#000">var</span> <span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#ce5c00;font-weight:bold">/</span> <span style="color:#000">mu</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">mu</span> <span style="color:#000">^</span> <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">beta</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#000">alpha</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#ce5c00;font-weight:bold">/</span> <span style="color:#000">mu</span> <span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">params</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">list</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">alpha</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">alpha</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">beta</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">beta</span><span style="color:#000;font-weight:bold">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">apply_region_moments</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">stats</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">mu</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">var</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">params</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#000">beta_params_from_moments</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">mu</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">var</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#000">hdi</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#000">hdiBeta</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">params</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">alpha</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">params</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">beta</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">p</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">0.9</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">fields</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#000">list</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Central</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">rp</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#000">mu</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#000">Low</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">rp</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#000">hdi[2]</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#000">High</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">rp</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#000">hdi[1]</span><span style="color:#000;font-weight:bold">),</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000">alpha</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">rv</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">params</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">alpha</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#000">beta</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">rv</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">params</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">beta</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#000">mu</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">mu</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">var</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">var</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">modifyList</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">stats</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">fields</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div>
 	<style>
   .feedback--answer {
     display: inline-block;

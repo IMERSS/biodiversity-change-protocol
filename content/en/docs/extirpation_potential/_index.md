@@ -6,11 +6,8 @@ tags: [test, docs]
 weight: 8
 ---
 
-## Intersecting search effort with gridded habitat
-
-XXXXXX
-
-```
-## Convert polygons to grid
-
-```
+Inference of extirpation in potential habitat proceeds as with inference
+for historical habitat, with the additional element to the analysis that our
+prior probability of extirpation is modified by a distance kernel, which assigns
+decreasing probability of persistence with increasing distance from historical
+habitat.
