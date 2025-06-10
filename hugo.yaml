@@ -12,6 +12,8 @@ enableMissingTranslationPlaceholders: true
 
 enableRobotsTXT: true
 
+relativeURLs: true
+
 # Will give values to .Lastmod etc.
 enableGitInfo: true
 

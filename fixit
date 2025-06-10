@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sed -i 's|(/featured-background|(./featured-background|g' index.html

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Test on IMERSS</title>
+    <link>/tags/test/</link>
+    <description>Recent content in Test on IMERSS</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Inverse distance prior</title>
+      <link>/docs/extirpation_potential/distance_prior/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/extirpation_potential/distance_prior/</guid>
+      <description>&lt;h2 id=&#34;xxxx&#34;&gt;XXXX&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#xxxx&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 6010px&#34;&gt;&#xA;&lt;img class=&#34;card-img-top&#34; src=&#34;../../docs/extirpation_potential/distance_prior/distance_weight_hu_428162d9a02f47d2.jpg&#34; width=&#34;6000&#34; height=&#34;4000&#34;&gt;&#xA;&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;&#xA;&lt;p class=&#34;card-text&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## Calibrating&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Data synthesis</title>
+      <link>/docs/baseline-analysis/data_synthesis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/baseline-analysis/data_synthesis/</guid>
+      <description>&lt;h2 id=&#34;combination-of-heterogeneous-data-in-baseline-analyses&#34;&gt;Combination of heterogeneous data in baseline analyses&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#combination-of-heterogeneous-data-in-baseline-analyses&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;Statistical approaches to modeling biodiversity change are often paralyzed by limitations and deficiencies inherent&#xA;in biodiversity data—especially when historical and contemporary data are combined from multiple sources.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Data are commonly unstructured, or heterogeneous, lacking consistent attributes or metadata&lt;/li&gt;&#xA;&lt;li&gt;Data are often biased toward positive detections (lacking absence information)&lt;/li&gt;&#xA;&lt;li&gt;Data may be collected in ways that violate the assumptions of statistical models&lt;/li&gt;&#xA;&lt;li&gt;Georeferencing is often generalized based on vague locality information&lt;/li&gt;&#xA;&lt;li&gt;Data may be sparse, with few or perhaps only singleton records to vouch for historical populations, especially at local scales&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;baseline-analyses-offer-a-practical-approach&#34;&gt;Baseline analyses offer a practical approach&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#baseline-analyses-offer-a-practical-approach&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;A practical approach to this difficult situation is to forego any advanced modeling practices &lt;em&gt;ab initio&lt;/em&gt;&#xA;and begin instead with a simple baseline analysis of historical &lt;em&gt;vs&lt;/em&gt; contemporary sources of biodiversity data.&#xA;This depends on normalization of species occurrence data to support the comparison of historical and contemporary species records.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Defining historical habitat patches</title>
+      <link>/docs/mapping_habitat/historical_habitat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/mapping_habitat/historical_habitat/</guid>
+      <description>&lt;h2 id=&#34;mapping-target-species&#34;&gt;Mapping target species&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#mapping-target-species&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;XXXXXXX&lt;/p&gt;&#xA;&lt;h2 id=&#34;defining-area-of-habitat-patches-based-on-coordinate-uncertainty-of-target--occurrence-records&#34;&gt;Defining area of habitat patches based on coordinate uncertainty of target  occurrence records&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#defining-area-of-habitat-patches-based-on-coordinate-uncertainty-of-target--occurrence-records&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;XXXXXXX&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Defining potential habitat patches</title>
+      <link>/docs/mapping_habitat/potential_habitat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/mapping_habitat/potential_habitat/</guid>
+      <description>&lt;h2 id=&#34;mapping-potential-habitat&#34;&gt;Mapping potential habitat&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#mapping-potential-habitat&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;In the previous habitat mapping vignette, we defined the extent of historical habitat.&lt;/p&gt;&#xA;&lt;h2 id=&#34;expanding-the-habitat-grid-to-include-potential-habitat&#34;&gt;Expanding the habitat grid to include potential habitat&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#expanding-the-habitat-grid-to-include-potential-habitat&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;XXXXX&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Effective search effort</title>
+      <link>/docs/extirpation_historical/single_cells/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/extirpation_historical/single_cells/</guid>
+      <description>&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;&#xA;&lt;p&gt;The IUCN defines a taxon as ‘presumed extinct’ “when &lt;em&gt;exhaustive surveys&lt;/em&gt; in known and/or expected habitat &amp;hellip;&#xA;have failed to record an individual.”&lt;/p&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;h2 id=&#34;what-constitutes-a-complete-search&#34;&gt;What constitutes a complete search?&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#what-constitutes-a-complete-search&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;&#xA;Imagine yourself in a \(30×30m\) area (better yet, get out into the field to think this through!)&#xA;How much time do you think you need to adequately search this area?&#xA;&lt;/p&gt;&#xA;&lt;p&gt;There are many factors to consider here, including the size of the target organism, the complexity of its environment,&#xA;search conditions, the surveyor&amp;rsquo;s efficacy, &lt;em&gt;etc&lt;/em&gt;..&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pooling search effort</title>
+      <link>/docs/extirpation_historical/region/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/extirpation_historical/region/</guid>
+      <description>&lt;h2 id=&#34;xxxx&#34;&gt;XXXX&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#xxxx&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## Calibrating&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Rarity types</title>
+      <link>/docs/extirpation_potential/rarity_types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/extirpation_potential/rarity_types/</guid>
+      <description>&lt;h2 id=&#34;xxxx&#34;&gt;XXXX&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#xxxx&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## Calibrating&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Solow calculation (Prior I)</title>
+      <link>/docs/inferring_extirpation_risk/solow_calculation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/inferring_extirpation_risk/solow_calculation/</guid>
+      <description>&lt;h2 id=&#34;inferring-local-extinction-based-on-limited-occurrence-data&#34;&gt;Inferring local extinction based on limited occurrence data&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#inferring-local-extinction-based-on-limited-occurrence-data&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;XXXXXXX&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;a class=&#34;btn btn-primary&#34; data-bs-toggle=&#34;collapse&#34; href=&#34;#collapseExample&#34; role=&#34;button&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapseExample&#34;&gt;&#xA;    Expand for mathematical details&#xA;  &lt;/a&gt;&#xA;&lt;/p&gt;&#xA;&lt;div class=&#34;collapse&#34; id=&#34;collapseExample&#34;&gt;&#xA;  &lt;div class=&#34;card card-body&#34;&gt;&#xA;&lt;p&gt;&#xA;Solow (1993) provides a framework for determining a reasonable prior distribution &#xA;for belief about species extinction when observational data are limited. &#xA;Their Equation 3 presents a Bayes Factor for summarizing evidence in favor of extinction, &#xA;given by: \(B(t) = (n -1) / [(T/t_n )^(n - 1)  - 1]\) where \(n\) is the number of observations and \(Ti\) &#xA;represents the \(ith\) sighting time and \(T\) is the present date. &#xA;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Baseline analysis</title>
+      <link>/docs/baseline-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/baseline-analysis/</guid>
+      <description>&lt;h2 id=&#34;early-assessment-of-local-exinction-risk&#34;&gt;Early assessment of local exinction risk&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#early-assessment-of-local-exinction-risk&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;Baseline analyses offer a simple but useful preliminary approach to assessing&#xA;biodiversity change. By comparing historical collections data with contemporary&#xA;&amp;ldquo;big biodiversity data&amp;rdquo;, such as those available via the Global Biodiversity&#xA;Information Facility or iNaturalist, we can identify species or populations that&#xA;may potentially be at risk of local extinction. Keeping this approach simple, we can&#xA;overcome some of the immediate challenges posed by the analysis of complex&#xA;biodiversity data sets.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Comparing data</title>
+      <link>/docs/baseline-analysis/differences/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/baseline-analysis/differences/</guid>
+      <description>&lt;h2 id=&#34;identifying-potential-changes&#34;&gt;Identifying potential changes&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#identifying-potential-changes&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;Differences between historical and contemporary biodiversity data could potentially indicate change in the system:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;In conservation assessments, historically reported species that have not been seen within XX years are often considered&#xA;&amp;lsquo;historical populations&amp;rsquo; whose persistence is in question (XXXX)&lt;/li&gt;&#xA;&lt;li&gt;Conversely, species that appear suddenly in a biodiversity record may signal a recent dispersal or colonization event&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Here, we focus specifically on &amp;ldquo;species at large&amp;rdquo;, or historical reports that have gone undetected in recent decades.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Inferring extirpation risk</title>
+      <link>/docs/inferring_extirpation_risk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/inferring_extirpation_risk/</guid>
+      <description>&lt;h2 id=&#34;detection-frequency&#34;&gt;Detection frequency&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#detection-frequency&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;Another metric that might be considered in evaluating extirpation risk is detection&#xA;frequency or sighting rate. Whether a species was observed only once historically,&#xA;or multiple times, before going unreported, might influence our prior belief in the&#xA;likelihood of its persistence or extirpation.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;If there are many records vouching for a species&amp;rsquo; historical occurrence, we might have&#xA;greater confidence that it was a well established population&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kernel validation</title>
+      <link>/docs/extirpation_potential/kernel_validation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/extirpation_potential/kernel_validation/</guid>
+      <description>&lt;h2 id=&#34;xxxx&#34;&gt;XXXX&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#xxxx&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## Calibrating&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Representing habitat</title>
+      <link>/docs/mapping_habitat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/mapping_habitat/</guid>
+      <description>&lt;h2 id=&#34;mapping-habitat&#34;&gt;Mapping habitat&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#mapping-habitat&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;Habitat can be represented in many ways, ranging from complex species distribution models&#xA;to relatively simple ecosystem mapping or site classification data.&lt;/p&gt;&#xA;&lt;p&gt;In this tutorial, we use high resolution () site classification mapping to map habitat for our target species.&#xA;This spatial data takes the shape of polygons circumscribing different ecosystem types or areas of land use.&#xA;For many regions, there exist databases where this type of spatial data can be accessed.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Target selection criteria</title>
+      <link>/docs/baseline-analysis/criteria/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/baseline-analysis/criteria/</guid>
+      <description>&lt;h2 id=&#34;open-ended-assessments-of-potential-change&#34;&gt;Open-ended assessments of potential change&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#open-ended-assessments-of-potential-change&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;In order to proceed beyond an initial baseline analysis to assess possible changes in a system, we can set&#xA;useful criteria to focus our attention (and limited resources) on species that are most likely to be vulnerable.&lt;/p&gt;&#xA;&lt;p&gt;Depending on the criteria we set, there may emerge many potential target species or populations of concern.&#xA;On the first pass, however, it is notable that this decision-making process is blind to any conservation priorities we may have,&#xA;which can bias biodiversity change assessments.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Search effort</title>
+      <link>/docs/search_effort/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/search_effort/</guid>
+      <description>&lt;h2 id=&#34;intersecting-search-effort-with-gridded-habitat&#34;&gt;Intersecting search effort with gridded habitat&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#intersecting-search-effort-with-gridded-habitat&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;XXXXXX&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## Convert polygons to grid&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Inferring extirpation</title>
+      <link>/docs/extirpation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/extirpation/</guid>
+      <description>&lt;h2 id=&#34;intersecting-search-effort-with-gridded-habitat&#34;&gt;Intersecting search effort with gridded habitat&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#intersecting-search-effort-with-gridded-habitat&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;XXXXXX&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## Convert polygons to grid&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>The beta distribution</title>
+      <link>/docs/extirpation/beta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/extirpation/beta/</guid>
+      <description>&lt;h2 id=&#34;xxxx&#34;&gt;XXXX&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#xxxx&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;XXXXXX&lt;/p&gt;&#xA;&lt;figure class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 1440px&#34;&gt;&#xA;&lt;img class=&#34;card-img-top&#34; src=&#34;../../docs/extirpation/beta/beta_hu_e29669c2a9424164.jpg&#34; width=&#34;1430&#34; height=&#34;1176&#34;&gt;&#xA;&lt;figcaption class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;&#xA;&lt;p class=&#34;card-text&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## XXXX&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&#xA;  &lt;a class=&#34;btn btn-primary&#34; data-bs-toggle=&#34;collapse&#34; href=&#34;#collapseExample&#34; role=&#34;button&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapseExample&#34;&gt;&#xA;    Expand for mathematical details&#xA;  &lt;/a&gt;&#xA;&lt;/p&gt;&#xA;&lt;div class=&#34;collapse&#34; id=&#34;collapseExample&#34;&gt;&#xA;  &lt;div class=&#34;card card-body&#34;&gt;&#xA;&lt;p&gt;&#xA; We aimed to model the probability of a species’ extirpation in a particular area. For consistency with mathematical treatments, we present calculations with a random variable \(θ\)&#xA; encoding the probability of presence in the range \([0, 1]\) and convert to \(1-θ\), the probability of extirpation when we summarise our results. &#xA; Observations of presence or absence \(y_t\) are governed by a Bernoulli process with parameter \(θ\), where \(p(y_t |θ)=θ\) if \(y_(t )=1\) represents presence. &#xA;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Inferring extirpation in historical habitat</title>
+      <link>/docs/extirpation_historical/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/extirpation_historical/</guid>
+      <description>&lt;h2 id=&#34;intersecting-search-effort-with-gridded-habitat&#34;&gt;Intersecting search effort with gridded habitat&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#intersecting-search-effort-with-gridded-habitat&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;XXXXXX&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## Convert polygons to grid&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Inferring extirpation in potential habitat</title>
+      <link>/docs/extirpation_potential/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/extirpation_potential/</guid>
+      <description>&lt;h2 id=&#34;intersecting-search-effort-with-gridded-habitat&#34;&gt;Intersecting search effort with gridded habitat&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#intersecting-search-effort-with-gridded-habitat&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;XXXXXX&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## Convert polygons to grid&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

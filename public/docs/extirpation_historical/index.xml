@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Inferring extirpation in historical habitat on IMERSS</title>
+    <link>/docs/extirpation_historical/</link>
+    <description>Recent content in Inferring extirpation in historical habitat on IMERSS</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="/docs/extirpation_historical/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Effective search effort</title>
+      <link>/docs/extirpation_historical/single_cells/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/extirpation_historical/single_cells/</guid>
+      <description>&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;&#xA;&lt;p&gt;The IUCN defines a taxon as ‘presumed extinct’ “when &lt;em&gt;exhaustive surveys&lt;/em&gt; in known and/or expected habitat &amp;hellip;&#xA;have failed to record an individual.”&lt;/p&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;h2 id=&#34;what-constitutes-a-complete-search&#34;&gt;What constitutes a complete search?&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#what-constitutes-a-complete-search&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;&#xA;Imagine yourself in a \(30×30m\) area (better yet, get out into the field to think this through!)&#xA;How much time do you think you need to adequately search this area?&#xA;&lt;/p&gt;&#xA;&lt;p&gt;There are many factors to consider here, including the size of the target organism, the complexity of its environment,&#xA;search conditions, the surveyor&amp;rsquo;s efficacy, &lt;em&gt;etc&lt;/em&gt;..&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pooling search effort</title>
+      <link>/docs/extirpation_historical/region/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/extirpation_historical/region/</guid>
+      <description>&lt;h2 id=&#34;xxxx&#34;&gt;XXXX&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#xxxx&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## Calibrating&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Example</title>
+      <link>/docs/extirpation_historical/example/</link>
+      <pubDate>Wed, 04 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>/docs/extirpation_historical/example/</guid>
+      <description>&lt;p&gt;Before the beginning of the BioGaliano project in 2015, a total of 607 vascular plant species were reported for Galiano Island, represented by 1,698 records, including 446 herbarium specimens (Fig. 1).&#xA;After five years of concerted search effort, amounting to &amp;gt;18,000 observations, we documented 560 species on the project, confirming 433/607 historical species reports (71% of the historically reported diversity) and adding 127 new species to the list.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

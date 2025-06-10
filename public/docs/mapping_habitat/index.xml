@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Representing habitat on IMERSS</title>
+    <link>/docs/mapping_habitat/</link>
+    <description>Recent content in Representing habitat on IMERSS</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="/docs/mapping_habitat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Defining potential habitat patches</title>
+      <link>/docs/mapping_habitat/potential_habitat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/mapping_habitat/potential_habitat/</guid>
+      <description>&lt;h2 id=&#34;mapping-potential-habitat&#34;&gt;Mapping potential habitat&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#mapping-potential-habitat&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;In the previous habitat mapping vignette, we defined the extent of historical habitat.&lt;/p&gt;&#xA;&lt;h2 id=&#34;expanding-the-habitat-grid-to-include-potential-habitat&#34;&gt;Expanding the habitat grid to include potential habitat&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#expanding-the-habitat-grid-to-include-potential-habitat&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;XXXXX&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Example</title>
+      <link>/docs/mapping_habitat/example/</link>
+      <pubDate>Wed, 04 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>/docs/mapping_habitat/example/</guid>
+      <description>&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;&#xA;&lt;p&gt;This is a placeholder page that shows you how to use this template site.&lt;/p&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;Do you have any example &lt;strong&gt;applications&lt;/strong&gt; or &lt;strong&gt;code&lt;/strong&gt; for your users in your repo&#xA;or elsewhere? Link to your examples here.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
