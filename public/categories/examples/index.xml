@@ -127,13 +127,6 @@
       <description>&lt;p&gt;After a gridded search effort density dataframe has been assembled,&#xA;inference of extirpation risk proceeds in two stages.&lt;/p&gt;&#xA;&lt;p&gt;In the first stage, we infer an posterior distribution for extirpation&#xA;probability for each cell in historical and potential habitat.&lt;/p&gt;&#xA;&lt;p&gt;In the second stage, these per-cell estimates are pooled into regional&#xA;estimates for extirpation, forming quantified proxies for the IUCN&#xA;extinction criteria, complete with uncertainty estimates.&lt;/p&gt;&#xA;&lt;p&gt;At both stages, prior and posterior estimates of extirpation are modelled using&#xA;Bayesian inference on distributions from the beta family.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Inferring extirpation in historical habitat</title>
-      <link>/docs/extirpation_historical/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/docs/extirpation_historical/</guid>
-      <description>&lt;h2 id=&#34;intersecting-search-effort-with-gridded-habitat&#34;&gt;Intersecting search effort with gridded habitat&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#intersecting-search-effort-with-gridded-habitat&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;XXXXXX&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## Convert polygons to grid&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    <item>
       <title>Inferring extirpation in potential habitat</title>
       <link>/docs/extirpation_potential/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

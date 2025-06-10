@@ -140,8 +140,8 @@ params:
   prism_syntax_highlighting: false
 
   copyright:
-    authors: Docsy Authors | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) |
-    from_year: 2018
+    authors: IMERSS | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) |
+    from_year: 2025
 
   # User interface configuration
   ui:

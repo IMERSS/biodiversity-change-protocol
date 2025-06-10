@@ -198,9 +198,9 @@ by how peaked the distribution is around its maximum.
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
 <p>
- We aimed to model the probability of a species’ extirpation in a particular area. For consistency with mathematical treatments, we present calculations with a random variable \(θ\)
+ We model the probability of a species’ extirpation in a particular area. For consistency with mathematical treatments, we present calculations with a random variable \(θ\)
  encoding the probability of presence in the range \([0, 1]\) and convert to \(1-θ\), the probability of extirpation when we summarise our results. 
- Observations of presence or absence \(y_t\) are governed by a Bernoulli process with parameter \(θ\), where \(p(y_t |θ)=θ\) if \(y_(t )=1\) represents presence. 
+ Observations of presence or absence \(y_t\) are governed by a Bernoulli process with parameter \(θ\), where \(p(y_t |θ)=θ\) if \(y_t =1\) represents presence. 
 </p>
 <p>
 Following the notation of Royle and Dorazio (2008), we updated our prior beliefs (prior distribution \(π(θ)\)) using a probabilistic model (likelihood function \(f(y|θ)\)) to derive posterior beliefs (posterior distribution \(π(θ|y)\)). This produces the classical form of Bayes theorem for inference written as:
@@ -208,10 +208,10 @@ Following the notation of Royle and Dorazio (2008), we updated our prior beliefs
 </p>
 <p>
 We modeled the probability of presence by the beta distribution on \([0, 1]\), which is described by two shape parameters \(α\) and \(β\) and takes the form:
-                  $$f(y|α,β) ∝ y^(α-1) (1-y)^(β-1)$$   (Equation 2)
-</p
+                  $$f(y|α,β) ∝ y^{(α-1)} (1-y)^{(β-1)}$$   (Equation 2)
+</p>
 <p>
-This is a convenient choice because, under the Bayesian framework, we can select a conjugate prior within this family, which leads to a posterior distribution in the same family. Given our observations of target species take the form of binary variables (all representing non-detection), these can be placed within a hierarchical Bayesian modeling context where the shape parameters \(α\) \(β\) represent hyperparameters for our modeled distributions.
+This is a convenient choice because, under the Bayesian framework, we can select a conjugate prior within this family, which leads to a posterior distribution in the same family. Given our observations of target species take the form of binary variables (all representing non-detection), these can be placed within a hierarchical Bayesian modeling context where the shape parameters \(α\) and \(β\) represent hyperparameters for our modeled distributions.
 </p>
   </div>
 </div>
@@ -385,8 +385,8 @@ into beta parameters for a regional distribution using moment matching:</p>
 
       </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
         <span class="td-footer__copyright">&copy;
-    2018&ndash;2025
-    <span class="td-footer__authors">Docsy Authors | <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a> |</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span><span class="ms-2"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></span>
+    2025&ndash;2025
+    <span class="td-footer__authors">IMERSS | <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a> |</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span><span class="ms-2"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></span>
       </div>
     </div>
   </div>
