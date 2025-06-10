@@ -25,4 +25,4 @@ given by: \(B(t) = (n -1) / [(T/t_n )^(n - 1)  - 1]\) where \(n\) is the number 
 represents the \(ith\) sighting time and \(T\) is the present date. 
 </p>
 </div>
-  </div>
+</div>
