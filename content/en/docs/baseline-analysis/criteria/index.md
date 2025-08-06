@@ -9,14 +9,15 @@ weight: 4
 ## Open-ended assessments of potential change
 
 In order to proceed beyond an initial baseline analysis to assess possible changes in a system, we can set
-useful criteria to focus our attention (and limited resources) on species that are most likely to be vulnerable.
+criteria to focus our attention (and limited resources) on high risk species that are most likely to be vulnerable.
 
 Depending on the criteria we set, there may emerge many potential target species or populations of concern.
-On the first pass, however, it is notable that this decision-making process is blind to any conservation priorities we may have,
-which can bias biodiversity change assessments.
+On the first pass, however, it is notable that this decision-making process is blind to any conservation priorities 
+we might have (*e.g.*, species assessed as vulnerable at a provincial or national scale), which can bias biodiversity 
+change assessments.
 
 {{% pageinfo %}}
-"Conservation programs often prioritize species-at-risk, even while many common species may undergo the highest relative losses."
+"Conservation programs often prioritize species-at-risk, even while many common species may undergo the highest relative losses (Jansen *et al.*, 2019)."
 {{% /pageinfo %}}
 
 
@@ -73,7 +74,7 @@ The number of times a species occurs in a historical record can be useful inform
 1) A low number of occurrences could potentially signal rarity or vulnerability. 
 2) The more species occurrences, the more confidence we can have that a species was well established historically.
 
-This prior knowledge can help to inform our assessment of the vulnerability of species to local extinction.
+This prior knowledge can help to inform our assessment of a species' vulnerability to local extinction.
 
 ```
 # Tabulate species record counts

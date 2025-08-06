@@ -10,7 +10,6 @@ weight: 2
 
 XXXXXXX
 
-
 ## Defining area of habitat patches based on coordinate uncertainty of target  occurrence records
 
 XXXXXXX

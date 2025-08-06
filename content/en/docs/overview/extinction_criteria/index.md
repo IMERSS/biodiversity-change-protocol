@@ -18,8 +18,8 @@ criteria (‘exhaustive’, ‘expected’, ‘appropriate’), not only to clar
 for claims regarding extirpation but also to inform effective search methods and to assess the feasibility 
 of meeting these requirements.
 
-Our goal is to transform the abstract problem of assessing extinction into a structured, 
-measurable, and actionable process. With that goal in mind, the following 
-documentation seeks to clarify the steps and assumptions embedded within IUCN extinction 
-criteria—assumptions that often present challenges for communities seeking to 
-apply them in practice.
+Our goal is to transform the abstract problem of assessing extinction into a 
+structured, measurable, and actionable process. To that end, this documentation 
+clarifies the steps and assumptions underlying the IUCN extinction criteria and 
+proposes a practical methodology for applying them to infer extinction events in 
+real-world contexts.

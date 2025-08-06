@@ -21,14 +21,15 @@ in biodiversity data—especially when historical and contemporary data are comb
 
 A practical approach to this difficult situation is to forego any advanced modeling practices *ab initio*
 and begin instead with a simple baseline analysis of historical *vs* contemporary sources of biodiversity data.
-This depends on normalization of species occurrence data to support the comparison of historical and contemporary species records.
+This approach will generally depend on normalization of species occurrence data across multiple datasets, to support the comparison of historical
+and contemporary species records.
 
 {{% pageinfo %}}
 Normalization of biodiversity data is a thorny enough problem in its own right and not treated here. For this
-tutorial we assume that names are aligned and any synonymy is resolved between the data being compared.
+tutorial we assume that names are aligned and any ambiguity (synonymy, etc.) is resolved between the data being compared.
 {{% /pageinfo %}}
 
-* Best practices are to adhere to the Darwin Core standard for species occurrence data.
+* Best practices are to adhere to [Darwin Core standards](https://dwc.tdwg.org) for species occurrence data.
 * Different communities may prefer to adhere to different taxonomic databases. Any taxonomic standard can be observed, as 
 long as it results in consistent mapping of taxa between datasets.
 
