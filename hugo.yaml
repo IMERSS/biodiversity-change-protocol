@@ -12,10 +12,12 @@ enableMissingTranslationPlaceholders: true
 
 enableRobotsTXT: true
 
+theme: "docsy"
+
 relativeURLs: true
 
 # Will give values to .Lastmod etc.
-enableGitInfo: true
+enableGitInfo: false
 
 # Comment out to disable taxonomies in Docsy
 # disableKinds: [taxonomy]
@@ -203,13 +205,3 @@ params:
         url: https://example.org/mail
         icon: fa fa-envelope
         desc: Discuss development issues around the project
-
-module:
-  # Uncomment the next line to build and serve using local docsy clone declared in the named Hugo workspace:
-  # workspace: docsy.work
-  hugoVersion:
-    extended: true
-    min: 0.146.0
-  imports:
-    - path: github.com/google/docsy
-      disable: false

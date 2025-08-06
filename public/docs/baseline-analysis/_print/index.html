@@ -30,14 +30,15 @@
 
   <meta itemprop="name" content="Baseline analysis">
   <meta itemprop="description" content="A first pass approach to biodiversity change assessments">
-  <meta itemprop="dateModified" content="2025-06-05T21:21:11-04:00">
-  <meta itemprop="wordCount" content="77">
+  <meta itemprop="datePublished" content="2025-06-04T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-06-04T00:00:00+00:00">
+  <meta itemprop="wordCount" content="75">
   <meta itemprop="keywords" content="Test,Docs">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Baseline analysis">
   <meta name="twitter:description" content="A first pass approach to biodiversity change assessments">
-<link rel="preload" href="../../../scss/main.min.6c0ab20cfeb11b67fd4c1e29a9c26cb743b7f22670386f8fae1066506b5ac33c.css" as="style" integrity="sha256-bAqyDP6xG2f9TB4pqcJst0O38iZwOG&#43;PrhBmUGtawzw=" crossorigin="anonymous">
-<link href="../../../scss/main.min.6c0ab20cfeb11b67fd4c1e29a9c26cb743b7f22670386f8fae1066506b5ac33c.css" rel="stylesheet" integrity="sha256-bAqyDP6xG2f9TB4pqcJst0O38iZwOG&#43;PrhBmUGtawzw=" crossorigin="anonymous">
+<link rel="preload" href="../../../scss/main.scss" as="style" integrity="" crossorigin="anonymous">
+<link href="../../../scss/main.scss" rel="stylesheet">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -147,12 +148,12 @@ This is the multi-page printable view of this section.
 
 <div class="content">
       <h2 id="early-assessment-of-local-exinction-risk">Early assessment of local exinction risk<a class="td-heading-self-link" href="#early-assessment-of-local-exinction-risk" aria-label="Heading self-link"></a></h2>
-<p>Baseline analyses offer a simple but useful preliminary approach to assessing
+<p>Baseline analyses offer a useful preliminary approach to assessing
 biodiversity change. By comparing historical collections data with contemporary
 &ldquo;big biodiversity data&rdquo;, such as those available via the Global Biodiversity
 Information Facility or iNaturalist, we can identify species or populations that
-may potentially be at risk of local extinction. Keeping this approach simple, we can
-overcome some of the immediate challenges posed by the analysis of complex
+may potentially be at risk of local extinction. Keeping this approach simple,
+we can overcome some of the immediate challenges posed by the analysis of complex
 biodiversity data sets.</p>
 
 </div>
@@ -190,17 +191,18 @@ in biodiversity data—especially when historical and contemporary data are comb
 <h2 id="baseline-analyses-offer-a-practical-approach">Baseline analyses offer a practical approach<a class="td-heading-self-link" href="#baseline-analyses-offer-a-practical-approach" aria-label="Heading self-link"></a></h2>
 <p>A practical approach to this difficult situation is to forego any advanced modeling practices <em>ab initio</em>
 and begin instead with a simple baseline analysis of historical <em>vs</em> contemporary sources of biodiversity data.
-This depends on normalization of species occurrence data to support the comparison of historical and contemporary species records.</p>
+This approach will generally depend on normalization of species occurrence data across multiple datasets, to support the comparison of historical
+and contemporary species records.</p>
 
 
 <div class="pageinfo pageinfo-primary">
 <p>Normalization of biodiversity data is a thorny enough problem in its own right and not treated here. For this
-tutorial we assume that names are aligned and any synonymy is resolved between the data being compared.</p>
+tutorial we assume that names are aligned and any ambiguity (synonymy, etc.) is resolved between the data being compared.</p>
 
 </div>
 
 <ul>
-<li>Best practices are to adhere to the Darwin Core standard for species occurrence data.</li>
+<li>Best practices are to adhere to <a href="https://dwc.tdwg.org">Darwin Core standards</a> for species occurrence data.</li>
 <li>Different communities may prefer to adhere to different taxonomic databases. Any taxonomic standard can be observed, as
 long as it results in consistent mapping of taxa between datasets.</li>
 </ul>
@@ -223,16 +225,16 @@ long as it results in consistent mapping of taxa between datasets.</li>
 	<h1 id="pg-de4c46b404158559824ab4e8c2da45fa">2 - Comparing data</h1>
     <div class="lead">The difference that makes the difference</div>
 	<h2 id="identifying-potential-changes">Identifying potential changes<a class="td-heading-self-link" href="#identifying-potential-changes" aria-label="Heading self-link"></a></h2>
-<p>Differences between historical and contemporary biodiversity data could potentially indicate change in the system:</p>
+<p>Differences between historical and contemporary biodiversity data could potentially indicate change in a system:</p>
 <ul>
 <li>In conservation assessments, historically reported species that have not been seen within XX years are often considered
-&lsquo;historical populations&rsquo; whose persistence is in question (XXXX)</li>
-<li>Conversely, species that appear suddenly in a biodiversity record may signal a recent dispersal or colonization event</li>
+&lsquo;historical populations&rsquo; whose persistence is considered questionable (XXXX)</li>
+<li>Conversely, species that suddenly appear in a biodiversity record may signal a recent dispersal, colonization or invasion event</li>
 </ul>
-<p>Here, we focus specifically on &ldquo;species at large&rdquo;, or historical reports that have gone undetected in recent decades.</p>
+<p>Here, we focus specifically on &ldquo;species at large&rdquo;, <em>i.e.</em>, historical reports that have gone undetected in recent decades.</p>
 <pre tabindex="0"><code># Not seen in the last 20 years
 </code></pre><p>Populations or species that have gone undetected for many years may be considered at risk of extirpation and targeted for assessment.
-However, there are other important criteria to consider before undertaking such an effort.</p>
+However, there are other important criteria that communities may consider before undertaking such efforts.</p>
 
 </div>
 
@@ -252,14 +254,15 @@ However, there are other important criteria to consider before undertaking such 
     <div class="lead">Honing focus on biodiversity change</div>
 	<h2 id="open-ended-assessments-of-potential-change">Open-ended assessments of potential change<a class="td-heading-self-link" href="#open-ended-assessments-of-potential-change" aria-label="Heading self-link"></a></h2>
 <p>In order to proceed beyond an initial baseline analysis to assess possible changes in a system, we can set
-useful criteria to focus our attention (and limited resources) on species that are most likely to be vulnerable.</p>
+criteria to focus our attention (and limited resources) on high risk species that are most likely to be vulnerable.</p>
 <p>Depending on the criteria we set, there may emerge many potential target species or populations of concern.
-On the first pass, however, it is notable that this decision-making process is blind to any conservation priorities we may have,
-which can bias biodiversity change assessments.</p>
+On the first pass, however, it is notable that this decision-making process is blind to any conservation priorities
+we might have (<em>e.g.</em>, species assessed as vulnerable at a provincial or national scale), which can bias biodiversity
+change assessments.</p>
 
 
 <div class="pageinfo pageinfo-primary">
-<p>&ldquo;Conservation programs often prioritize species-at-risk, even while many common species may undergo the highest relative losses.&rdquo;</p>
+<p>&ldquo;Conservation programs often prioritize species-at-risk, even while many common species may undergo the highest relative losses (Jansen <em>et al.</em>, 2019).&rdquo;</p>
 
 </div>
 
@@ -294,7 +297,7 @@ At the very least, we will want to ensure our targets have coordinates:</p>
 <li>A low number of occurrences could potentially signal rarity or vulnerability.</li>
 <li>The more species occurrences, the more confidence we can have that a species was well established historically.</li>
 </ol>
-<p>This prior knowledge can help to inform our assessment of the vulnerability of species to local extinction.</p>
+<p>This prior knowledge can help to inform our assessment of a species&rsquo; vulnerability to local extinction.</p>
 <pre tabindex="0"><code># Tabulate species record counts
 #
 </code></pre>

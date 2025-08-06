@@ -30,14 +30,15 @@
 
   <meta itemprop="name" content="Representing habitat">
   <meta itemprop="description" content="Gridding land classification data">
-  <meta itemprop="dateModified" content="2025-06-07T11:45:10-02:30">
-  <meta itemprop="wordCount" content="137">
+  <meta itemprop="datePublished" content="2025-06-04T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-06-04T00:00:00+00:00">
+  <meta itemprop="wordCount" content="160">
   <meta itemprop="keywords" content="Test,Docs">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Representing habitat">
   <meta name="twitter:description" content="Gridding land classification data">
-<link rel="preload" href="../../../scss/main.min.6c0ab20cfeb11b67fd4c1e29a9c26cb743b7f22670386f8fae1066506b5ac33c.css" as="style" integrity="sha256-bAqyDP6xG2f9TB4pqcJst0O38iZwOG&#43;PrhBmUGtawzw=" crossorigin="anonymous">
-<link href="../../../scss/main.min.6c0ab20cfeb11b67fd4c1e29a9c26cb743b7f22670386f8fae1066506b5ac33c.css" rel="stylesheet" integrity="sha256-bAqyDP6xG2f9TB4pqcJst0O38iZwOG&#43;PrhBmUGtawzw=" crossorigin="anonymous">
+<link rel="preload" href="../../../scss/main.scss" as="style" integrity="" crossorigin="anonymous">
+<link href="../../../scss/main.scss" rel="stylesheet">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -152,15 +153,18 @@ This is the multi-page printable view of this section.
       <h2 id="mapping-habitat">Mapping habitat<a class="td-heading-self-link" href="#mapping-habitat" aria-label="Heading self-link"></a></h2>
 <p>Habitat can be represented in many ways, ranging from complex species distribution models
 to relatively simple ecosystem mapping or site classification data.</p>
-<p>In this tutorial, we use high resolution () site classification mapping to map habitat for our target species.
-This spatial data takes the shape of polygons circumscribing different ecosystem types or areas of land use.
-For many regions, there exist databases where this type of spatial data can be accessed.</p>
+<p>In this tutorial, we use high resolution (1:5,000 scale) site classification mapping
+to map habitat for our target species. This spatial data takes the shape of polygons
+circumscribing different ecosystem types or areas of land use. This versatile approach
+should be accessible to many communities, wherever land classification or terrestrial
+ecosystem mapping data are available. Otherwise, habitat can be mapped based on
+orthoimagery generated using a variety of methods (<em>e.g.</em>, satellite, drone).</p>
 <h3 id="filtering-site-classification-mapping-based-on-habitat-types-for-target-species">Filtering site classification mapping based on habitat types for target species<a class="td-heading-self-link" href="#filtering-site-classification-mapping-based-on-habitat-types-for-target-species" aria-label="Heading self-link"></a></h3>
 <p>XXXXXXX</p>
 <h3 id="converting-polygons-to-gridded-representation-of-habitat">Converting polygons to gridded representation of habitat<a class="td-heading-self-link" href="#converting-polygons-to-gridded-representation-of-habitat" aria-label="Heading self-link"></a></h3>
 <p>XXXXX</p>
 <p>For this methodology, a key consideration is to ensure that the grid scale
-corresponds with precision in features representing search effort.</p>
+corresponds with the precision in features representing search effort.</p>
 <pre tabindex="0"><code>## Convert polygons to grid
 </code></pre><h3 id="calculate-proportional-representation-of-habitat-within-grid-cells">Calculate proportional representation of habitat within grid cells<a class="td-heading-self-link" href="#calculate-proportional-representation-of-habitat-within-grid-cells" aria-label="Heading self-link"></a></h3>
 <pre tabindex="0"><code>## Calculate prop. of habitat falling within grid cells

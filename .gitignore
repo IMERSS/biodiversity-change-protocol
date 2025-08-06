@@ -6,3 +6,6 @@ node_modules/
 
 .DS_Store
 
+# Ignore bulky Analysis files sourced from Google Drive
+Analysis_inputs/Habitat_model
+Analysis_inputs/Occurrences

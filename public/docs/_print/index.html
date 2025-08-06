@@ -22,12 +22,14 @@
 <title>Advancing a protocol for the detection of species extirpation | IMERSS</title>
 <meta name="description" content="This documentation is a work in progress.
 Detecting biodiversity change is a complex challenge, involving many “wicked problems” that communities around the world must navigate to make progress toward the goals of the UN Convention on Biological Diversity.
+Here we present a protocol to address a subset of these problems, with a focus on inferring local extinction, or extirpation.
 This protocol is fully developed and implemented in the research article published in Plants, Planet, People. Through this documentation, we provide a walk-through of this framework, centering on a tutorial dataset.">
 <meta property="og:url" content="/docs/">
   <meta property="og:site_name" content="IMERSS">
   <meta property="og:title" content="Advancing a protocol for the detection of species extirpation">
   <meta property="og:description" content="This documentation is a work in progress.
 Detecting biodiversity change is a complex challenge, involving many “wicked problems” that communities around the world must navigate to make progress toward the goals of the UN Convention on Biological Diversity.
+Here we present a protocol to address a subset of these problems, with a focus on inferring local extinction, or extirpation.
 This protocol is fully developed and implemented in the research article published in Plants, Planet, People. Through this documentation, we provide a walk-through of this framework, centering on a tutorial dataset.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
@@ -35,16 +37,19 @@ This protocol is fully developed and implemented in the research article publish
   <meta itemprop="name" content="Advancing a protocol for the detection of species extirpation">
   <meta itemprop="description" content="This documentation is a work in progress.
 Detecting biodiversity change is a complex challenge, involving many “wicked problems” that communities around the world must navigate to make progress toward the goals of the UN Convention on Biological Diversity.
+Here we present a protocol to address a subset of these problems, with a focus on inferring local extinction, or extirpation.
 This protocol is fully developed and implemented in the research article published in Plants, Planet, People. Through this documentation, we provide a walk-through of this framework, centering on a tutorial dataset.">
-  <meta itemprop="dateModified" content="2025-06-05T21:21:11-04:00">
-  <meta itemprop="wordCount" content="69">
+  <meta itemprop="datePublished" content="2025-06-04T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-06-04T00:00:00+00:00">
+  <meta itemprop="wordCount" content="90">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Advancing a protocol for the detection of species extirpation">
   <meta name="twitter:description" content="This documentation is a work in progress.
 Detecting biodiversity change is a complex challenge, involving many “wicked problems” that communities around the world must navigate to make progress toward the goals of the UN Convention on Biological Diversity.
+Here we present a protocol to address a subset of these problems, with a focus on inferring local extinction, or extirpation.
 This protocol is fully developed and implemented in the research article published in Plants, Planet, People. Through this documentation, we provide a walk-through of this framework, centering on a tutorial dataset.">
-<link rel="preload" href="../../scss/main.min.6c0ab20cfeb11b67fd4c1e29a9c26cb743b7f22670386f8fae1066506b5ac33c.css" as="style" integrity="sha256-bAqyDP6xG2f9TB4pqcJst0O38iZwOG&#43;PrhBmUGtawzw=" crossorigin="anonymous">
-<link href="../../scss/main.min.6c0ab20cfeb11b67fd4c1e29a9c26cb743b7f22670386f8fae1066506b5ac33c.css" rel="stylesheet" integrity="sha256-bAqyDP6xG2f9TB4pqcJst0O38iZwOG&#43;PrhBmUGtawzw=" crossorigin="anonymous">
+<link rel="preload" href="../../scss/main.scss" as="style" integrity="" crossorigin="anonymous">
+<link href="../../scss/main.scss" rel="stylesheet">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -457,6 +462,7 @@ This is the multi-page printable view of this section.
 <p>Detecting biodiversity change is a complex challenge, involving many “wicked problems”
 that communities around the world must navigate to make progress toward the goals of
 the UN Convention on Biological Diversity.</p>
+<p>Here we present a protocol to address a subset of these problems, with a focus on inferring local extinction, or extirpation.</p>
 <p>This protocol is fully developed and implemented in the research article published in <a href="https://www.imerss.org"><em>Plants, Planet, People</em></a>.
 Through this documentation, we provide a walk-through of this framework, centering on a tutorial dataset.</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 1440px">
@@ -541,11 +547,11 @@ failed to record an individual.”</p></blockquote>
 criteria (‘exhaustive’, ‘expected’, ‘appropriate’), not only to clarify the formal requirements
 for claims regarding extirpation but also to inform effective search methods and to assess the feasibility
 of meeting these requirements.</p>
-<p>Our goal is to transform the abstract problem of assessing extinction into a structured,
-measurable, and actionable process. With that goal in mind, the following
-documentation seeks to clarify the steps and assumptions embedded within IUCN extinction
-criteria—assumptions that often present challenges for communities seeking to
-apply them in practice.</p>
+<p>Our goal is to transform the abstract problem of assessing extinction into a
+structured, measurable, and actionable process. To that end, this documentation
+clarifies the steps and assumptions underlying the IUCN extinction criteria and
+proposes a practical methodology for applying them to infer extinction events in
+real-world contexts.</p>
 
 </div>
 
@@ -568,12 +574,12 @@ apply them in practice.</p>
 	<h1 id="pg-4f821f3935e354920beae68e54b45f38">2 - Baseline analysis</h1>
     <div class="lead">A first pass approach to biodiversity change assessments</div>
 	<h2 id="early-assessment-of-local-exinction-risk">Early assessment of local exinction risk<a class="td-heading-self-link" href="#early-assessment-of-local-exinction-risk" aria-label="Heading self-link"></a></h2>
-<p>Baseline analyses offer a simple but useful preliminary approach to assessing
+<p>Baseline analyses offer a useful preliminary approach to assessing
 biodiversity change. By comparing historical collections data with contemporary
 &ldquo;big biodiversity data&rdquo;, such as those available via the Global Biodiversity
 Information Facility or iNaturalist, we can identify species or populations that
-may potentially be at risk of local extinction. Keeping this approach simple, we can
-overcome some of the immediate challenges posed by the analysis of complex
+may potentially be at risk of local extinction. Keeping this approach simple,
+we can overcome some of the immediate challenges posed by the analysis of complex
 biodiversity data sets.</p>
 
 </div>
@@ -613,17 +619,18 @@ in biodiversity data—especially when historical and contemporary data are comb
 <h2 id="baseline-analyses-offer-a-practical-approach">Baseline analyses offer a practical approach<a class="td-heading-self-link" href="#baseline-analyses-offer-a-practical-approach" aria-label="Heading self-link"></a></h2>
 <p>A practical approach to this difficult situation is to forego any advanced modeling practices <em>ab initio</em>
 and begin instead with a simple baseline analysis of historical <em>vs</em> contemporary sources of biodiversity data.
-This depends on normalization of species occurrence data to support the comparison of historical and contemporary species records.</p>
+This approach will generally depend on normalization of species occurrence data across multiple datasets, to support the comparison of historical
+and contemporary species records.</p>
 
 
 <div class="pageinfo pageinfo-primary">
 <p>Normalization of biodiversity data is a thorny enough problem in its own right and not treated here. For this
-tutorial we assume that names are aligned and any synonymy is resolved between the data being compared.</p>
+tutorial we assume that names are aligned and any ambiguity (synonymy, etc.) is resolved between the data being compared.</p>
 
 </div>
 
 <ul>
-<li>Best practices are to adhere to the Darwin Core standard for species occurrence data.</li>
+<li>Best practices are to adhere to <a href="https://dwc.tdwg.org">Darwin Core standards</a> for species occurrence data.</li>
 <li>Different communities may prefer to adhere to different taxonomic databases. Any taxonomic standard can be observed, as
 long as it results in consistent mapping of taxa between datasets.</li>
 </ul>
@@ -646,16 +653,16 @@ long as it results in consistent mapping of taxa between datasets.</li>
 	<h1 id="pg-de4c46b404158559824ab4e8c2da45fa">2.2 - Comparing data</h1>
     <div class="lead">The difference that makes the difference</div>
 	<h2 id="identifying-potential-changes">Identifying potential changes<a class="td-heading-self-link" href="#identifying-potential-changes" aria-label="Heading self-link"></a></h2>
-<p>Differences between historical and contemporary biodiversity data could potentially indicate change in the system:</p>
+<p>Differences between historical and contemporary biodiversity data could potentially indicate change in a system:</p>
 <ul>
 <li>In conservation assessments, historically reported species that have not been seen within XX years are often considered
-&lsquo;historical populations&rsquo; whose persistence is in question (XXXX)</li>
-<li>Conversely, species that appear suddenly in a biodiversity record may signal a recent dispersal or colonization event</li>
+&lsquo;historical populations&rsquo; whose persistence is considered questionable (XXXX)</li>
+<li>Conversely, species that suddenly appear in a biodiversity record may signal a recent dispersal, colonization or invasion event</li>
 </ul>
-<p>Here, we focus specifically on &ldquo;species at large&rdquo;, or historical reports that have gone undetected in recent decades.</p>
+<p>Here, we focus specifically on &ldquo;species at large&rdquo;, <em>i.e.</em>, historical reports that have gone undetected in recent decades.</p>
 <pre tabindex="0"><code># Not seen in the last 20 years
 </code></pre><p>Populations or species that have gone undetected for many years may be considered at risk of extirpation and targeted for assessment.
-However, there are other important criteria to consider before undertaking such an effort.</p>
+However, there are other important criteria that communities may consider before undertaking such efforts.</p>
 
 </div>
 
@@ -675,14 +682,15 @@ However, there are other important criteria to consider before undertaking such 
     <div class="lead">Honing focus on biodiversity change</div>
 	<h2 id="open-ended-assessments-of-potential-change">Open-ended assessments of potential change<a class="td-heading-self-link" href="#open-ended-assessments-of-potential-change" aria-label="Heading self-link"></a></h2>
 <p>In order to proceed beyond an initial baseline analysis to assess possible changes in a system, we can set
-useful criteria to focus our attention (and limited resources) on species that are most likely to be vulnerable.</p>
+criteria to focus our attention (and limited resources) on high risk species that are most likely to be vulnerable.</p>
 <p>Depending on the criteria we set, there may emerge many potential target species or populations of concern.
-On the first pass, however, it is notable that this decision-making process is blind to any conservation priorities we may have,
-which can bias biodiversity change assessments.</p>
+On the first pass, however, it is notable that this decision-making process is blind to any conservation priorities
+we might have (<em>e.g.</em>, species assessed as vulnerable at a provincial or national scale), which can bias biodiversity
+change assessments.</p>
 
 
 <div class="pageinfo pageinfo-primary">
-<p>&ldquo;Conservation programs often prioritize species-at-risk, even while many common species may undergo the highest relative losses.&rdquo;</p>
+<p>&ldquo;Conservation programs often prioritize species-at-risk, even while many common species may undergo the highest relative losses (Jansen <em>et al.</em>, 2019).&rdquo;</p>
 
 </div>
 
@@ -717,7 +725,7 @@ At the very least, we will want to ensure our targets have coordinates:</p>
 <li>A low number of occurrences could potentially signal rarity or vulnerability.</li>
 <li>The more species occurrences, the more confidence we can have that a species was well established historically.</li>
 </ol>
-<p>This prior knowledge can help to inform our assessment of the vulnerability of species to local extinction.</p>
+<p>This prior knowledge can help to inform our assessment of a species&rsquo; vulnerability to local extinction.</p>
 <pre tabindex="0"><code># Tabulate species record counts
 #
 </code></pre>
@@ -874,15 +882,18 @@ represents the \(ith\) sighting time and \(T\) is the present date.
 	<h2 id="mapping-habitat">Mapping habitat<a class="td-heading-self-link" href="#mapping-habitat" aria-label="Heading self-link"></a></h2>
 <p>Habitat can be represented in many ways, ranging from complex species distribution models
 to relatively simple ecosystem mapping or site classification data.</p>
-<p>In this tutorial, we use high resolution () site classification mapping to map habitat for our target species.
-This spatial data takes the shape of polygons circumscribing different ecosystem types or areas of land use.
-For many regions, there exist databases where this type of spatial data can be accessed.</p>
+<p>In this tutorial, we use high resolution (1:5,000 scale) site classification mapping
+to map habitat for our target species. This spatial data takes the shape of polygons
+circumscribing different ecosystem types or areas of land use. This versatile approach
+should be accessible to many communities, wherever land classification or terrestrial
+ecosystem mapping data are available. Otherwise, habitat can be mapped based on
+orthoimagery generated using a variety of methods (<em>e.g.</em>, satellite, drone).</p>
 <h3 id="filtering-site-classification-mapping-based-on-habitat-types-for-target-species">Filtering site classification mapping based on habitat types for target species<a class="td-heading-self-link" href="#filtering-site-classification-mapping-based-on-habitat-types-for-target-species" aria-label="Heading self-link"></a></h3>
 <p>XXXXXXX</p>
 <h3 id="converting-polygons-to-gridded-representation-of-habitat">Converting polygons to gridded representation of habitat<a class="td-heading-self-link" href="#converting-polygons-to-gridded-representation-of-habitat" aria-label="Heading self-link"></a></h3>
 <p>XXXXX</p>
 <p>For this methodology, a key consideration is to ensure that the grid scale
-corresponds with precision in features representing search effort.</p>
+corresponds with the precision in features representing search effort.</p>
 <pre tabindex="0"><code>## Convert polygons to grid
 </code></pre><h3 id="calculate-proportional-representation-of-habitat-within-grid-cells">Calculate proportional representation of habitat within grid cells<a class="td-heading-self-link" href="#calculate-proportional-representation-of-habitat-within-grid-cells" aria-label="Heading self-link"></a></h3>
 <pre tabindex="0"><code>## Calculate prop. of habitat falling within grid cells
@@ -1272,8 +1283,37 @@ into beta parameters for a regional distribution using moment matching:</p>
     
 	<h1 id="pg-d7f0573925b80558cd075b437c659be1">7.1 - Example</h1>
     
-	<p>Before the beginning of the BioGaliano project in 2015, a total of 607 vascular plant species were reported for Galiano Island, represented by 1,698 records, including 446 herbarium specimens (Fig. 1).
-After five years of concerted search effort, amounting to &gt;18,000 observations, we documented 560 species on the project, confirming 433/607 historical species reports (71% of the historically reported diversity) and adding 127 new species to the list.</p>
+	<link href="../../docs/extirpation_historical/example/index_files/htmltools-fill/fill.css" rel="stylesheet" />
+<script src="../../docs/extirpation_historical/example/index_files/htmlwidgets/htmlwidgets.js"></script>
+<script src="../../docs/extirpation_historical/example/index_files/jquery/jquery-3.6.0.min.js"></script>
+<link href="../../docs/extirpation_historical/example/index_files/leaflet/leaflet.css" rel="stylesheet" />
+<script src="../../docs/extirpation_historical/example/index_files/leaflet/leaflet.js"></script>
+<link href="../../docs/extirpation_historical/example/index_files/leafletfix/leafletfix.css" rel="stylesheet" />
+<script src="../../docs/extirpation_historical/example/index_files/proj4/proj4.min.js"></script>
+<script src="../../docs/extirpation_historical/example/index_files/Proj4Leaflet/proj4leaflet.js"></script>
+<link href="../../docs/extirpation_historical/example/index_files/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+<script src="../../docs/extirpation_historical/example/index_files/leaflet-binding/leaflet.js"></script>
+<p>This map shows the accumulated search effort for Primula pauciflora over its historical habitat covering 9 grid cells
+in Bellhouse Park:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#000">prim_agm</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#000">read.csv</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Analysis_outputs/Intermediate/Primula pauciflora_accepted_grouped_merged.csv&#34;</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">prim_historical</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#000">prim_agm</span> <span style="color:#ce5c00;font-weight:bold">%&gt;%</span> <span style="color:#000">dplyr</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">filter</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">assigned_community</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#0000cf;font-weight:bold">77</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">prim_sf</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">assign_cell_geometry_sf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">prim_historical</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">galgrid</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">pal</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#000">colorNumeric</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">palette</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;viridis&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">domain</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">range</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">c</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">prim_sf</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">search_effort</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#000">na.rm</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">TRUE</span><span style="color:#000;font-weight:bold">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">m</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#000">leaflet</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">data</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">prim_sf</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8f5902;font-style:italic"># Add a Tiles layer to the map</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">addTiles</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8f5902;font-style:italic"># Add the grid layer to the map</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">addPolygons</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">fillColor</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">~</span><span style="color:#000">pal</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">search_effort</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#000">fillOpacity</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">0.8</span><span style="color:#000;font-weight:bold">,</span> 
+</span></span><span style="display:flex;"><span>              <span style="color:#000">color</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;#BDBDC3&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">weight</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8f5902;font-style:italic"># Add a legend</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">addLegend</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">pal</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">pal</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">values</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">c</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">max</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">prim_sf</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">search_effort</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">na.rm</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">TRUE</span><span style="color:#000;font-weight:bold">)),</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000">opacity</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">0.8</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">title</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;Accumulated Search Effort in ks&#34;</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Print the map</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">m</span>
+</span></span></code></pre></div><div class="leaflet html-widget html-fill-item" id="htmlwidget-1" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addPolygons","args":[[[[{"lng":[-123.3121258329,-123.3117168329,-123.3117168329,-123.3121258329,-123.3121258329],"lat":[48.87259604193872,48.87259604193872,48.87286504193872,48.87286504193872,48.87259604193872]}]],[[{"lng":[-123.3117168329,-123.3113078329,-123.3113078329,-123.3117168329,-123.3117168329],"lat":[48.87259604193872,48.87259604193872,48.87286504193872,48.87286504193872,48.87259604193872]}]],[[{"lng":[-123.3113078329,-123.3108988329,-123.3108988329,-123.3113078329,-123.3113078329],"lat":[48.87259604193872,48.87259604193872,48.87286504193872,48.87286504193872,48.87259604193872]}]],[[{"lng":[-123.3125348329,-123.3121258329,-123.3121258329,-123.3125348329,-123.3125348329],"lat":[48.87232704193872,48.87232704193872,48.87259604193872,48.87259604193872,48.87232704193872]}]],[[{"lng":[-123.3121258329,-123.3117168329,-123.3117168329,-123.3121258329,-123.3121258329],"lat":[48.87232704193872,48.87232704193872,48.87259604193872,48.87259604193872,48.87232704193872]}]],[[{"lng":[-123.3117168329,-123.3113078329,-123.3113078329,-123.3117168329,-123.3117168329],"lat":[48.87232704193872,48.87232704193872,48.87259604193872,48.87259604193872,48.87232704193872]}]],[[{"lng":[-123.3113078329,-123.3108988329,-123.3108988329,-123.3113078329,-123.3113078329],"lat":[48.87232704193872,48.87232704193872,48.87259604193872,48.87259604193872,48.87232704193872]}]],[[{"lng":[-123.3108988329,-123.3104898329,-123.3104898329,-123.3108988329,-123.3108988329],"lat":[48.87232704193872,48.87232704193872,48.87259604193872,48.87259604193872,48.87232704193872]}]],[[{"lng":[-123.3121258329,-123.3117168329,-123.3117168329,-123.3121258329,-123.3121258329],"lat":[48.87205804193872,48.87205804193872,48.87232704193872,48.87232704193872,48.87205804193872]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":"#BDBDC3","weight":1,"opacity":0.5,"fill":true,"fillColor":["#463480","#443C84","#3B518B","#228B8D","#FDE725","#3B518B","#404588","#3D4E8A","#365D8D"],"fillOpacity":0.8,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#440154 , #440154 0%, #414287 19.44810497613%, #2B758E 38.89620995226%, #20A486 58.34431492839%, #6DCD59 77.79241990452%, #ECE51B 97.24052488065%, #FDE725 "],"labels":["0","1","2","3","4","5"],"na_color":null,"na_label":"NA","opacity":0.8,"position":"topright","type":"numeric","title":"Accumulated Search Effort in ks","extra":{"p_1":0,"p_n":0.9724052488064997},"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[48.87205804193872,48.87286504193872],"lng":[-123.3125348329,-123.3104898329]}},"evals":[],"jsHooks":[]}</script>
 
 </div>
 
