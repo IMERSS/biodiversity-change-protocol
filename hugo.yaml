@@ -4,15 +4,15 @@ title: Protocol for the detection of extirpation
 # cSpell:ignore goldmark github hugo readingtime docsy subdir lastmod pygments linenos catmullrom norsk gu
 
 # Language settings
-contentDir: content/en
+contentDir: content
 defaultContentLanguage: en
 defaultContentLanguageInSubdir: false
 # Useful when translating.
-enableMissingTranslationPlaceholders: true
+
 
 enableRobotsTXT: true
 
-theme: "docsy"
+theme: "hextra"
 
 relativeURLs: true
 
@@ -76,7 +76,7 @@ markup:
 
 # Comment out if you don't want the "print entire section" link enabled.
 outputs:
-  section: [HTML, print, RSS]
+  section: [HTML, RSS]
 
 params:
   katex:
