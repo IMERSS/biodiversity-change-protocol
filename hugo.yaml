@@ -145,7 +145,12 @@ params:
     authors: IMERSS | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) |
     from_year: 2025
 
-  # User interface configuration
+  navbar:
+    logo:
+      width: 35
+      height: 30
+
+  # User interface configuration - note this is dead stuff carried over from docsy
   ui:
     # Set to true to disable breadcrumb navigation.
     breadcrumb_disable: false

@@ -124,6 +124,7 @@ This approach will generally depend on normalization of species occurrence data 
 and contemporary species records.&lt;/p&gt;
 
 
+
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;Normalization of biodiversity data is a thorny enough problem in its own right and not treated here. For this
 tutorial we assume that names are aligned and any ambiguity (synonymy, etc.) is resolved between the data being compared.&lt;/p&gt;
@@ -195,6 +196,7 @@ long as it results in consistent mapping of taxa between datasets.&lt;/li&gt;
         
         
         
+
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;The IUCN defines a taxon as ‘presumed extinct’ “when &lt;em&gt;exhaustive surveys&lt;/em&gt; in known and/or expected habitat &amp;hellip;
@@ -359,8 +361,8 @@ represents the \(ith\) sighting time and \(T\) is the present date.
       <description>
         
         
-        &lt;h2&gt;Early assessment of local exinction risk&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;early-assessment-of-local-exinction-risk&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#early-assessment-of-local-exinction-risk&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Baseline analyses offer a useful preliminary approach to assessing
+        &lt;h2&gt;Early assessment of local extinction risk&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;early-assessment-of-local-extinction-risk&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#early-assessment-of-local-extinction-risk&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Baseline analyses offer a useful preliminary approach to assessing
 biodiversity change. By comparing historical collections data with contemporary
 &amp;ldquo;big biodiversity data&amp;rdquo;, such as those available via the Global Biodiversity
 Information Facility or iNaturalist, we can identify species or populations that
@@ -531,6 +533,7 @@ criteria to focus our attention (and limited resources) on high risk species tha
 On the first pass, however, it is notable that this decision-making process is blind to any conservation priorities
 we might have (&lt;em&gt;e.g.&lt;/em&gt;, species assessed as vulnerable at a provincial or national scale), which can bias biodiversity
 change assessments.&lt;/p&gt;
+
 
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;

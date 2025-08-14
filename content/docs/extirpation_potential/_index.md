@@ -4,6 +4,8 @@ description: Updating the posterior based on search effort
 categories: [Examples, Placeholders]
 tags: [test, docs]
 weight: 8
+sidebar:
+  open: true
 ---
 
 Inference of extirpation in potential habitat proceeds as with inference

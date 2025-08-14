@@ -4,6 +4,8 @@ description: Gridding land classification data
 categories: [Examples, Placeholders]
 tags: [test, docs]
 weight: 4
+sidebar:
+  open: true
 ---
 
 ## Mapping habitat

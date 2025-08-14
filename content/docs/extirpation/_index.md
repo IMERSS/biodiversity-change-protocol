@@ -5,6 +5,8 @@ math: true
 categories: [Examples, Placeholders]
 tags: [test, docs]
 weight: 6
+sidebar:
+  open: true
 ---
 
 After a gridded search effort density dataframe has been assembled,

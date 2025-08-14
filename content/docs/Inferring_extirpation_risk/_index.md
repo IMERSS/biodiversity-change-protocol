@@ -4,6 +4,8 @@ description: Detection frequency as key metric for population assessments
 categories: [Examples, Placeholders]
 tags: [test, docs]
 weight: 3
+sidebar:
+  open: true
 ---
 
 ## Detection frequency

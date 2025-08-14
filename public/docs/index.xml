@@ -156,6 +156,7 @@ This approach will generally depend on normalization of species occurrence data 
 and contemporary species records.&lt;/p&gt;
 
 
+
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;Normalization of biodiversity data is a thorny enough problem in its own right and not treated here. For this
 tutorial we assume that names are aligned and any ambiguity (synonymy, etc.) is resolved between the data being compared.&lt;/p&gt;
@@ -210,6 +211,7 @@ long as it results in consistent mapping of taxa between datasets.&lt;/li&gt;
         
         
         
+
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;The IUCN defines a taxon as ‘presumed extinct’ “when &lt;em&gt;exhaustive surveys&lt;/em&gt; in known and/or expected habitat &amp;hellip;
@@ -376,6 +378,7 @@ represents the \(ith\) sighting time and \(T\) is the present date.
         
         
 
+
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;Let&amp;rsquo;s consider two vascular plant species as a case study for inferring extinction probabilities.&lt;/p&gt;
 
@@ -395,6 +398,7 @@ represents the \(ith\) sighting time and \(T\) is the present date.
         
         
         
+
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;This is a placeholder page that shows you how to use this template site.&lt;/p&gt;
@@ -500,6 +504,7 @@ criteria to focus our attention (and limited resources) on high risk species tha
 On the first pass, however, it is notable that this decision-making process is blind to any conservation priorities
 we might have (&lt;em&gt;e.g.&lt;/em&gt;, species assessed as vulnerable at a provincial or national scale), which can bias biodiversity
 change assessments.&lt;/p&gt;
+
 
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
