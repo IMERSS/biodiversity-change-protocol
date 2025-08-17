@@ -1,6 +1,6 @@
 setwd(paste0(dirname(rstudioapi::getActiveDocumentContext()$path), "/.."))
 
-# When working from GitHub, this script should be run before synthesizing Analysis inputs using synthesizeSearchEffort.R to fetch
+# When working from GitHub, this script should be run before synthesizing Analysis_inputs using synthesizeSearchEffort.R to fetch
 # bulky inputs from Google Drive
 
 # If you get an authorization error, run drive_auth() from the console to go to browser's authentication afresh

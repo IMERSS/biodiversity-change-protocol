@@ -1,0 +1,63 @@
+---
+title: Example II
+description: ''
+date: 2025-06-04
+weight: 5
+---
+
+```{r, setup, include=FALSE}
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+```
+
+```{r, echo=FALSE, include=FALSE}
+source("R/site_globals.R")
+source("scripts/geomUtils.R")
+source("scripts/config.R")
+library(leaflet)
+library(rmarkdown)
+library(dplyr)
+library(ggplot2)
+```
+
+This map shows the accumulated search effort for Crassula connata over both historical and potential habitat:
+
+```{r}
+cracon_agm <- read.csv("Analysis_outputs/Intermediate/Crassula connata_accepted_grouped_merged.csv")
+cracon_sf = assign_cell_geometry_sf(cracon_agm, galgrid)
+
+pal <- colorNumeric(palette = "viridis", domain = range(c(0, cracon_sf$search_effort), na.rm = TRUE))
+m <- leaflet(data = cracon_sf) %>%
+  # Add a Tiles layer to the map
+  addTiles() %>%
+  # Add the grid layer to the map
+  addPolygons(fillColor = ~pal(search_effort), fillOpacity = 0.8, 
+              color = "#BDBDC3", weight = 1) %>%
+  # Add a legend
+  addLegend(pal = pal, values = c(0, max(cracon_sf$search_effort, na.rm = TRUE)),
+            opacity = 0.8, title = "Accumulated Search Effort in ks")
+
+# Print the map
+m
+
+```
+
+See the treatment of [historical habitat](../../extirpation_historical/example-i) for explanation of
+the data format underlying this plot.
+
+
+This produces posterior regional statistics for extirpation across all habitat as follows:
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+target_stats <- read.csv("Analysis_outputs/Intermediate/Crassula connata_stats.csv")
+target_stats_all <- target_stats %>% dplyr::filter(Population == "all")
+paged_table(target_stats_all)
+```
+
+These show the computed parameters of the posterior beta distribution for extirpation expressed in two different forms - the standard (alpha, beta) representation and (mu, var) as parameters for the central estimate for sighting probability and its dispersion. Confidence bands are placed for this at [`r target_stats_all$Low`, `r target_stats_all$High`].
+
+Here is this posterior distribution graphed out - whilst the most probable extirpation value is 100% because of the folded nature of the beta distribution, this is a more dispersed distribution than that for historical habitat and the central estimate of extirpation probability is `r target_stats_all$Central`.
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+plot_site_beta(target_stats_all, "Crassula connata")
+```
+

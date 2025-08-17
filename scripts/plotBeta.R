@@ -27,14 +27,13 @@ onePlot <- function (thisTarget, community) {
   all_posterior_y <- dbeta(x, shape1 = as.numeric(allRec$beta), shape2 = as.numeric(allRec$alpha))
   posterior_y <- dbeta(x, shape1 = as.numeric(posteriorRec$beta), shape2 = as.numeric(posteriorRec$alpha))
   
-  # Colours taken from Adam's exponential kernels figure  purple = "#d377e8" red = "#e67e75"
   ggplot() + 
     geom_line(aes(x = x, y = solow_prior_y, color = "Solow Prior"), size = 1, linetype = "22") +
     geom_line(aes(x = x, y = exp_prior_y, color = "Solow and Distance Prior"), size = 1, linetype = "22") +
     geom_line(aes(x = x, y = all_posterior_y, color = "All Habitat Posterior"), size = 1, linetype = "solid") +
     geom_line(aes(x = x, y = posterior_y, color = "Historical Habitat Posterior"), size = 1, linetype = "solid") +
     scale_color_manual(values = c("Solow Prior" = "#4fabeb", 
-                                  "Solow and Distance Prior" = "#54b881", 
+                                  "Solow and Distance Prior" = "#5DEB4F", 
                                   "All Habitat Posterior" = "#FF8C00", 
                                   "Historical Habitat Posterior" = "#5a7d9a"), 
                        name = "Densities") +
