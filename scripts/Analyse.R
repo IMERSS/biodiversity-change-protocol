@@ -23,11 +23,14 @@ library(HDInterval)
 # Set relative paths (https://stackoverflow.com/questions/13672720/r-command-for-setting-working-directory-to-source-file-location-in-rstudio)
 setwd(paste0(dirname(rstudioapi::getActiveDocumentContext()$path), "/.."))
 
+# Load geometric utilities for dealing with gridded data
 source("scripts/geomUtils.R")
-source("scripts/utils.R")
 
 # Load core configuration for analysis which sets up coordinate grid frame and taxa of interest
 source("scripts/config.R")
+
+source("scripts/utils.R")
+
 
 # Read Solow prior estimates of extinction probabilities described in section 3.1.1 of the paper
 solow_dat <- read.csv("Analysis_inputs/direct_solow_dat.csv")
@@ -327,7 +330,7 @@ stats_to_df <- function (stats) {
   stats_df <- stats_df %>% mutate("Population" = rownames(stats))
 }
 
-analyse_accepted <- function (thisTarget, accepted_grouped_merged, habitat_to_centres, nearest_habitat_cell_id, exp_weight, solow_prob, set_name) {
+analyse_accepted <- function (thisTarget, accepted_grouped_merged, habitat_to_centres, exp_weight, solow_prob, set_name) {
 
   accepted_summary <- agm_to_summary(accepted_grouped_merged, exp_weight, solow_prob)
 
@@ -376,6 +379,10 @@ analyse_accepted <- function (thisTarget, accepted_grouped_merged, habitat_to_ce
   stats_df <- rbind(stats_df, allStats)
 
   stats_df <- stats_df %>% mutate("target" = thisTarget, prior_ER = rv(1 - solow_prob))
+  
+  timedWrite(stats_df, str_glue("Analysis_outputs/Intermediate/{thisTarget}_stats.csv"))
+  
+  stats_df
 }
 
 analyse_target <- function (thisTarget, detected = FALSE) {
@@ -535,7 +542,7 @@ analyse_target <- function (thisTarget, detected = FALSE) {
     # Pick the lowest (that is, lowest "sighting rate" = greatest prob of extirpation) record, corresponding to 1958 burgman/solow value
     solow_low <- min(solow_records$DirectSolowPP)
     # wg("Acquired {nrow(solow_records)} Solow records with prior range between {round(solow_low, 3)} and {round(solow_high, 3)}")
-    lowSet <- analyse_accepted(thisTarget, accepted_grouped_merged, habitat_to_centres, nearest_habitat_cell_id, exp_weight = exp_weight, solow_prob = solow_low, set_name = "Solow_low")
+    lowSet <- analyse_accepted(thisTarget, accepted_grouped_merged, habitat_to_centres, exp_weight = exp_weight, solow_prob = solow_low, set_name = "Solow_low")
     return (lowSet)
   }
 }

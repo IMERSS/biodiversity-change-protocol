@@ -1,5 +1,9 @@
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&display=swap";
 
+table {
+  /* Override absolutely insane display:block in hextra core style */
+    display: table !important;
+}
 
 :root {
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -246,4 +250,17 @@
     color: var(--bs-btn-hover-color);
     background-color: var(--bs-btn-hover-bg);
     border-color: var(--bs-btn-hover-border-color)
+}
+
+.pagedtable-header-name {
+  font-size: 12px;
+}
+
+/** Hack to make size calculation use smaller font size */
+.pagedtable > table:first-of-type {
+  font-size: 12px;
+}
+
+.pagedtable-wrapper {
+  margin-top: 10px;
 }
