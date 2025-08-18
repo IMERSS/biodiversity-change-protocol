@@ -27,8 +27,7 @@ prim_sf = assign_cell_geometry_sf(prim_agm, galgrid)
 
 pal <- colorNumeric(palette = "viridis", domain = range(c(0, prim_sf$search_effort), na.rm = TRUE))
 m <- leaflet(data = prim_sf) %>%
-  # Add a Tiles layer to the map
-  addTiles() %>%
+  addProviderTiles("Esri.WorldImagery") %>%
   # Add the grid layer to the map
   addPolygons(fillColor = ~pal(search_effort), fillOpacity = 0.8, 
               color = "#BDBDC3", weight = 1) %>%
