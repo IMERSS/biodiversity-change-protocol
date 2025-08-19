@@ -41,6 +41,11 @@ m <- leaflet(data = target_sf) %>%
 m
 
 ```
+```{r}
+target_stats <- read.csv("Analysis_outputs/Intermediate/Plagiobothrys tenellus_stats.csv")
+target_stats_historical <- target_stats %>% dplyr::filter(Population == 66)
+paged_table(target_stats_historical)
+```
 
 This map shows the accumulated search effort for Plagiobothrys tenellus over historical community 67
 
@@ -63,4 +68,9 @@ m <- leaflet(data = target_sf) %>%
 # Print the map
 m
 
+```
+```{r}
+target_stats <- read.csv("Analysis_outputs/Intermediate/Plagiobothrys tenellus_stats.csv")
+target_stats_historical <- target_stats %>% dplyr::filter(Population == 67)
+paged_table(target_stats_historical)
 ```

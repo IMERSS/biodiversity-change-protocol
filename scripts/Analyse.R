@@ -82,14 +82,35 @@ habitatOverrides <- read.csv("Analysis_inputs/Habitat_model/historical_habitat.c
 habitatOverridesSplit <- split(habitatOverrides$cell_id, habitatOverrides$Population)
 habitatOverrideKeys <- unique(habitatOverrides$Population)
 
+habitatOverridesWithRegion <- subset(habitatOverrides, filter_region != "")
+habitatOverridesPolygons <- setNames(
+  lapply(habitatOverridesWithRegion$filter_region, function(region) {
+    sf_obj <- st_read(paste0("Analysis_inputs/Habitat_model/", region), quiet = TRUE)
+    return (sf_obj) # Ensure it is an sf object and not a list
+  }),
+  habitatOverridesWithRegion$Population
+)
+
 assign_community <- function (cell_id, NEAR_DIST, radius, OID) {
-  overrideList <- habitatOverridesSplit[[as.character(OID)]]
-  hasOverride <- !is.null(overrideList)
-  overrideApply <- ifelse(hasOverride, cell_id %in% overrideList, FALSE)
+  key <- as.character(OID)
+  overrideList <- habitatOverridesSplit[[key]]
+  hasOverrideList <- !is.null(overrideList) && !identical(overrideList, NA) # Don't use is.na which coerces to list
+  overrideListApply <- ifelse(hasOverrideList, cell_id %in% overrideList, FALSE)
+  overridePolygon <- habitatOverridesPolygons[[key]]
+  hasOverridePolygon <- !is.null(overridePolygon)
   if (NEAR_DIST < radius) {
-    return (ifelse(hasOverride, ifelse(overrideApply, OID, 0), OID))
+    if (hasOverridePolygon) {
+      centroid <- st_point(cell_id_to_centroid(galgrid, cell_id))
+      inPolygon <- st_intersects(centroid, overridePolygon, sparse = FALSE)
+      return (ifelse(inPolygon, OID, 0))
+      centroid_sf <- st_sfc(centroid, crs = "WGS84")
+    } else if (hasOverrideList) {
+      return (ifelse(overrideListApply, OID, 0))
+    } else {
+      return (OID)
+    }
   } else {
-    if (overrideApply) {
+    if (overrideListApply) {
       wg("Override habitat assignment for cell {cell_id} which is at distance {radius} > {NEAR_DIST} from historical observation for population {OID}")
       return (OID)
     }

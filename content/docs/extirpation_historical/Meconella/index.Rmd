@@ -41,3 +41,8 @@ m <- leaflet(data = target_sf) %>%
 m
 
 ```
+```{r}
+target_stats <- read.csv("Analysis_outputs/Intermediate/Meconella oregana_stats.csv")
+target_stats_historical <- target_stats %>% dplyr::filter(Population == 55)
+paged_table(target_stats_historical)
+```
