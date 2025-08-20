@@ -432,7 +432,7 @@ analyse_target <- function (thisTarget, detected = FALSE) {
   ) %>% mutate_at(vars(uc), ~replace_na(., 50)) %>% mutate(
       radius = uc + gridcell * sqrt(2) / 2,
       assigned_community = assign_community_vector(cell_id, NEAR_DIST, radius, OID),
-      fringe_dist = ifelse(assigned_community == 0, NEAR_DIST - radius, 0))
+      fringe_dist = ifelse(assigned_community == 0, NEAR_DIST, 0))
 
   community_counts <- habitat_to_centres %>%
     group_by(assigned_community) %>%

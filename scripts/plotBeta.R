@@ -64,4 +64,4 @@ allp <- ggpubr::ggarrange(p1, p2, p3, p4, ncol = 2, nrow = 2, common.legend = TR
 print (allp)
 
 ggsave("Main_figures/Figure_5_beta_targets.png", dpi = 1000, units = "in", bg="white",
-       height = 6, width = 8)
+       height = 6, width = 9)
