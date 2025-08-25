@@ -91,6 +91,50 @@ habitatOverridesPolygons <- setNames(
   habitatOverridesWithRegion$Population
 )
 
+communityLookup = read.csv("Analysis_inputs/community_lookup.csv")
+
+#' Replace assigned community values derived from historical record indices in a data frame
+#` with friendly values based on a lookup table.
+#'
+#' @param df A data frame to modify.
+#' @param col A string representing the name of the column in `df` to be modified.
+#' @param lookup_df A data frame containing the lookup table with columns `Index` and `Name`.
+#'
+#' @return The modified data frame with the specified column updated based on the lookup table.
+#'
+replace_assigned_community <- function(df, col, lookup_df) {
+  # df: data frame to modify
+  # col: column name as a string
+  # lookup_df: data frame with columns Index and Name
+  
+  # Ensure lookup map
+  lookup <- setNames(as.character(lookup_df$Name), as.character(lookup_df$Index))
+  lookup <- c("0" = "pot", lookup)
+  lookup <- c("all" = "all", lookup)
+
+  values <- as.character(df[[col]])
+  
+  # Replace only where value exists in lookup
+  df[[col]] <- ifelse(values %in% names(lookup), lookup[values], values)
+  
+  return(df)
+}
+
+#' Assign a community to a habitat cell based on proximity and overrides.
+#'
+#' This function determines the community assignment for a given habitat cell
+#' based on its distance to a historical population center, predefined override lists,
+#' and optional override polygons. If the cell is within the specified radius of a population center,
+#' it is assigned to that community. Otherwise, it may be assigned based on overrides.
+#'
+#' @param cell_id An integer representing the ID of the habitat cell.
+#' @param NEAR_DIST A numeric value representing the distance of the cell to the nearest historical population center.
+#' @param radius A numeric value representing the radius of influence for the population center.
+#' @param OID An integer representing the ID of the historical population center.
+#'
+#' @return An integer representing the assigned community ID. Returns `OID` if the cell is assigned to a community,
+#'   or `0` if no community is assigned.
+#'
 assign_community <- function (cell_id, NEAR_DIST, radius, OID) {
   key <- as.character(OID)
   overrideList <- habitatOverridesSplit[[key]]
@@ -306,6 +350,19 @@ rv <- function (v) {
   round (v, 2)
 }
 
+#' Apply region moments to compute Beta distribution parameters and HDI.
+#'
+#' This function calculates the parameters of a Beta distribution and the highest density interval (HDI)
+#' for a given region based on the provided mean and variance. It updates the input statistics list
+#' with the computed values.
+#'
+#' @param stats A list containing the current statistics for the region.
+#' @param mu A numeric value representing the mean of the region.
+#' @param var A numeric value representing the variance of the region.
+#'
+#' @return A modified list of statistics with additional fields for Beta distribution parameters
+#'   (`alpha`, `beta`), the central estimate, and the HDI limits (`Low`, `High`).
+#'
 apply_region_moments <- function (stats, mu, var) {
   params <- beta_params_from_moments(mu, var)
 
@@ -314,7 +371,21 @@ apply_region_moments <- function (stats, mu, var) {
   modifyList(stats, fields)
 }
 
-# Given a dataframe including beta cells with columns alpha, beta, produce a summary vector fusing their statistics
+#' Generate summary statistics for a region based on beta distribution parameters.
+#'
+#' This function calculates summary statistics for a given region using beta distribution
+#' parameters (`alpha`, `beta`) from the input dataframe. It computes weighted means for and applies
+#' regional moments to update the statistics list.
+#'
+#' @param x A dataframe containing beta distribution parameters (`alpha`, `beta`) and other relevant data for the region.
+#' @param exp_cells A numeric value representing the expected number of cells enclosed within a certain distance (experimental)
+#' @param weight_vector An optional numeric vector of weights for calculating weighted means.
+#'   If `NULL`, equal weights are used.
+#'
+#' @return A list containing the calculated summary statistics for the region, including
+#'   the number of cells, the number of searched cells, the estimated number of populations,
+#'   the proportion of habitat searched, and updated beta distribution statistics.
+#'
 region_stats <- function (x, exp_cells, weight_vector = NULL) {
   cells <- nrow(x)
   searched <- nrow(x %>% filter(search_effort > 0))
@@ -351,6 +422,22 @@ stats_to_df <- function (stats) {
   stats_df <- stats_df %>% mutate("Population" = rownames(stats))
 }
 
+#' Analyse accepted habitat cells and compute extinction probabilities.
+#'
+#' This function processes accepted habitat cells, calculates extinction probabilities,
+#' and generates summary statistics for a given target species. It also writes the results
+#' to shapefiles and intermediate CSV files for further analysis.
+#'
+#' @param thisTarget A string representing the target species being analyzed.
+#' @param accepted_grouped_merged A data frame containing grouped and merged data of accepted habitat cells,
+#'   including search effort, fringe distance, and assigned community information.
+#' @param habitat_to_centres A data frame mapping habitat cells to the nearest historical population centers.
+#' @param exp_weight A numeric value representing the exponential weighting factor for distance from historical habitat.
+#' @param solow_prob A numeric value representing the Solow prior probability of extinction.
+#' @param set_name A string used to name the output files generated by this function.
+#'
+#' @return A data frame containing summary statistics for the analyzed habitat cells.
+#'
 analyse_accepted <- function (thisTarget, accepted_grouped_merged, habitat_to_centres, exp_weight, solow_prob, set_name) {
 
   accepted_summary <- agm_to_summary(accepted_grouped_merged, exp_weight, solow_prob)
@@ -400,8 +487,9 @@ analyse_accepted <- function (thisTarget, accepted_grouped_merged, habitat_to_ce
   stats_df <- rbind(stats_df, allStats)
 
   stats_df <- stats_df %>% mutate("target" = thisTarget, prior_ER = rv(1 - solow_prob))
+  stats_df_rewrite <- replace_assigned_community(stats_df, "Population", communityLookup)
   
-  timedWrite(stats_df, str_glue("Analysis_outputs/Intermediate/{thisTarget}_stats.csv"))
+  timedWrite(stats_df_rewrite, str_glue("Analysis_outputs/Intermediate/{thisTarget}_stats.csv"))
   
   stats_df
 }
@@ -554,8 +642,9 @@ analyse_target <- function (thisTarget, detected = FALSE) {
   effortCells_intersect <- st_intersection((accepted_grouped_sf %>% filter(search_effort > 0)), allHabitat) %>% mutate(area = st_area(.) %>% as.numeric(), area_prop = area / oneArea) %>% select(cell_id, area, area_prop) %>% st_drop_geometry()
 
   accepted_grouped_merged <- accepted_grouped_sum %>% left_join(effortCells_intersect)
+  accepted_grouped_merged_rewrite <- replace_assigned_community(accepted_grouped_merged, "assigned_community", communityLookup)
 
-  timedWrite(accepted_grouped_merged, str_glue("Analysis_outputs/Intermediate/{thisTarget}_accepted_grouped_merged.csv"))
+  timedWrite(accepted_grouped_merged_rewrite, str_glue("Analysis_outputs/Intermediate/{thisTarget}_accepted_grouped_merged.csv"))
   
   if (!detected) {
     exp_weight <- (distance_exp %>% dplyr::filter(str_detect(Species, thisTarget)))$Exp_weight * exp_multiplier

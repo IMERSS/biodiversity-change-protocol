@@ -19,11 +19,11 @@ library(dplyr)
 library(ggplot2)
 ```
 
-This map shows the accumulated search effort for Plagiobothrys tenellus over historical community 66
+This map shows the accumulated search effort for Plagiobothrys tenellus over historical community PT1
 
 ```{r}
 target_agm <- read.csv("Analysis_outputs/Intermediate/Plagiobothrys tenellus_accepted_grouped_merged.csv")
-target_historical <- target_agm %>% dplyr::filter(assigned_community == 66)
+target_historical <- target_agm %>% dplyr::filter(assigned_community == "PT1")
 target_sf = assign_cell_geometry_sf(target_historical, galgrid)
 
 pal <- colorNumeric(palette = "viridis", domain = range(c(0, target_sf$search_effort), na.rm = TRUE))
@@ -43,15 +43,15 @@ m
 ```
 ```{r}
 target_stats <- read.csv("Analysis_outputs/Intermediate/Plagiobothrys tenellus_stats.csv")
-target_stats_historical <- target_stats %>% dplyr::filter(Population == 66)
+target_stats_historical <- target_stats %>% dplyr::filter(Population == "PT1")
 paged_table(target_stats_historical)
 ```
 
-This map shows the accumulated search effort for Plagiobothrys tenellus over historical community 67
+This map shows the accumulated search effort for Plagiobothrys tenellus over historical community PT2
 
 ```{r}
 
-target_historical <- target_agm %>% dplyr::filter(assigned_community == 67)
+target_historical <- target_agm %>% dplyr::filter(assigned_community == "PT2")
 target_sf = assign_cell_geometry_sf(target_historical, galgrid)
 
 pal <- colorNumeric(palette = "viridis", domain = range(c(0, target_sf$search_effort), na.rm = TRUE))
@@ -71,6 +71,6 @@ m
 ```
 ```{r}
 target_stats <- read.csv("Analysis_outputs/Intermediate/Plagiobothrys tenellus_stats.csv")
-target_stats_historical <- target_stats %>% dplyr::filter(Population == 67)
+target_stats_historical <- target_stats %>% dplyr::filter(Population == "PT2")
 paged_table(target_stats_historical)
 ```

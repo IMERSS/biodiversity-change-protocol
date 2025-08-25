@@ -7,32 +7,24 @@ weight: 11
 
 <link href="{{< blogdown/postref >}}index_files/htmltools-fill/fill.css" rel="stylesheet" />
 <script src="{{< blogdown/postref >}}index_files/htmlwidgets/htmlwidgets.js"></script>
-
 <script src="{{< blogdown/postref >}}index_files/jquery/jquery-3.6.0.min.js"></script>
-
 <link href="{{< blogdown/postref >}}index_files/leaflet/leaflet.css" rel="stylesheet" />
 <script src="{{< blogdown/postref >}}index_files/leaflet/leaflet.js"></script>
-
 <link href="{{< blogdown/postref >}}index_files/leafletfix/leafletfix.css" rel="stylesheet" />
 <script src="{{< blogdown/postref >}}index_files/proj4/proj4.min.js"></script>
-
 <script src="{{< blogdown/postref >}}index_files/Proj4Leaflet/proj4leaflet.js"></script>
-
 <link href="{{< blogdown/postref >}}index_files/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
 <script src="{{< blogdown/postref >}}index_files/leaflet-binding/leaflet.js"></script>
-
 <script src="{{< blogdown/postref >}}index_files/leaflet-providers/leaflet-providers_2.0.0.js"></script>
-
 <script src="{{< blogdown/postref >}}index_files/leaflet-providers-plugin/leaflet-providers-plugin.js"></script>
-
 <link href="{{< blogdown/postref >}}index_files/pagedtable/css/pagedtable.css" rel="stylesheet" />
 <script src="{{< blogdown/postref >}}index_files/pagedtable/js/pagedtable.js"></script>
 
-This map shows the accumulated search effort for Meconella oregana over historical community 55
+This map shows the accumulated search effort for Meconella oregana over historical community MO1
 
 ``` r
 target_agm <- read.csv("Analysis_outputs/Intermediate/Meconella oregana_accepted_grouped_merged.csv")
-target_historical <- target_agm %>% dplyr::filter(assigned_community == 55)
+target_historical <- target_agm %>% dplyr::filter(assigned_community == "MO1")
 target_sf = assign_cell_geometry_sf(target_historical, galgrid)
 
 pal <- colorNumeric(palette = "viridis", domain = range(c(0, target_sf$search_effort), na.rm = TRUE))
@@ -55,14 +47,14 @@ m
 
 ``` r
 target_stats <- read.csv("Analysis_outputs/Intermediate/Meconella oregana_stats.csv")
-target_stats_historical <- target_stats %>% dplyr::filter(Population == 55)
+target_stats_historical <- target_stats %>% dplyr::filter(Population == "MO1")
 paged_table(target_stats_historical)
 ```
 
 <div data-pagedtable="false">
 
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["cells"],"name":[1],"type":["int"],"align":["right"]},{"label":["searched"],"name":[2],"type":["int"],"align":["right"]},{"label":["pops"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["habitatSearched"],"name":[4],"type":["chr"],"align":["left"]},{"label":["Central"],"name":[5],"type":["chr"],"align":["left"]},{"label":["Low"],"name":[6],"type":["chr"],"align":["left"]},{"label":["High"],"name":[7],"type":["chr"],"align":["left"]},{"label":["alpha"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["beta"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["mu"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["var"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["Population"],"name":[12],"type":["chr"],"align":["left"]},{"label":["target"],"name":[13],"type":["chr"],"align":["left"]},{"label":["prior_ER"],"name":[14],"type":["dbl"],"align":["right"]}],"data":[{"1":"357","2":"205","3":"1.52","4":"57.4%","5":"79.0%","6":"56.7%","7":"100.0%","8":"1.23","9":"4.63","10":"0.2095036","11":"0.02416869","12":"55","13":"Meconella oregana","14":"0.64"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["cells"],"name":[1],"type":["int"],"align":["right"]},{"label":["searched"],"name":[2],"type":["int"],"align":["right"]},{"label":["pops"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["habitatSearched"],"name":[4],"type":["chr"],"align":["left"]},{"label":["Central"],"name":[5],"type":["chr"],"align":["left"]},{"label":["Low"],"name":[6],"type":["chr"],"align":["left"]},{"label":["High"],"name":[7],"type":["chr"],"align":["left"]},{"label":["alpha"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["beta"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["mu"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["var"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["Population"],"name":[12],"type":["chr"],"align":["left"]},{"label":["target"],"name":[13],"type":["chr"],"align":["left"]},{"label":["prior_ER"],"name":[14],"type":["dbl"],"align":["right"]}],"data":[{"1":"357","2":"205","3":"1.52","4":"57.4%","5":"79.0%","6":"56.7%","7":"100.0%","8":"1.23","9":"4.63","10":"0.2095036","11":"0.02416869","12":"MO1","13":"Meconella oregana","14":"0.64"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 
 </div>

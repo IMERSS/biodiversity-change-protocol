@@ -19,12 +19,12 @@ library(dplyr)
 library(ggplot2)
 ```
 
-This map shows the accumulated search effort for Crassula connata over its historical habitat covering 10 grid cells
+This map shows the accumulated search effort for Crassula connata over its historical habitat covering 6 grid cells
 in Bellhouse Park:
 
 ```{r, error=TRUE}
 cracon_agm <- read.csv("Analysis_outputs/Intermediate/Crassula connata_accepted_grouped_merged.csv")
-cracon_historical <- cracon_agm %>% dplyr::filter(assigned_community == 44)
+cracon_historical <- cracon_agm %>% dplyr::filter(assigned_community == "CC1")
 cracon_sf = assign_cell_geometry_sf(cracon_historical, galgrid)
 
 pal <- colorNumeric(palette = "viridis", domain = range(c(0, cracon_sf$search_effort), na.rm = TRUE))
@@ -58,7 +58,7 @@ This produces posterior regional statistics for extirpation in historical habita
 
 ```{r}
 target_stats <- read.csv("Analysis_outputs/Intermediate/Crassula connata_stats.csv")
-target_stats_historical <- target_stats %>% dplyr::filter(Population == 44)
+target_stats_historical <- target_stats %>% dplyr::filter(Population == "CC1")
 paged_table(target_stats_historical)
 ```
 

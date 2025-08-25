@@ -19,11 +19,11 @@ library(dplyr)
 library(ggplot2)
 ```
 
-This map shows the accumulated search effort for Meconella oregana over historical community 55
+This map shows the accumulated search effort for Meconella oregana over historical community MO1
 
 ```{r}
 target_agm <- read.csv("Analysis_outputs/Intermediate/Meconella oregana_accepted_grouped_merged.csv")
-target_historical <- target_agm %>% dplyr::filter(assigned_community == 55)
+target_historical <- target_agm %>% dplyr::filter(assigned_community == "MO1")
 target_sf = assign_cell_geometry_sf(target_historical, galgrid)
 
 pal <- colorNumeric(palette = "viridis", domain = range(c(0, target_sf$search_effort), na.rm = TRUE))
@@ -43,6 +43,6 @@ m
 ```
 ```{r}
 target_stats <- read.csv("Analysis_outputs/Intermediate/Meconella oregana_stats.csv")
-target_stats_historical <- target_stats %>% dplyr::filter(Population == 55)
+target_stats_historical <- target_stats %>% dplyr::filter(Population == "MO1")
 paged_table(target_stats_historical)
 ```
