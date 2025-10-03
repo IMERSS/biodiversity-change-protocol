@@ -45,29 +45,21 @@ native.at.large.2020 <- at.large.2020 %>% filter(Origin == 'native')
 nrow(native.at.large.2020) # 110 native plant species at large
 ```
 
-### Taxonomically difficult or cryptic species
-
-Graminoids are easily overlooked, so sighting rate may be less informative regarding extinction risk. We can narrow our focus to the more conspicuous dicots and petaloid monocots:
-
-```{r, message=FALSE, warning=FALSE, results='hide'}
-native.non.graminoids.at.large.2020 <- native.at.large.2020 %>% filter(Order != 'Poales')
-nrow(native.non.graminoids.at.large.2020) # 70 native dicots / petaloid monocots at large
-```
-
 ### Historical evidence
 
-Biological specimens are the strongest evidence we have for biodiversity change assessments. List records could be unreliable, so we should probably limit our assessment to species represented by independently verifiable voucher specimens:
+Biological specimens are the strongest evidence we have for biodiversity change assessments.
 
-```{r, message=FALSE, warning=FALSE, results='hide'}
-vouchered.native.non.graminoids.at.large.2020 <- native.non.graminoids.at.large.2020 %>% filter(Basis.of.Historical.Record == 'voucher')
-nrow(vouchered.native.non.graminoids.at.large.2020) # 32 vouchered native dicots / petaloid monocots at large
+```
+# Filter voucher specimens
+# 
 ```
 
-```{r, message=FALSE, echo=FALSE}
-paged_table(vouchered.native.non.graminoids.at.large.2020)
-```
+### Taxonomically difficult or cryptic species
 
-From this resulting list, we might apply additional criteria to select a set of candidates for extinction risk assessment. This tutorial focuses on a subset of taxa we considered in our study: *Crassula connata*, *Meconella oregana*, *Plagiobothrys tenellus*, and *Primula pauciflora*.
+```
+# Filter out graminoids
+# 
+```
 
 
 ### Coordinate uncertainty
