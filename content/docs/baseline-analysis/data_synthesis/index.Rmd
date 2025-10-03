@@ -51,7 +51,7 @@ long as it results in consistent mapping of taxa between datasets.
 # How many species were historically reported for Galiano Island, prior to the beginning of the
 # Biodiversity Galiano project?
 
-summary <- read.csv("Galiano_Tracheophyta_summary_reviewed_2024-10-07.csv")
+summary <- read.csv("scripts/historical_analysis/Galiano_Tracheophyta_summary_reviewed_2024-10-07.csv")
 
 reported <- summary %>% filter(Reporting.Status == 'reported')
 confirmed <- summary %>% filter(Reporting.Status == 'confirmed')
