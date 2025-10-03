@@ -26,10 +26,10 @@ table {
     --bs-navbar-active-color: #fff;
     --bs-navbar-brand-color: #fff;
     --bs-navbar-brand-hover-color: #fff;
-    
+
     --bs-nav-link-padding-x: 1rem;
     --bs-nav-link-padding-y: 0.5rem;
-    --bs-nav-link-font-weight: ;
+    --bs-nav-link-font-weight: 500;
     --bs-nav-link-color: rgba(255, 255, 255, 0.55);
     --bs-nav-link-hover-color: rgba(255, 255, 255, 0.75);
     --bs-nav-link-disabled-color: var(--bs-secondary-color);
@@ -125,6 +125,10 @@ table {
     color: inherit;
     margin: 2rem auto;
     padding: 1.5rem;
+}
+
+.dark .pageinfo{
+    background: #124250;
 }
 
 @font-face {
@@ -263,4 +267,52 @@ table {
 
 .pagedtable-wrapper {
   margin-top: 10px;
+}
+
+
+/* Search button */
+
+
+.search-wrapper input {
+    border-radius: 100px;
+    border-color: #0000;
+    border-width: 2px;
+    background-color: rgba(243 244 246 / 0.5);
+    outline: 2px solid transparent;
+    padding: 0.3rem 5px 0.3rem 2.5rem;
+}
+
+.search-wrapper input:focus {
+    border-color: #444;
+    background-color: rgb(243 244 246);
+}
+
+/* Stolen for search */
+
+.search-icon {
+    left: 0px;
+    position: absolute;
+    pointer-events: none;
+    align-items: center;
+    padding-left: 0.7rem;
+}
+
+.clear-search-button {
+    position: absolute;
+    right: 10px;
+    display: none;
+    outline: none;
+    color: var(--bs-navbar-color);
+}
+
+.search-wrapper input:not(:placeholder-shown) + .clear-search-button {
+    display: inline;
+}
+
+.clear-search-button:hover {
+    color: var(--bs-nav-link-color);
+}
+
+.search-wrapper .excerpt {
+    display: none;
 }

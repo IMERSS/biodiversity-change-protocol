@@ -11,15 +11,14 @@ library(stringr)
 library(viridis)
 library(scales)
 
-# Set relative paths (https://stackoverflow.com/questions/13672720/r-command-for-setting-working-directory-to-source-file-location-in-rstudio)
-setwd((dirname(rstudioapi::getActiveDocumentContext()$path)))
+setwd(rprojroot::find_rstudio_root_file())
 
 # Read summary
 
 # How many species were historically reported for Galiano Island, prior to the beginning of the
 # Biodiversity Galiano project?
 
-summary <- read.csv("Galiano_Tracheophyta_summary_reviewed_2024-10-07.csv")
+summary <- read.csv("Analysis_inputs/Galiano_Tracheophyta_summary_reviewed_2024-10-07.csv")
 
 reported <- summary %>% filter(Reporting.Status == 'reported')
 confirmed <- summary %>% filter(Reporting.Status == 'confirmed')
@@ -74,7 +73,7 @@ nrow(confirmed.and.reported.prior.2020)
 
 ## How much new data has been generated with the advent of iNaturalist?
 
-observations <- read.csv("Galiano_Island_vascular_plant_records_2024-10-09.csv")
+observations <- read.csv("Analysis_inputs/Galiano_Island_vascular_plant_records_2024-10-09.csv")
 
 records.pre.2020 <- observations %>% filter(year <2020)
 records.2015.to.2020 <- records.pre.2020 %>% filter(year >=2015)
