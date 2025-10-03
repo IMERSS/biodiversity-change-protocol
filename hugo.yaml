@@ -1,7 +1,4 @@
-baseURL: https://example.docsy.dev
 title: Protocol for the detection of extirpation
-
-# cSpell:ignore goldmark github hugo readingtime docsy subdir lastmod pygments linenos catmullrom norsk gu
 
 # Language settings
 contentDir: content
@@ -13,13 +10,26 @@ enableRobotsTXT: true
 
 theme: "hextra"
 
-relativeURLs: true
+relativeUrls: true
+publishDir: docs
 
 # Will give values to .Lastmod etc.
 enableGitInfo: false
 
 # Comment out to disable taxonomies in Docsy
 # disableKinds: [taxonomy]
+
+menu:
+  main:
+    - name: Search
+      weight: 100
+      params:
+        type: search
+    - name: GitHub
+      weight: 110
+      url: "https://github.com/IMERSS/biodiversity-change-protocol"
+      params:
+        icon: github
 
 # You can add your own taxonomies
 taxonomies:
@@ -81,7 +91,7 @@ params:
   katex:
     enable: true
     options:
-      delimiters: 
+      delimiters:
         - left: \(
           right: \)
           display: false

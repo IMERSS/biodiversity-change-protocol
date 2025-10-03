@@ -1,7 +1,8 @@
 # Biodiversity Change Protocol
 
-This repository contains code and data supporting the paper _Operationalising a protocol for the detection of species extirpation: a localised approach to a global problem_ and
-its supplementary materials, in review at [Plants, People, Planet](https://nph.onlinelibrary.wiley.com/journal/25722611).
+This repository contains code and data supporting the paper
+_Detecting species extirpation: a localised approach to a global problem_ and
+its supplementary materials, accepted for publication by [Plants, People, Planet](https://nph.onlinelibrary.wiley.com/journal/25722611).
 
 ## Introduction 
 
