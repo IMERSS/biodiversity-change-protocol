@@ -42,5 +42,4 @@ tutorial we assume that names are aligned and any ambiguity (synonymy, etc.) is 
 {{% /pageinfo %}}
 
 * Best practices are to adhere to [Darwin Core standards](https://dwc.tdwg.org) for species occurrence data.
-* Different communities may prefer to adhere to different taxonomic databases. Any taxonomic standard can be observed, as 
-long as it results in consistent mapping of taxa between datasets.
+* Different communities may prefer to adhere to different taxonomic databases. Any taxonomic standard can be observed, as long as it results in consistent mapping of taxa between datasets.
