@@ -1,10 +1,14 @@
 ---
 title: Target selection criteria
 description: Honing focus on biodiversity change
-categories: [Examples, Placeholders]
 tags: [test, docs]
 weight: 4
 ---
+
+
+
+
+
 
 ## Open-ended assessments of potential change
 
