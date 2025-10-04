@@ -10,6 +10,7 @@ weight: 2
 ## Inferring local extinction based on limited occurrence data
 
 XXXXXXX
+
 <p>
   <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Expand for mathematical details

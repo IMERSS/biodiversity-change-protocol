@@ -6,7 +6,7 @@ menu: {main: {weight: 10}}
 
 # About IMERSS
 
-##Institute for Multidisciplinary Ecological Research in the Salish Sea
+## Institute for Multidisciplinary Ecological Research in the Salish Sea
 
 IMERSS is a multidisciplinary, cross–cultural, and transboundary community of practice dedicated to long-term ecological research in the Salish Sea. 
 
