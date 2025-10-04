@@ -18,49 +18,57 @@ library(dplyr)
 library(ggplot2)
 ```
 
-
 ## Open-ended assessments of potential change
 
-In order to proceed beyond an initial baseline analysis to assess possible changes in a system, we can set
-criteria to focus our attention (and limited resources) on high risk species that are most likely to be vulnerable.
+In order to proceed beyond an initial baseline analysis to assess possible changes in a system, we can set criteria to focus our attention (and limited resources) on high risk species that are most likely to be vulnerable.
 
-Depending on the criteria we set, there may emerge many potential target species or populations of concern.
-On the first pass, however, it is notable that this decision-making process is blind to any conservation priorities 
-we might have (*e.g.*, species assessed as vulnerable at a provincial or national scale), which can bias biodiversity 
-change assessments.
+Depending on the criteria we set, there may emerge many potential target species or populations of concern. On the first pass, however, it is notable that this decision-making process is blind to any conservation priorities we might have (*e.g.*, species assessed as vulnerable at a provincial or national scale), which can bias such assessments.
 
 {{% pageinfo %}}
 "Conservation programs often prioritize species-at-risk, even while many common species may undergo the highest relative losses (Jansen *et al.*, 2019)."
 {{% /pageinfo %}}
 
-
 ## Criteria to consider
 
 ### Provenance
 
-First, presumably we are mostly concerned with change in plant communities of native origin:
+Likely, we are mostly concerned with change in plant communities of native origin:
 
-```{r, message=FALSE, warning=FALSE, results='hide'}
-native.at.large.2020 <- at.large.2020 %>% filter(Origin == 'native')
-nrow(native.at.large.2020) # 110 native plant species at large
+### Native species unreported for more than 20 years
+
+```{r, message=FALSE, warning=FALSE}
+at.large.2020 <- read.csv("Analysis_Inputs/Galiano_Tracheophyta_summary_reviewed_at_large_2024-10-07.csv")
+
+native.at.large.2020 <- at.large.2020 %>% filter(origin == 'native')
+n_native <- nrow(native.at.large.2020)
+
+cat("Of the species unreported for more than twenty years prior to 2020,", 
+    n_native, "were native plant species.")
 ```
 
 ### Taxonomically difficult or cryptic species
 
-Graminoids are easily overlooked, so sighting rate may be less informative regarding extinction risk. We can narrow our focus to the more conspicuous dicots and petaloid monocots:
+Graminoids are often easily overlooked, so sighting rates may be less informative regarding extinction risk. Here, we narrow our focus to the more conspicuous dicots and petaloid monocots:
 
-```{r, message=FALSE, warning=FALSE, results='hide'}
-native.non.graminoids.at.large.2020 <- native.at.large.2020 %>% filter(Order != 'Poales')
-nrow(native.non.graminoids.at.large.2020) # 70 native dicots / petaloid monocots at large
+```{r, message=FALSE, warning=FALSE}
+native.non.graminoids.at.large.2020 <- native.at.large.2020 %>% filter(order != 'Poales')
+n_non_graminoids <- nrow(native.non.graminoids.at.large.2020)
+
+cat("Of the native species unreported for more than twenty years prior to 2020,", 
+    n_non_graminoids, "were dicots or petaloid monocots.")
 ```
 
 ### Historical evidence
 
-Biological specimens are the strongest evidence we have for biodiversity change assessments. List records could be unreliable, so we should probably limit our assessment to species represented by independently verifiable voucher specimens:
+Biological specimens are the strongest evidence we have for biodiversity change assessments. List records can be unreliable, so we limit our assessment to species represented by independently verifiable voucher specimens:
 
-```{r, message=FALSE, warning=FALSE, results='hide'}
-vouchered.native.non.graminoids.at.large.2020 <- native.non.graminoids.at.large.2020 %>% filter(Basis.of.Historical.Record == 'voucher')
-nrow(vouchered.native.non.graminoids.at.large.2020) # 32 vouchered native dicots / petaloid monocots at large
+```{r, message=FALSE, warning=FALSE}
+vouchered.native.non.graminoids.at.large.2020 <- native.non.graminoids.at.large.2020 %>%
+  filter(basisOfHistoricalRecord == 'voucher')
+
+n_vouchered <- nrow(vouchered.native.non.graminoids.at.large.2020)
+
+cat("Of the native dicots and petaloid monocots unreported for more than twenty years prior to 2020,", n_vouchered, "were documented by verifiable voucher specimens.")
 ```
 
 ```{r, message=FALSE, echo=FALSE}
@@ -69,6 +77,7 @@ paged_table(vouchered.native.non.graminoids.at.large.2020)
 
 From this resulting list, we might apply additional criteria to select a set of candidates for extinction risk assessment. This tutorial focuses on a subset of taxa we considered in our study: *Crassula connata*, *Meconella oregana*, *Plagiobothrys tenellus*, and *Primula pauciflora*.
 
+Other important criteria to consider:
 
 ### Coordinate uncertainty
 
@@ -80,11 +89,5 @@ Geographic coordinates represent one of the most crucial pieces of information f
 * Sometimes, coordinates are generalized to the geometric centre (centroid) of a given area, with a wide radius of coordinate uncertainty
 * Sometimes, we don't have any coordinates at all
 
-It is exceedingly difficult if not impossible to assess the status of species or populations that lack specific locality information. At the very least, we will want to ensure our targets have coordinates:
-
-```
-# Filter out records lacking coordinates
-```
-
-(Depending on the approach, one might want to be more strict and filter records below a certain threshold of coordinate Uncertainty)
+It is exceedingly difficult if not impossible to assess the status of species or populations that lack specific locality information. At the very least, we will want to ensure our targets have generalized coordinates referring to a discrete locality. Depending on the approach, one might want to be even more strict and filter records below a certain threshold of coordinate uncertainty. Otherwise we cannot be confident in our assessment.
 
