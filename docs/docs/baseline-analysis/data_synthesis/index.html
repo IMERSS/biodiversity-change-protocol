@@ -22,7 +22,7 @@
 <meta itemprop="name" content="Data synthesis">
 <meta itemprop="description" content="Dealing with messy data"><meta itemprop="datePublished" content="2025-10-02T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2025-10-02T00:00:00+00:00" />
-<meta itemprop="wordCount" content="238">
+<meta itemprop="wordCount" content="231">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Data synthesis"/>
 <meta name="twitter:description" content="Dealing with messy data"/>
 
@@ -266,14 +266,6 @@
     href="../../../docs/inferring_extirpation_risk/solow_calculation/"
     
   >Solow calculation (Prior I)
-    </a>
-              
-            </li><li class="hx-flex hx-flex-col "><a
-    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="../../../docs/inferring_extirpation_risk/example/"
-    
-  >Example
     </a>
               
             </li></ul>
@@ -545,14 +537,6 @@
   >Solow calculation (Prior I)
     </a>
               
-            </li><li class="hx-flex hx-flex-col "><a
-    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="../../../docs/inferring_extirpation_risk/example/"
-    
-  >Example
-    </a>
-              
             </li></ul>
       </div></li>
           <li class="open"><a
@@ -766,8 +750,7 @@
         <div class="content">
           <h1>Data synthesis</h1>
           <h2>Combination of heterogeneous data in baseline analyses<span class="hx-absolute -hx-mt-20" id="combination-of-heterogeneous-data-in-baseline-analyses"></span>
-    <a href="#combination-of-heterogeneous-data-in-baseline-analyses" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Statistical approaches to modeling biodiversity change are often paralyzed by limitations and deficiencies inherent
-in biodiversity data—especially when historical and contemporary data are combined from multiple sources.</p>
+    <a href="#combination-of-heterogeneous-data-in-baseline-analyses" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Statistical approaches to modeling biodiversity change are often paralyzed by limitations inherent in biodiversity data—especially when historical and contemporary data are combined from multiple sources.</p>
 <ul>
 <li>Data are commonly unstructured, or heterogeneous, lacking consistent attributes or metadata</li>
 <li>Data are often biased toward positive detections (lacking absence information)</li>
@@ -776,22 +759,18 @@ in biodiversity data—especially when historical and contemporary data are comb
 <li>Data may be sparse, with few or perhaps only singleton records to vouch for historical populations, especially at local scales</li>
 </ul>
 <h2>Baseline analyses offer a practical approach<span class="hx-absolute -hx-mt-20" id="baseline-analyses-offer-a-practical-approach"></span>
-    <a href="#baseline-analyses-offer-a-practical-approach" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>A practical approach to this difficult situation is to forego any advanced modeling practices <em>ab initio</em>
-and begin instead with a simple baseline analysis of historical <em>vs</em> contemporary sources of biodiversity data.
-This approach will generally depend on normalization of species occurrence data across multiple datasets, to support the comparison of historical
-and contemporary species records.</p>
+    <a href="#baseline-analyses-offer-a-practical-approach" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>A practical approach to this difficult situation is to forego any advanced modeling practices <em>ab initio</em> and begin instead with a simple baseline analysis of historical <em>vs</em> contemporary sources of biodiversity data. This approach will generally depend on normalization of species occurrence data across multiple datasets, to support the comparison of historical and contemporary species records.</p>
 
 
 
 <div class="pageinfo pageinfo-primary">
-<p>Normalization of biodiversity data is a thorny enough problem in its own right and not treated here. For this
-tutorial we assume that names are aligned and any ambiguity (synonymy, etc.) is resolved between the data being compared.</p>
+<p>Normalization of biodiversity data is a thorny enough problem in its own right and not treated here. For this tutorial we assume that names are aligned and any ambiguity (synonymy, etc.) is resolved between the data being compared.</p>
 
 </div>
 
 <ul>
-<li>Best practices are to adhere to <a href="https://dwc.tdwg.org" target="_blank" rel="noopener">Darwin Core standards</a> for species occurrence data.</li>
-<li>Different communities may prefer to adhere to different taxonomic databases. Any taxonomic standard can be observed, as long as it results in consistent mapping of taxa between datasets.</li>
+<li>Best practice is to adhere to <a href="https://dwc.tdwg.org" target="_blank" rel="noopener">Darwin Core standards</a> for species occurrence data.</li>
+<li>Different communities may prefer different taxonomic databases, but any standard is acceptable as long as it enables consistent mapping of taxa across datasets.</li>
 </ul>
 
         </div>

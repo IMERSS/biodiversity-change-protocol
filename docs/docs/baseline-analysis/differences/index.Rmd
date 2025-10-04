@@ -23,43 +23,58 @@ library(ggplot2)
 
 Differences between historical and contemporary biodiversity data could potentially indicate change in a system:
 
-* In conservation assessments, historically reported species that have not been seen within 20--40 years are often considered 
-'historical populations' whose persistence is considered questionable ([Nature Serve 2025](https://help.natureserve.org/biotics/Content/Record_Management/Element_Files/Element_Tracking/ETRACK_Definitions_of_Heritage_Conservation_Status_Ranks.htm?utm_source=chatgpt.com))
+* Historically reported species that have not been seen in the last 20--40 years are generally considered 'historical populations' whose persistence is considered questionable ([Nature Serve 2025](https://help.natureserve.org/biotics/Content/Record_Management/Element_Files/Element_Tracking/ETRACK_Definitions_of_Heritage_Conservation_Status_Ranks.htm?utm_source=chatgpt.com))
 * Conversely, species that suddenly appear in a biodiversity record may signal a recent dispersal, colonization or invasion event
 
-Here, we focus specifically on "species at large", *i.e.*, historical reports that have gone undetected in recent decades.
+Here, we focus specifically on "species at large", *i.e.*, historically reported species that have gone undetected in recent decades.
 
 ### Summarize historical baseline data
 
-```{r, message=FALSE, warning=FALSE, results='hide'}
-# How many species were historically reported for Galiano Island, prior to the beginning of the Biodiversity Galiano project?
+### Historical records
 
-summary <- read.csv("scripts/historical_analysis/Galiano_Tracheophyta_summary_reviewed_2024-10-07.csv")
+How many species were historically reported for Galiano Island, prior to the beginning of the Biodiversity Galiano project?
 
-reported <- summary %>% filter(Reporting.Status == 'reported')
-confirmed <- summary %>% filter(Reporting.Status == 'confirmed')
-historical.reports <- rbind(reported, confirmed)
 
-nrow(historical.reports) # There were 607 species historically known to Galiano Island, prior to the beginning of the Biodiversity Galiano project
+```{r, message=FALSE, warning=FALSE}
+library(dplyr)
+library(lubridate)
 
-historical.reports.native <- historical.reports %>% filter(Origin == 'native')
+summary <- read.csv("Analysis_Inputs/Galiano_Tracheophyta_summary_reviewed_2024-10-07.csv")
 
-nrow(historical.reports.native) # There were 309 native plant species reported for Galiano Island prior to the beginning of the BioGaliano project
+reported <- summary %>% filter(reportingStatus == 'reported')
+confirmed <- summary %>% filter(reportingStatus == 'confirmed')
+historical.reports <- bind_rows(reported, confirmed)
 
-# How many species were documented by 2020?
-  
-confirmed$year.confirmed <- as.numeric(substr(confirmed$First.Observed, start = 1, stop = 4))
-
-confirmed.prior.2020 <- confirmed %>% filter(year.confirmed < 2020)
-
-confirmed.prior.2020$year.confirmed <- NULL
-
-nrow(confirmed.prior.2020) # 433/607 historical records confirmed by 2020
-
-at.large.2020 <- anti_join(historical.reports, confirmed.prior.2020)
-nrow(at.large.2020) # 174 species remained at large by 2020
+n_hist <- nrow(historical.reports)
+cat("There were", n_hist, 
+    "species historically known to Galiano Island, prior to the beginning of the Biodiversity Galiano project.")
 
 ```
 
-Populations or species that have gone undetected for many years may be considered at risk of extirpation and targeted for assessment. However, there are other important criteria that communities may consider before undertaking such efforts.
+```{r, message=FALSE, warning=FALSE}
+confirmed <- confirmed %>%
+  mutate(year.confirmed = as.numeric(substr(firstObservediNat, 1, 4)))
 
+confirmed.prior.2020 <- confirmed %>% filter(year.confirmed < 2020)
+n_confirmed <- nrow(confirmed.prior.2020)
+
+cat(n_confirmed, "of these historical records had been confirmed by 2020.")
+```
+
+```{r, message=FALSE, warning=FALSE}
+at.large.2020 <- anti_join(historical.reports, confirmed.prior.2020)
+n_at_large <- nrow(at.large.2020)
+
+cat("This left", n_at_large, "species still at large by 2020.")
+```
+
+```{r, message=FALSE, warning=FALSE}
+at.large.2020 <- at.large.2020 %>%
+  filter(as.Date(eventDate) < as.Date("2000-01-01"))
+n_unseen20 <- nrow(at.large.2020)
+
+cat("Of these,", n_unseen20, 
+    "species had not been reported for more than twenty years prior to 2020.")
+```
+
+Populations or species that have gone undetected for many years may be considered at risk of extirpation. However, there are other important criteria that communities may consider before such an assessment is made.
