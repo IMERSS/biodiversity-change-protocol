@@ -10,7 +10,7 @@ library(rstan)
 
 source("Scripts/utils.R")
 
-setwd(paste0(dirname(rstudioapi::getActiveDocumentContext()$path), "/../.."))
+setwd(rprojroot::find_rstudio_root_file())
 
 recordfiles <- c("A_formosa_detections_distances_to_first_records.csv",
              "C_attenuata_detections_distances_to_first_records.csv",
@@ -38,7 +38,7 @@ priors <- c(prior(normal(0, 1), nlpar = "q", lb = 0),
 estimate_kernel <- function (recordfile) {
   
   # Load observed data
-  records <- read.csv(str_glue("Scripts/distance_decay_hypothesis_tests/{recordfile}"))
+  records <- read.csv(str_glue("Analysis_inputs/{recordfile}"))
   
   # Ensure data are formatted correctly
   records$distance <- as.numeric(records$distance)
