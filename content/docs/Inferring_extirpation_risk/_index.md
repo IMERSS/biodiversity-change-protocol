@@ -20,7 +20,7 @@ been extirpated.
 greater confidence that it was a well established population
 
 * If a species is only reported once or twice, historical populations may have been small or non-viable, or perhaps the species 
-is simply rare and overlooked
+is obscure and was simply overlooked
 
 Sighting rates constitute useful prior knowledge and can be used to calculate extinction probabilities.
 

@@ -20,37 +20,37 @@ setwd(rprojroot::find_rstudio_root_file())
 
 summary <- read.csv("Analysis_inputs/Galiano_Tracheophyta_summary_reviewed_2024-10-07.csv")
 
-reported <- summary %>% filter(Reporting.Status == 'reported')
-confirmed <- summary %>% filter(Reporting.Status == 'confirmed')
+reported <- summary %>% filter(reportingStatus == 'reported')
+confirmed <- summary %>% filter(reportingStatus == 'confirmed')
 historical.reports <- rbind(reported, confirmed)
 
 nrow(historical.reports) # There were 607 species historically known to Galiano Island, prior to
 # the beginning of the Biodiversity Galiano project
 
-historical.reports.native <- historical.reports %>% filter(Origin == 'native')
+historical.reports.native <- historical.reports %>% filter(origin == 'native')
 
 nrow(historical.reports.native) # There were 309 native plant species reported for Galiano Island
 # prior to the beginning of the BioGaliano project
 
 # How many species were documented by 2020?
   
-confirmed$year.confirmed <- as.numeric(substr(confirmed$First.Observed, start = 1, stop = 4))
+confirmed$year.confirmed <- as.numeric(substr(confirmed$firstObserved, start = 1, stop = 4))
 
 confirmed.prior.2020 <- confirmed %>% filter(year.confirmed < 2020)
 
 confirmed.prior.2020$year.confirmed <- NULL
 
-nrow(confirmed.prior.2020) # 433/607 historical records confirmed by 2020
+nrow(confirmed.prior.2020) # 432/607 historical records confirmed by 2020
 
 at.large.2020 <- anti_join(historical.reports, confirmed.prior.2020)
-nrow(at.large.2020) # 174 species remained at large by 2020
+nrow(at.large.2020) # 175 species remained at large by 2020
 
-native.at.large.2020 <- at.large.2020 %>% filter(Origin == 'native')
+native.at.large.2020 <- at.large.2020 %>% filter(origin == 'native')
 nrow(native.at.large.2020)
 
-new <- summary %>% filter(grepl("new", Reporting.Status))
+new <- summary %>% filter(grepl("new", reportingStatus))
 
-new$year.new <- as.numeric(substr(new$First.Observed, start = 1, stop = 4))
+new$year.new <- as.numeric(substr(new$firstObserved, start = 1, stop = 4))
 
 new.prior.2020 <- new %>% filter(year.new < 2020)
 
@@ -60,7 +60,7 @@ nrow(new.prior.2020) # 127 species reported new for Galiano by 2020
 
 confirmed.and.new.prior.2020 <- rbind(confirmed.prior.2020, new.prior.2020)
 
-nrow(confirmed.and.new.prior.2020) # 560 species observed on BioGaliano by 2020
+nrow(confirmed.and.new.prior.2020) # 559 species observed on BioGaliano by 2020
 
 known.plants.prior.2020 <- rbind(reported, confirmed.prior.2020, new.prior.2020)
 
