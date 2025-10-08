@@ -267,7 +267,22 @@ into beta parameters for a regional distribution using moment matching:&lt;/p&gt
         
         
         &lt;h2&gt;Inferring local extinction based on limited occurrence data&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;inferring-local-extinction-based-on-limited-occurrence-data&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#inferring-local-extinction-based-on-limited-occurrence-data&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;XXXXXXX&lt;/p&gt;
+    &lt;a href=&#34;#inferring-local-extinction-based-on-limited-occurrence-data&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;We&amp;rsquo;ll work through the computation of our prior probability of presence (PP) using
+&lt;a href=&#34;https://esajournals.onlinelibrary.wiley.com/doi/10.2307/1940821&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Solow&amp;rsquo;s 1993 formula&lt;/a&gt; for one of our focal species, &lt;em&gt;Crassula connata&lt;/em&gt;. As is common
+for our rare species of interest, we have just one sighting in the historical
+record, made in 1983, which time we&amp;rsquo;ll call $T_1$. This requires some care in applying Solow&amp;rsquo;s formula (expand
+section below for mathematical details) which formally requires a minimum of two sightings in order
+to give meaningful results.&lt;/p&gt;
+&lt;p&gt;In this case we adopt a &amp;ldquo;sentinel&amp;rdquo; earliest sighting $T_0$ corresponding to the beginning
+of formal record-keeping in the area, 1958 [AS fill in explanation here], and choose our
+project datum $T_2$ as 2019.
+In this case, Solow&amp;rsquo;s formula determining the Bayes factor (odds ratio) in favour
+of presence simplifies to $B(t) = 1 / [(T_2 - T_0) / (T_1 - T_0) - 1] = 0.6944$.&lt;/p&gt;
+&lt;p&gt;Transforming from an odds ratio to a probability using the standard formula $P(t) = B(t)/ (1 + B(t))$
+gives our prior probability of presence $PP_{CC} = 0.41$.&lt;/p&gt;
+&lt;p&gt;This could also be
+represented as the prior probability of extinction $PE_{CC} = 1 - PP_{CC} = 0.59$, the figure
+appearing in Table 2 in our paper.&lt;/p&gt;
 &lt;p&gt;
   &lt;a class=&#34;btn btn-primary&#34; data-bs-toggle=&#34;collapse&#34; href=&#34;#collapseExample&#34; role=&#34;button&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapseExample&#34;&gt;
     Expand for mathematical details

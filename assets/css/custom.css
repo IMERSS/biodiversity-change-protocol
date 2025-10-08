@@ -310,7 +310,7 @@ table {
     right: 10px;
     display: none;
     outline: none;
-    color: var(--bs-navbar-color);
+    color: var(--bs-body-color);
 }
 
 .search-wrapper input:not(:placeholder-shown) + .clear-search-button {

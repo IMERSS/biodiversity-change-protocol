@@ -8,6 +8,8 @@
 
 <script defer src="{{ $jsCustom.RelPermalink }}"></script>
 
+<link id="site-root-marker" href="{{ "/" | relURL }}">
+
 {{- $navWidth := "hx-max-w-[90rem]" -}}
 {{- with .Site.Params.navbar.width -}}
   {{ if eq . "normal" -}}
