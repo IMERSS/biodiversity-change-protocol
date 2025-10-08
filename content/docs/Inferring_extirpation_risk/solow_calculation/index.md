@@ -22,7 +22,7 @@ XXXXXXX
 Solow (1993) provides a framework for determining a reasonable prior distribution 
 for belief about species extinction when observational data are limited. 
 Their Equation 3 presents a Bayes Factor for summarizing evidence in favor of extinction, 
-given by: \(B(t) = (n -1) / [(T/t_n )^(n - 1)  - 1]\) where \(n\) is the number of observations and \(Ti\) 
+given by: \(B(t) = (n - 1) / [(T/t_n )^{(n - 1)} - 1]\) where \(n\) is the number of observations and \(T_i\) 
 represents the \(ith\) sighting time and \(T\) is the present date. 
 </p>
 </div>
