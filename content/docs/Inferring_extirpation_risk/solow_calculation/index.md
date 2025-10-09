@@ -13,13 +13,13 @@ To estimate how likely a species is still present before considering any new evi
 
 Solow’s method expresses this intuition mathematically by comparing three key times: 
 
-* T₀ — the first detection, the beginning of formal record-keeping, or the earliest time we could reasonably have detected the species if it were present.
-* T₁ — the time of the most recent confirmed sighting
-* T₂ — the current time or the endpoint of our study. 
+* $T_0$ — the first detection, the beginning of formal record-keeping, or the earliest time we could reasonably have detected the species if it were present
+* $T_1$ — the time of the most recent confirmed sighting
+* $T_2$ — the current time or the endpoint of our study 
 
 The formula calculates an odds ratio (called a Bayes factor) that weighs the likelihood the species is still present versus extinct, based on how long it has gone unobserved. 
 
-Intuitively, the longer the gap between the last sighting and today (T₂ – T₁), relative to the total observation period (T₂ – T₀), the lower the odds that the species persists. 
+Intuitively, the longer the gap between the last sighting and today ($T_2$ – $T_1$), relative to the total observation period ($T_2$ – $T_0$), the lower the odds that the species persists. 
 
 <p>
   <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">

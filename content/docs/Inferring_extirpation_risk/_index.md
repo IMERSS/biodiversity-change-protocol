@@ -16,3 +16,6 @@ When many records attest to a species’ historical presence, we can be more con
 
 Sighting rates thus constitute informative prior knowledge that can be incorporated into models to estimate extinction probabilities.
 
+{{% imgproc plants Fill "3130x709" %}}
+{{% /imgproc %}}
+

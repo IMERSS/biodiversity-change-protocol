@@ -6,11 +6,6 @@ sidebar:
   open: true
 ---
 
-Extinction events are the sum of all extirpation events, with the vanishing of all individuals of a species. Thus, to address the global threat of biodiversity loss, communities must develop systems for the early detection and prevention of extinction as it occurs locally. 
-
-{{% imgproc plants Fill "3130x709" %}}
-{{% /imgproc %}}
-
 The global biodiversity crisis stems from a cascading series of extirpations driving species
 toward extinction. Addressing this crisis requires methods for early detection of extinction at
 local scales, where communities can mobilise conservation efforts. We present a method for

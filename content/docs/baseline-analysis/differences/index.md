@@ -26,7 +26,6 @@ Here, we focus specifically on "species at large", *i.e.*, historically reported
 How many species were historically reported for Galiano Island, prior to the beginning of the Biodiversity Galiano project?
 
 
-
 ``` r
 library(dplyr)
 library(lubridate)

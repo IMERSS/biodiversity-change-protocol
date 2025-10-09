@@ -18,3 +18,5 @@ may potentially be at risk of local extinction. Keeping this approach simple,
 we can overcome some of the immediate challenges posed by the analysis of complex 
 biodiversity data sets.
 
+{{% imgproc biodiversityanalysis Fill "3655x3320" %}}
+{{% /imgproc %}}
