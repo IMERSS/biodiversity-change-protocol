@@ -1,5 +1,5 @@
 ---
-title: Example 1
+title: Example I
 description: Crassula connata
 math: true
 weight: 3

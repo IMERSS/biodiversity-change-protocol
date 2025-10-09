@@ -13,7 +13,7 @@ To estimate how likely a species is still present before considering any new evi
 
 Solow’s method expresses this intuition mathematically by comparing three key times: 
 
-* T₀ — the beginning of formal record-keeping or the earliest time we could reasonably have detected the species if it were present.
+* T₀ — the first detection, the beginning of formal record-keeping, or the earliest time we could reasonably have detected the species if it were present.
 * T₁ — the time of the most recent confirmed sighting
 * T₂ — the current time or the endpoint of our study. 
 
