@@ -25,14 +25,14 @@ In order to proceed beyond an initial baseline analysis to assess possible chang
 Depending on the criteria we set, there may emerge many potential target species or populations of concern. On the first pass, however, it is notable that this decision-making process is blind to any conservation priorities we might have (*e.g.*, species assessed as vulnerable at a provincial or national scale), which can bias such assessments.
 
 {{% pageinfo %}}
-"Conservation programs often prioritize species-at-risk, even while many common species may undergo the highest relative losses (Jansen *et al.*, 2019)."
+"If the focus of nature conservation efforts remains on rare and threatened species only, ignoring moderately common species, we might miss most of the biodiversity changes occurring in our landscapes (Gaston, 2010). On the other hand, many formerly frequent species should be considered as under threat according to IUCN criteria (Jansen *et al*., 2019)."
 {{% /pageinfo %}}
 
 ## Criteria to consider
 
 ### Provenance
 
-Likely, we are mostly concerned with change in plant communities of native origin:
+Likely, we are mostly concerned with change in plant communities of native provenance.
 
 ### Native species unreported for more than 20 years
 
