@@ -9,16 +9,17 @@ weight: 2
 
 ## Inferring local extinction based on limited occurrence data
 
-To estimate how likely a species is still present before considering any new evidence, 
+To estimate the likelihood of a species presence before considering any new evidence, 
 we use a non-parametric extinction test—a method developed by Solow (1993).
 This approach starts from the simple idea that the timing of past sightings contains 
-information about whether a species has disappeared. If a species was last observed 
+information about whether a species might have disappeared. If a species was last observed 
 long ago, and we’ve continued searching without finding it again, our confidence in 
 its persistence declines. 
 
 Solow’s method expresses this intuition mathematically by comparing three key times: 
 
-* $T_0$ — the first detection, the beginning of formal record-keeping, or the earliest time we could reasonably have detected the species if it were present
+* $T_0$ — the first detection, the beginning of formal record-keeping, or the earliest 
+time we could reasonably have detected the species if it were present
 * $T_1$ — the time of the most recent confirmed sighting
 * $T_2$ — the current time or the endpoint of our study 
 

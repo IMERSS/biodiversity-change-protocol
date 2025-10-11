@@ -13,13 +13,11 @@ weight: 4
 
 ## Open-ended assessments of potential change
 
-In order to proceed beyond an initial baseline analysis to assess possible changes in a system, we can set criteria to focus our attention (and limited resources) on high risk species that are most likely to be vulnerable.
+In order to proceed beyond an initial baseline analysis to assess possible changes in a system, we can set criteria to focus our attention (and limited resources) on species that are most likely to be vulnerable.
 
 Depending on the criteria we set, there may emerge many potential target species or populations of concern. On the first pass, however, it is notable that this decision-making process is blind to any conservation priorities we might have (*e.g.*, species assessed as vulnerable at a provincial or national scale), which can bias such assessments.
 
-{{% pageinfo %}}
-"If the focus of nature conservation efforts remains on rare and threatened species only, ignoring moderately common species, we might miss most of the biodiversity changes occurring in our landscapes (Gaston, 2010). On the other hand, many formerly frequent species should be considered as under threat according to IUCN criteria (Jansen *et al*., 2019)."
-{{% /pageinfo %}}
+>"If the focus of nature conservation efforts remains on rare and threatened species only, ignoring moderately common species, we might miss most of the biodiversity changes occurring in our landscapes (Gaston, 2010). On the other hand, many formerly frequent species should be considered as under threat according to IUCN criteria (Jansen *et al*., 2019)."
 
 ## Criteria to consider
 
