@@ -9,7 +9,12 @@ weight: 2
 
 ## Inferring local extinction based on limited occurrence data
 
-To estimate how likely a species is still present before considering any new evidence, we use a method developed by Solow (1993). This approach starts from the simple idea that the timing of past sightings contains information about whether a species has disappeared. If a species was last observed long ago, and we’ve continued searching without finding it again, our confidence in its persistence naturally declines. 
+To estimate how likely a species is still present before considering any new evidence, 
+we use a non-parametric extinction test—a method developed by Solow (1993).
+This approach starts from the simple idea that the timing of past sightings contains 
+information about whether a species has disappeared. If a species was last observed 
+long ago, and we’ve continued searching without finding it again, our confidence in 
+its persistence declines. 
 
 Solow’s method expresses this intuition mathematically by comparing three key times: 
 
@@ -17,9 +22,11 @@ Solow’s method expresses this intuition mathematically by comparing three key 
 * $T_1$ — the time of the most recent confirmed sighting
 * $T_2$ — the current time or the endpoint of our study 
 
-The formula calculates an odds ratio (called a Bayes factor) that weighs the likelihood the species is still present versus extinct, based on how long it has gone unobserved. 
-
-Intuitively, the longer the gap between the last sighting and today ($T_2$ – $T_1$), relative to the total observation period ($T_2$ – $T_0$), the lower the odds that the species persists. 
+The formula calculates an odds ratio (called a Bayes factor) that weighs the 
+likelihood that the species is still present versus extinct, based on how long it has 
+gone unobserved. The longer the gap between the last sighting and today ($T_2$ – $T_1$), 
+relative to the total observation period ($T_2$ – $T_0$), the lower the odds that the 
+species persists. 
 
 <p>
   <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -32,8 +39,8 @@ Intuitively, the longer the gap between the last sighting and today ($T_2$ – $
 Solow (1993) provides a framework for determining a reasonable prior distribution 
 for belief about species extinction when observational data are limited. 
 Their Equation 3 presents a Bayes Factor for summarizing evidence in favor of extinction, 
-given by: \(B(t) = (n - 1) / [(T/t_n )^{(n - 1)} - 1]\) where \(n\) is the number of observations and \(T_i\) 
-represents the \(ith\) sighting time and \(T\) is the present date. 
+given by: \(B(t) = (n - 1) / [(T/t_n )^{(n - 1)} - 1]\) where \(n\) is the number of 
+observations and \(T_i\) represents the \(ith\) sighting time and \(T\) is the present date. 
 </p>
 </div>
 </div>

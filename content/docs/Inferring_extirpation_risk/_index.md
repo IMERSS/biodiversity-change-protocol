@@ -8,6 +8,9 @@ sidebar:
   open: true
 ---
 
+{{% imgproc plants Fill "3130x709" %}}
+{{% /imgproc %}}
+
 ## Detection frequency
 
 A useful metric for assessing extirpation risk is the detection frequency or sighting rate of a species. Species that were observed only once historically may have a different likelihood of persistence than those recorded repeatedly before disappearing from records. In other words, the number and frequency of historical observations can inform our prior belief about whether a species is likely still extant or has been extirpated. 
@@ -16,6 +19,5 @@ When many records attest to a species’ historical presence, we can be more con
 
 Sighting rates thus constitute informative prior knowledge that can be incorporated into models to estimate extinction probabilities.
 
-{{% imgproc plants Fill "3130x709" %}}
-{{% /imgproc %}}
+
 
