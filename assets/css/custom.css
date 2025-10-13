@@ -259,6 +259,10 @@ table {
   font-size: 12px;
 }
 
+.pagedtable-header-type {
+    display: none;
+}
+
 /** Hack to make size calculation use smaller font size */
 .pagedtable > table:first-of-type {
   font-size: 12px;

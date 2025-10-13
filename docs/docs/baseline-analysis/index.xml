@@ -39,7 +39,7 @@
 
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;Normalization of biodiversity data is a thorny enough problem in its own right and not treated here. For this tutorial we assume that names are aligned and any ambiguity (synonymy, etc.) is resolved between the data being compared.&lt;/p&gt;
+&lt;p&gt;Normalization of biodiversity data is a thorny enough problem in its own right and not treated here. For this tutorial we assume that names are aligned and any ambiguity (synonymy, orthographic variants, &lt;em&gt;etc&lt;/em&gt;.) is resolved between the data being compared.&lt;/p&gt;
 
 &lt;/div&gt;
 
@@ -208,19 +208,14 @@
         &lt;link href=&#34;../../docs/baseline-analysis/criteria/index_files/pagedtable/css/pagedtable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;../../docs/baseline-analysis/criteria/index_files/pagedtable/js/pagedtable.js&#34;&gt;&lt;/script&gt;
 &lt;h2&gt;Open-ended assessments of potential change&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;open-ended-assessments-of-potential-change&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#open-ended-assessments-of-potential-change&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;In order to proceed beyond an initial baseline analysis to assess possible changes in a system, we can set criteria to focus our attention (and limited resources) on high risk species that are most likely to be vulnerable.&lt;/p&gt;
+    &lt;a href=&#34;#open-ended-assessments-of-potential-change&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;In order to proceed beyond an initial baseline analysis to assess possible changes in a system, we can set criteria to focus our attention (and limited resources) on species that are most likely to be vulnerable.&lt;/p&gt;
 &lt;p&gt;Depending on the criteria we set, there may emerge many potential target species or populations of concern. On the first pass, however, it is notable that this decision-making process is blind to any conservation priorities we might have (&lt;em&gt;e.g.&lt;/em&gt;, species assessed as vulnerable at a provincial or national scale), which can bias such assessments.&lt;/p&gt;
-
-
-
-&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;&amp;ldquo;Conservation programs often prioritize species-at-risk, even while many common species may undergo the highest relative losses (Jansen &lt;em&gt;et al.&lt;/em&gt;, 2019).&amp;rdquo;&lt;/p&gt;
-
-&lt;/div&gt;
-
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;If the focus of nature conservation efforts remains on rare and threatened species only, ignoring moderately common species, we might miss most of the biodiversity changes occurring in our landscapes (Gaston, 2010). On the other hand, many formerly frequent species should be considered as under threat according to IUCN criteria (Jansen &lt;em&gt;et al&lt;/em&gt;., 2019).&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2&gt;Criteria to consider&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;criteria-to-consider&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#criteria-to-consider&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Provenance&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;provenance&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#provenance&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Likely, we are mostly concerned with change in plant communities of native origin:&lt;/p&gt;
+    &lt;a href=&#34;#provenance&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Likely, we are mostly concerned with change in plant communities of native provenance.&lt;/p&gt;
 &lt;h3&gt;Native species unreported for more than 20 years&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;native-species-unreported-for-more-than-20-years&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#native-species-unreported-for-more-than-20-years&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
 

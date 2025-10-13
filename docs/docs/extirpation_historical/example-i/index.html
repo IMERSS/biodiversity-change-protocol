@@ -11,31 +11,35 @@
 <link rel="apple-touch-icon" href="../../../apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="../../../site.webmanifest" rel="manifest" />
 <title>Example I – IMERSS</title>
-  <meta name="description" content="This map shows the accumulated search effort for Primula pauciflora over its historical habitat covering 9 grid cells in Bellhouse Park:
-prim_agm &lt;- read.csv(&#34;Analysis_outputs/Intermediate/Primula pauciflora_accepted_grouped_merged.csv&#34;) prim_historical &lt;- prim_agm %&gt;% dplyr::filter(assigned_community == &#34;PP1&#34;) prim_sf = assign_cell_geometry_sf(prim_historical, galgrid) pal &lt;- colorNumeric(palette = &#34;viridis&#34;, domain = range(c(0, prim_sf$search_effort), na.rm = TRUE)) m &lt;- leaflet(data = prim_sf) %&gt;% # Add a Tiles layer to the map addProviderTiles(&#34;Esri.WorldImagery&#34;) %&gt;% # Add the grid layer to the map addPolygons(fillColor = ~pal(search_effort), fillOpacity = 0." /><link rel="canonical" href="../../../docs/extirpation_historical/example-i/" itemprop="url" />
+  <meta name="description" content="Gridded search data are passed for computing regional statistics as the second argument to the analyse_accepted function in Analyse.R:
+analyse_accepted(thisTarget, accepted_grouped_merged, habitat_to_centres, exp_weight = exp_weight, solow_prob = solow_low) Here exp_weight is the exponential kernel distance weighting parameter and solow_prob is the Solow prior probability of sighting. This produces posterior regional statistics for extirpation in historical habitat as follows:
+target_stats &lt;- read.csv(&#34;Analysis_outputs/Intermediate/Primula pauciflora_stats.csv&#34;) target_stats_historical &lt;- target_stats %&gt;% dplyr::filter(Population == &#34;PP1&#34;) paged_table(target_stats_historical) These show the computed parameters of the posterior beta distribution for extirpation expressed in two different forms - the standard (alpha, beta) representation and (mu, var) as parameters for the central estimate for sighting probability and its dispersion." /><link rel="canonical" href="../../../docs/extirpation_historical/example-i/" itemprop="url" />
 
 <meta property="og:title" content="Example I" />
-<meta property="og:description" content="This map shows the accumulated search effort for Primula pauciflora over its historical habitat covering 9 grid cells in Bellhouse Park:
-prim_agm &lt;- read.csv(&#34;Analysis_outputs/Intermediate/Primula pauciflora_accepted_grouped_merged.csv&#34;) prim_historical &lt;- prim_agm %&gt;% dplyr::filter(assigned_community == &#34;PP1&#34;) prim_sf = assign_cell_geometry_sf(prim_historical, galgrid) pal &lt;- colorNumeric(palette = &#34;viridis&#34;, domain = range(c(0, prim_sf$search_effort), na.rm = TRUE)) m &lt;- leaflet(data = prim_sf) %&gt;% # Add a Tiles layer to the map addProviderTiles(&#34;Esri.WorldImagery&#34;) %&gt;% # Add the grid layer to the map addPolygons(fillColor = ~pal(search_effort), fillOpacity = 0." />
+<meta property="og:description" content="Gridded search data are passed for computing regional statistics as the second argument to the analyse_accepted function in Analyse.R:
+analyse_accepted(thisTarget, accepted_grouped_merged, habitat_to_centres, exp_weight = exp_weight, solow_prob = solow_low) Here exp_weight is the exponential kernel distance weighting parameter and solow_prob is the Solow prior probability of sighting. This produces posterior regional statistics for extirpation in historical habitat as follows:
+target_stats &lt;- read.csv(&#34;Analysis_outputs/Intermediate/Primula pauciflora_stats.csv&#34;) target_stats_historical &lt;- target_stats %&gt;% dplyr::filter(Population == &#34;PP1&#34;) paged_table(target_stats_historical) These show the computed parameters of the posterior beta distribution for extirpation expressed in two different forms - the standard (alpha, beta) representation and (mu, var) as parameters for the central estimate for sighting probability and its dispersion." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/extirpation_historical/example-i/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2025-06-04T00:00:00+00:00" />
 <meta property="article:modified_time" content="2025-06-04T00:00:00+00:00" />
 <meta itemprop="name" content="Example I">
-<meta itemprop="description" content="This map shows the accumulated search effort for Primula pauciflora over its historical habitat covering 9 grid cells in Bellhouse Park:
-prim_agm &lt;- read.csv(&#34;Analysis_outputs/Intermediate/Primula pauciflora_accepted_grouped_merged.csv&#34;) prim_historical &lt;- prim_agm %&gt;% dplyr::filter(assigned_community == &#34;PP1&#34;) prim_sf = assign_cell_geometry_sf(prim_historical, galgrid) pal &lt;- colorNumeric(palette = &#34;viridis&#34;, domain = range(c(0, prim_sf$search_effort), na.rm = TRUE)) m &lt;- leaflet(data = prim_sf) %&gt;% # Add a Tiles layer to the map addProviderTiles(&#34;Esri.WorldImagery&#34;) %&gt;% # Add the grid layer to the map addPolygons(fillColor = ~pal(search_effort), fillOpacity = 0."><meta itemprop="datePublished" content="2025-06-04T00:00:00+00:00" />
+<meta itemprop="description" content="Gridded search data are passed for computing regional statistics as the second argument to the analyse_accepted function in Analyse.R:
+analyse_accepted(thisTarget, accepted_grouped_merged, habitat_to_centres, exp_weight = exp_weight, solow_prob = solow_low) Here exp_weight is the exponential kernel distance weighting parameter and solow_prob is the Solow prior probability of sighting. This produces posterior regional statistics for extirpation in historical habitat as follows:
+target_stats &lt;- read.csv(&#34;Analysis_outputs/Intermediate/Primula pauciflora_stats.csv&#34;) target_stats_historical &lt;- target_stats %&gt;% dplyr::filter(Population == &#34;PP1&#34;) paged_table(target_stats_historical) These show the computed parameters of the posterior beta distribution for extirpation expressed in two different forms - the standard (alpha, beta) representation and (mu, var) as parameters for the central estimate for sighting probability and its dispersion."><meta itemprop="datePublished" content="2025-06-04T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2025-06-04T00:00:00+00:00" />
-<meta itemprop="wordCount" content="475">
+<meta itemprop="wordCount" content="124">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Example I"/>
-<meta name="twitter:description" content="This map shows the accumulated search effort for Primula pauciflora over its historical habitat covering 9 grid cells in Bellhouse Park:
-prim_agm &lt;- read.csv(&#34;Analysis_outputs/Intermediate/Primula pauciflora_accepted_grouped_merged.csv&#34;) prim_historical &lt;- prim_agm %&gt;% dplyr::filter(assigned_community == &#34;PP1&#34;) prim_sf = assign_cell_geometry_sf(prim_historical, galgrid) pal &lt;- colorNumeric(palette = &#34;viridis&#34;, domain = range(c(0, prim_sf$search_effort), na.rm = TRUE)) m &lt;- leaflet(data = prim_sf) %&gt;% # Add a Tiles layer to the map addProviderTiles(&#34;Esri.WorldImagery&#34;) %&gt;% # Add the grid layer to the map addPolygons(fillColor = ~pal(search_effort), fillOpacity = 0."/>
+<meta name="twitter:description" content="Gridded search data are passed for computing regional statistics as the second argument to the analyse_accepted function in Analyse.R:
+analyse_accepted(thisTarget, accepted_grouped_merged, habitat_to_centres, exp_weight = exp_weight, solow_prob = solow_low) Here exp_weight is the exponential kernel distance weighting parameter and solow_prob is the Solow prior probability of sighting. This produces posterior regional statistics for extirpation in historical habitat as follows:
+target_stats &lt;- read.csv(&#34;Analysis_outputs/Intermediate/Primula pauciflora_stats.csv&#34;) target_stats_historical &lt;- target_stats %&gt;% dplyr::filter(Population == &#34;PP1&#34;) paged_table(target_stats_historical) These show the computed parameters of the posterior beta distribution for extirpation expressed in two different forms - the standard (alpha, beta) representation and (mu, var) as parameters for the central estimate for sighting probability and its dispersion."/>
 
     <link rel="preload" href="../../../css/compiled/main.min.0d60cbb74d97ccaea83c3ea6d973c5961d69642b38588069a503bc04e284cbc7.css" as="style" integrity="sha256-DWDLt02XzK6oPD6m2XPFlh1pZCs4WIBppQO8BOKEy8c=" />
     <link href="../../../css/compiled/main.min.0d60cbb74d97ccaea83c3ea6d973c5961d69642b38588069a503bc04e284cbc7.css" rel="stylesheet" integrity="sha256-DWDLt02XzK6oPD6m2XPFlh1pZCs4WIBppQO8BOKEy8c=" />
 
 
 
-  <link href="../../../css/custom.min.f9ec9cf429d68e8cf1fdbcb592b7ac2bd3f4e6682af848df92975daf4826de34.css" rel="stylesheet" integrity="sha256-&#43;eyc9CnWjozx/by1kresK9P05mgq&#43;Ejfkpddr0gm3jQ=" />
+  <link href="../../../css/custom.min.e79959b8931977e2df8180258427c022f7845b6d9a35cc3bcd6c2c95c564f0ad.css" rel="stylesheet" integrity="sha256-55lZuJMZd&#43;LfgYAlhCfAIveEW22aNcw7zWwslcVk8K0=" />
 
 
   <script>
@@ -264,7 +268,7 @@ prim_agm &lt;- read.csv(&#34;Analysis_outputs/Intermediate/Primula pauciflora_ac
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="../../../docs/inferring_extirpation_risk/example/"
     
-  >Example 1
+  >Example I
     </a>
               
             </li></ul>
@@ -310,8 +314,27 @@ prim_agm &lt;- read.csv(&#34;Analysis_outputs/Intermediate/Primula pauciflora_ac
     href="../../../docs/search_effort/"
     
   >Search effort
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="../../../docs/search_effort/example-i/"
+    
+  >Example I
     </a>
               
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="../../../docs/search_effort/example-ii/"
+    
+  >Example II
+    </a>
+              
+            </li></ul>
+      </div>
             </li><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
@@ -542,7 +565,7 @@ prim_agm &lt;- read.csv(&#34;Analysis_outputs/Intermediate/Primula pauciflora_ac
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="../../../docs/inferring_extirpation_risk/example/"
     
-  >Example 1
+  >Example I
     </a>
               
             </li></ul>
@@ -587,7 +610,26 @@ prim_agm &lt;- read.csv(&#34;Analysis_outputs/Intermediate/Primula pauciflora_ac
     href="../../../docs/search_effort/"
     
   >Search effort
-    </a></li>
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="../../../docs/search_effort/example-i/"
+    
+  >Example I
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="../../../docs/search_effort/example-ii/"
+    
+  >Example II
+    </a>
+              
+            </li></ul>
+      </div></li>
           <li class="open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
@@ -749,43 +791,12 @@ prim_agm &lt;- read.csv(&#34;Analysis_outputs/Intermediate/Primula pauciflora_ac
 
         <div class="content">
           <h1>Example I</h1>
-          <link href="../../../docs/extirpation_historical/example-i/index_files/htmltools-fill/fill.css" rel="stylesheet" />
-<script src="../../../docs/extirpation_historical/example-i/index_files/htmlwidgets/htmlwidgets.js"></script>
-<script src="../../../docs/extirpation_historical/example-i/index_files/jquery/jquery-3.6.0.min.js"></script>
-<link href="../../../docs/extirpation_historical/example-i/index_files/leaflet/leaflet.css" rel="stylesheet" />
-<script src="../../../docs/extirpation_historical/example-i/index_files/leaflet/leaflet.js"></script>
-<link href="../../../docs/extirpation_historical/example-i/index_files/leafletfix/leafletfix.css" rel="stylesheet" />
-<script src="../../../docs/extirpation_historical/example-i/index_files/proj4/proj4.min.js"></script>
-<script src="../../../docs/extirpation_historical/example-i/index_files/Proj4Leaflet/proj4leaflet.js"></script>
-<link href="../../../docs/extirpation_historical/example-i/index_files/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
-<script src="../../../docs/extirpation_historical/example-i/index_files/leaflet-binding/leaflet.js"></script>
-<script src="../../../docs/extirpation_historical/example-i/index_files/leaflet-providers/leaflet-providers_2.0.0.js"></script>
-<script src="../../../docs/extirpation_historical/example-i/index_files/leaflet-providers-plugin/leaflet-providers-plugin.js"></script>
-<link href="../../../docs/extirpation_historical/example-i/index_files/pagedtable/css/pagedtable.css" rel="stylesheet" />
+          <link href="../../../docs/extirpation_historical/example-i/index_files/pagedtable/css/pagedtable.css" rel="stylesheet" />
 <script src="../../../docs/extirpation_historical/example-i/index_files/pagedtable/js/pagedtable.js"></script>
-<link href="../../../docs/extirpation_historical/example-i/index_files/pagedtable/css/pagedtable.css" rel="stylesheet" />
-<script src="../../../docs/extirpation_historical/example-i/index_files/pagedtable/js/pagedtable.js"></script>
-<p>This map shows the accumulated search effort for Primula pauciflora over its historical habitat covering 9 grid cells
-in Bellhouse Park:</p>
+<p>Gridded search data are passed for computing regional statistics as the second argument to the <code>analyse_accepted</code> function in Analyse.R:</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
-<div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#000">prim_agm</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#000">read.csv</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Analysis_outputs/Intermediate/Primula pauciflora_accepted_grouped_merged.csv&#34;</span><span style="color:#000;font-weight:bold">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">prim_historical</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#000">prim_agm</span> <span style="color:#ce5c00;font-weight:bold">%&gt;%</span> <span style="color:#000">dplyr</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">filter</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">assigned_community</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#4e9a06">&#34;PP1&#34;</span><span style="color:#000;font-weight:bold">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">prim_sf</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">assign_cell_geometry_sf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">prim_historical</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">galgrid</span><span style="color:#000;font-weight:bold">)</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#000">pal</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#000">colorNumeric</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">palette</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;viridis&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">domain</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">range</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">c</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">prim_sf</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">search_effort</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#000">na.rm</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">TRUE</span><span style="color:#000;font-weight:bold">))</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">m</span> <span style="color:#ce5c00;font-weight:bold">&lt;-</span> <span style="color:#000">leaflet</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">data</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">prim_sf</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">%&gt;%</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#8f5902;font-style:italic"># Add a Tiles layer to the map</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000">addProviderTiles</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Esri.WorldImagery&#34;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">%&gt;%</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#8f5902;font-style:italic"># Add the grid layer to the map</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000">addPolygons</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">fillColor</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">~</span><span style="color:#000">pal</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">search_effort</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#000">fillOpacity</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">0.8</span><span style="color:#000;font-weight:bold">,</span> 
-</span></span><span style="display:flex;"><span>              <span style="color:#000">color</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;#BDBDC3&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">weight</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">%&gt;%</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#8f5902;font-style:italic"># Add a legend</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#000">addLegend</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">pal</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">pal</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">values</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">c</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">max</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">prim_sf</span><span style="color:#ce5c00;font-weight:bold">$</span><span style="color:#000">search_effort</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">na.rm</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">TRUE</span><span style="color:#000;font-weight:bold">)),</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#000">opacity</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">0.8</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">title</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;Accumulated Search Effort in ks&#34;</span><span style="color:#000;font-weight:bold">)</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Print the map</span>
-</span></span><span style="display:flex;"><span><span style="color:#000">m</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+<pre><code>analyse_accepted(thisTarget, accepted_grouped_merged, habitat_to_centres, exp_weight = exp_weight, solow_prob = solow_low)</code></pre><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
     title="Copy code"
@@ -795,58 +806,6 @@ in Bellhouse Park:</p>
   </button>
 </div>
 </div>
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-1" style="width:672px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addPolygons","args":[[[[{"lng":[-123.3121258329,-123.3117168329,-123.3117168329,-123.3121258329,-123.3121258329],"lat":[48.87259604193872,48.87259604193872,48.87286504193872,48.87286504193872,48.87259604193872]}]],[[{"lng":[-123.3117168329,-123.3113078329,-123.3113078329,-123.3117168329,-123.3117168329],"lat":[48.87259604193872,48.87259604193872,48.87286504193872,48.87286504193872,48.87259604193872]}]],[[{"lng":[-123.3113078329,-123.3108988329,-123.3108988329,-123.3113078329,-123.3113078329],"lat":[48.87259604193872,48.87259604193872,48.87286504193872,48.87286504193872,48.87259604193872]}]],[[{"lng":[-123.3125348329,-123.3121258329,-123.3121258329,-123.3125348329,-123.3125348329],"lat":[48.87232704193872,48.87232704193872,48.87259604193872,48.87259604193872,48.87232704193872]}]],[[{"lng":[-123.3121258329,-123.3117168329,-123.3117168329,-123.3121258329,-123.3121258329],"lat":[48.87232704193872,48.87232704193872,48.87259604193872,48.87259604193872,48.87232704193872]}]],[[{"lng":[-123.3117168329,-123.3113078329,-123.3113078329,-123.3117168329,-123.3117168329],"lat":[48.87232704193872,48.87232704193872,48.87259604193872,48.87259604193872,48.87232704193872]}]],[[{"lng":[-123.3113078329,-123.3108988329,-123.3108988329,-123.3113078329,-123.3113078329],"lat":[48.87232704193872,48.87232704193872,48.87259604193872,48.87259604193872,48.87232704193872]}]],[[{"lng":[-123.3108988329,-123.3104898329,-123.3104898329,-123.3108988329,-123.3108988329],"lat":[48.87232704193872,48.87232704193872,48.87259604193872,48.87259604193872,48.87232704193872]}]],[[{"lng":[-123.3121258329,-123.3117168329,-123.3117168329,-123.3121258329,-123.3121258329],"lat":[48.87205804193872,48.87205804193872,48.87232704193872,48.87232704193872,48.87205804193872]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":"#BDBDC3","weight":1,"opacity":0.5,"fill":true,"fillColor":["#463480","#443C84","#3B518B","#228B8D","#FDE725","#3B518B","#404588","#3D4E8A","#365D8D"],"fillOpacity":0.8,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#440154 , #440154 0%, #414287 19.44810497613%, #2B758E 38.89620995226%, #20A486 58.34431492839%, #6DCD59 77.79241990452%, #ECE51B 97.24052488065%, #FDE725 "],"labels":["0","1","2","3","4","5"],"na_color":null,"na_label":"NA","opacity":0.8,"position":"topright","type":"numeric","title":"Accumulated Search Effort in ks","extra":{"p_1":0,"p_n":0.9724052488064997},"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[48.87205804193872,48.87286504193872],"lng":[-123.3125348329,-123.3104898329]}},"evals":[],"jsHooks":[]}</script>
-<p>The table that this plot is generated from is in the AGM (accepted, grouped, merged) format, output by the
-data pipeline which aggregates search trace data, grids it into cells and intersects it with habitat polygons. Here is the data covering
-the 9 Bellhouse Park cells:</p>
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["cell_id"],"name":[1],"type":["int"],"align":["right"]},{"label":["effortId"],"name":[2],"type":["chr"],"align":["left"]},{"label":["search_effort"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["fringe_dist"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["assigned_community"],"name":[5],"type":["chr"],"align":["left"]},{"label":["area"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["area_prop"],"name":[7],"type":["dbl"],"align":["right"]}],"data":[{"1":"373277","2":"2022-04-08...","3":"0.7702174","4":"0","5":"PP1","6":"119.9354","7":"0.1332616"},{"1":"373278","2":"2021-04-15...","3":"0.8952186","4":"0","5":"PP1","6":"456.6756","7":"0.5074174"},{"1":"373279","2":"2021-04-15...","3":"1.2665682","4":"0","5":"PP1","6":"393.4646","7":"0.4371829"},{"1":"373979","2":"2020-04-11...","3":"2.4678189","4":"0","5":"PP1","6":"592.6015","7":"0.6584462"},{"1":"373980","2":"2020-04-11...","3":"5.1418892","4":"0","5":"PP1","6":"882.4500","7":"0.9804999"},{"1":"373981","2":"2020-05-19...","3":"1.2633671","4":"0","5":"PP1","6":"894.7453","7":"0.9941614"},{"1":"373982","2":"2020-05-19...","3":"1.0420709","4":"0","5":"PP1","6":"893.5274","7":"0.9928083"},{"1":"373983","2":"2020-05-19...","3":"1.2058804","4":"0","5":"PP1","6":"240.0844","7":"0.2667604"},{"1":"374683","2":"2020-03-21...","3":"1.4940715","4":"0","5":"PP1","6":"361.1144","7":"0.4012382"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
-<p>Here is a description of the columns in this table:</p>
-<table>
-<thead>
-<tr>
-<th>AGM Column</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cell_id</td>
-<td>Numeric cell id, allocated to a grid cell as configured in the project’s <a href="https://github.com/IMERSS/biodiversity-change-protocol/tree/main/scripts/config.R" target="_blank" rel="noopener">config.R</a> file and manipulated by the utilities in <a href="https://github.com/IMERSS/biodiversity-change-protocol/tree/main/scripts/geomUtil.R" target="_blank" rel="noopener">geomUtil.R</a></td>
-</tr>
-<tr>
-<td>effortId</td>
-<td>A string which summarises each of the search efforts contributing to this search cell. This is purely for traceability and is not used by the analysis computing extirpation probability</td>
-</tr>
-<tr>
-<td>search_effort</td>
-<td>Total accumulated search effort for this grid cell measured in ksec by all observers</td>
-</tr>
-<tr>
-<td>fringe_dist</td>
-<td>The distance of this cell from historical habitat - these values are all 0 above since the cells lie within the historical habitat</td>
-</tr>
-<tr>
-<td>assigned_community</td>
-<td>The historical community to which this cell is assigned. These numbers are taken from row numbers in the historical plant records table after filtering for those with coordinates - for this analysis in <a href="https://github.com/IMERSS/biodiversity-change-protocol/tree/mainAnalysis_inputs/Occurrences/target_plant_records_2024.csv" target="_blank" rel="noopener">target_plant_records_2024.csv</a></td>
-</tr>
-<tr>
-<td>area</td>
-<td>Effective area of the grid cell in square metres after intersecting it with valid habitat polygons - for this analysis, a full cell will be approximately 900 sqm</td>
-</tr>
-<tr>
-<td>area_prop</td>
-<td>The proportion that the effective grid cell area is of a standard full grid cell - for this analysis, 900 sqm</td>
-</tr>
-</tbody>
-</table>
-<p>These cell data are passed for computing regional statistics as the second argument to the <code>analyse_accepted</code> function in Analyse.R:</p>
-<pre><code>analyse_accepted(thisTarget, accepted_grouped_merged, habitat_to_centres, exp_weight = exp_weight, solow_prob = solow_low)
-</code></pre>
 <p>Here <code>exp_weight</code> is the exponential kernel distance weighting parameter and <code>solow_prob</code> is the Solow prior probability of sighting.
 This produces posterior regional statistics for extirpation in historical habitat as follows:</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -864,21 +823,25 @@ This produces posterior regional statistics for extirpation in historical habita
 </div>
 </div>
 <div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
+  <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["cells"],"name":[1],"type":["int"],"align":["right"]},{"label":["searched"],"name":[2],"type":["int"],"align":["right"]},{"label":["pops"],"name":[3],"type":["int"],"align":["right"]},{"label":["habitatSearched"],"name":[4],"type":["chr"],"align":["left"]},{"label":["Central"],"name":[5],"type":["chr"],"align":["left"]},{"label":["Low"],"name":[6],"type":["chr"],"align":["left"]},{"label":["High"],"name":[7],"type":["chr"],"align":["left"]},{"label":["alpha"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["beta"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["mu"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["var"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["Population"],"name":[12],"type":["chr"],"align":["left"]},{"label":["target"],"name":[13],"type":["chr"],"align":["left"]},{"label":["prior_ER"],"name":[14],"type":["dbl"],"align":["right"]}],"data":[{"1":"9","2":"9","3":"1","4":"100.0%","5":"95.8%","6":"91.2%","7":"100.0%","8":"1.35","9":"30.98","10":"0.04171371","11":"0.00119949","12":"PP1","13":"Primula pauciflora","14":"0.57"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <p>These show the computed parameters of the posterior beta distribution for extirpation expressed in two different forms - the standard (alpha, beta) representation and (mu, var) as parameters for the central estimate for sighting probability and its dispersion. Confidence bands are placed for this at [91.2%, 100.0%].</p>
 <p>Here is this posterior distribution graphed out:</p>
-<img src="../../../docs/extirpation_historical/example-i/index_files/figure-html/unnamed-chunk-5-1.png" width="672" />
+<img src="../../../docs/extirpation_historical/example-i/index_files/figure-html/unnamed-chunk-3-1.png" width="672" />
 
         </div>
         <div class="hx-mt-16"></div>
-        <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
-        href="../../../docs/extirpation_historical/example-ii/"
-        title="Example II"
-        class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-ml-auto ltr:hx-pl-4 ltr:hx-text-right rtl:hx-mr-auto rtl:hx-pr-4 rtl:hx-text-left"
-      >Example II<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+        <pre>Mine false </pre><div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
+            href="../../../docs/extirpation_historical/"
+            title="Inferring extirpation in historical habitat"
+            class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-pr-4 rtl:hx-pl-4"
+    ><svg class="hx-inline hx-h-5 hx-shrink-0 ltr:hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Inferring extirpation in historical habitat</a><a
+            href="../../../docs/extirpation_historical/example-ii/"
+            title="Example II"
+            class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-ml-auto ltr:hx-pl-4 ltr:hx-text-right rtl:hx-mr-auto rtl:hx-pr-4 rtl:hx-text-left"
+    >Example II<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
         
       </main>
     </article>
