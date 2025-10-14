@@ -26,9 +26,9 @@ function calculate_solow() {
     }
 
     // Calculate B(t) using Solow (1993) Equation 3
-    const numerator = n - 1;
+    const numerator = n === 1 ? 1 : n - 1;
     const ratio = (T - T0) / (tn - T0);
-    const denominator = Math.pow(ratio, n - 1) - 1;
+    const denominator = n === 1 ? Math.log(ratio) : (Math.pow(ratio, n - 1) - 1);
 
     if (denominator === 0) {
         showError("Invalid calculation: denominator is zero");

@@ -66,7 +66,7 @@ It makes use of the following raw materials:
 * Target taxon specific summaries in [Analysis_inputs/Search_Effort/Target_Summaries](Analysis_inputs/Search_Effort/Target_Summaries)
 * Historical plant records in [Analysis_inputs/Occurrences/target_plant_records_2024.csv]([Analysis_inputs/Occurrences/target_plant_records_2024.csv])
 * Habitat assignments in [Analysis_inputs/Habitat_model](Analysis_inputs/Habitat_model) 
-* Prior sighting rate probabilities derived via Solow in [Analysis_inputs/Search_Effort/direct_solow_dat.csv](Analysis_inputs/Search_Effort/direct_solow_dat.csv)
+* Prior sighting rate probabilities derived via Solow in [Analysis_inputs/direct_solow_dat.csv](Analysis_inputs/direct_solow_dat.csv)
 * Exponential distance kernel values in [Analysis_inputs/Search_Effort/exp_weight.csv](Analysis_inputs/Search_Effort/exp_weight.csv)
 
 Principal output:

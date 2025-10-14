@@ -22,7 +22,7 @@
 <meta itemprop="name" content="Solow calculation (Prior I)">
 <meta itemprop="description" content="Calculating extirpation probabilities based on sighting rates">
 
-<meta itemprop="wordCount" content="412">
+<meta itemprop="wordCount" content="431">
 <meta itemprop="keywords" content="test,docs," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Solow calculation (Prior I)"/>
 <meta name="twitter:description" content="Calculating extirpation probabilities based on sighting rates"/>
 
@@ -830,6 +830,10 @@ given by: \(B(t) = (n - 1) / [((T - T_0)/(t_n - T_0))^{(n - 1)} - 1]\) where \(n
 observations, \(t_i\) represents the \(ith\) sighting time, \(T\) is the present date and \(T_0\) is
 the start of the period of observation.
 </p>
+<p>
+In the case \(n = 1\) this formula simplifies to 
+\(B(t) = 1 / ln((T - T_0)/(t_n - T_0))\).
+</p>
 <p>Here is an interactive calculator with the values of $T_0$, $t_n$, $T$ and $n$ set to the values appropriate
 for our observations of <em>Plagiobothrys tenellus</em> which was observed $n=2$ times in 1982 and 1998, and our
 observation period bracketing these observations between 1958 and 2019. As well as $B(t)$, the Bayes factor in
@@ -874,7 +878,7 @@ presence and $EP(t) = 1 - PP(t)$, our prior probability of extinction which feed
 
         </div>
         <div class="hx-mt-16"></div>
-        <pre>Mine false </pre><div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
+        <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
             href="../../../docs/inferring_extirpation_risk/"
             title="Inferring extirpation risk"
             class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-pr-4 rtl:hx-pl-4"

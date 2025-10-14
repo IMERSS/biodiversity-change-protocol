@@ -46,6 +46,10 @@ given by: \(B(t) = (n - 1) / [((T - T_0)/(t_n - T_0))^{(n - 1)} - 1]\) where \(n
 observations, \(t_i\) represents the \(ith\) sighting time, \(T\) is the present date and \(T_0\) is
 the start of the period of observation.
 </p>
+<p>
+In the case \(n = 1\) this formula simplifies to 
+\(B(t) = 1 / ln((T - T_0)/(t_n - T_0))\).
+</p>
 
 
 Here is an interactive calculator with the values of $T_0$, $t_n$, $T$ and $n$ set to the values appropriate
