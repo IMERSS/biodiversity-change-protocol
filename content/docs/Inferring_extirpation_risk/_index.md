@@ -1,9 +1,7 @@
 ---
 title: Inferring extirpation risk
 description: Detection frequency as key metric for population assessments
-categories: [Examples, Placeholders]
-tags: [test, docs]
-weight: 3
+weight: 4
 sidebar:
   open: true
 ---

@@ -14,7 +14,7 @@ weight: 3
 
 Here we consider the sighting rate of one of our targets, *Plagiobothrys tenellus*, as an example.
 
-First, we assume 1958, the date of the first botanical collection on Galiano Island, as the earliest date that observations of this species might have been made, and 2019—the date that our study began-as the endpoint bracketing the time frame of our analysis.
+First, we assume 1958, the date of the first botanical collection on Galiano Island, as the earliest date that observations of this species might have been made, and 2019—the date that our study began—as the time frame bracketing our analysis.
 
 `\(T_0\)` = 1958
 `\(T\)` = 2019
