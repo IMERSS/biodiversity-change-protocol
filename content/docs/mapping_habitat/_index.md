@@ -20,28 +20,15 @@ should be accessible to many communities, wherever land classification or terres
 ecosystem mapping data are available. Otherwise, habitat can be mapped based on 
 orthoimagery generated using a variety of methods (*e.g.*, satellite, drone).
 
-
 ### Filtering site classification mapping based on habitat types for target species
 
-XXXXXXX
+First, we select the site classifications representing suitable habitat for our targets:
+woodlands (WD), cliffs (CL), herbaceous (HB) habitat types. These are extracted as polgyons, 
+then converted to grid cells.
 
 ### Converting polygons to gridded representation of habitat
 
-XXXXX
-
-For this methodology, a key consideration is to ensure that the grid scale 
-corresponds with the precision in features representing search effort.
-
-```
-## Convert polygons to grid
-
-```
-
-### Calculate proportional representation of habitat within grid cells
-
-```
-## Calculate prop. of habitat falling within grid cells
-
-```
-
+Polygons representing habitat for target species is then represented as grid cells. 
+For this methodology, a key consideration is to ensure that the grid scale corresponds 
+with the precision of features representing search effort (see next section).
 
