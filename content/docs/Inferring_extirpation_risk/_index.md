@@ -8,7 +8,7 @@ sidebar:
   open: true
 ---
 
-{{% imgproc plants Fill "3130x709" %}}
+{{% imgproc plants Fill "2400x600" %}}
 {{% /imgproc %}}
 
 ## Detection frequency
