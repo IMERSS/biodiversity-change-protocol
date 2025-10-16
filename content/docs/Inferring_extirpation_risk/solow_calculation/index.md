@@ -2,8 +2,6 @@
 title: Solow calculation (Prior I)
 description: Calculating extirpation probabilities based on sighting rates
 math: true
-categories: [Examples, Placeholders]
-tags: [test, docs]
 weight: 2
 ---
 
@@ -50,3 +48,5 @@ the start of the period of observation.
 In the case \(n = 1\) this formula simplifies to 
 \(B(t) = 1 / ln((T - T_0)/(t_n - T_0))\).
 </p>
+</div>
+</div>
