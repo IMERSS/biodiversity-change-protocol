@@ -80,7 +80,8 @@ In the case \(n = 1\) this formula simplifies to
         
         &lt;link href=&#34;../../docs/inferring_extirpation_risk/example/index_files/pagedtable/css/pagedtable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;../../docs/inferring_extirpation_risk/example/index_files/pagedtable/js/pagedtable.js&#34;&gt;&lt;/script&gt;
-&lt;p&gt;Here we consider the sighting rate of one of our targets, &lt;em&gt;Plagiobothrys tenellus&lt;/em&gt;, as an example.&lt;/p&gt;
+&lt;p&gt;Here we consider the sighting rate of one of our targets, &lt;em&gt;Plagiobothrys tenellus&lt;/em&gt;, as an example. We will use this sighting rate
+to test the null hypothesis that extinction has not occurred.&lt;/p&gt;
 &lt;p&gt;First, we assume 1958, the date of the first botanical collection on Galiano Island, as the earliest date that observations of this species might have been made, and 2019—the date that our study began—as the time frame bracketing our analysis.&lt;/p&gt;
 &lt;div class=&#34;para&#34;&gt;$T_0$ = 1958&lt;/div&gt;
 &lt;div&gt;$T$ = 2019&lt;/div&gt;
