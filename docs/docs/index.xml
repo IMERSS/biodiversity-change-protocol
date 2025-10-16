@@ -502,9 +502,9 @@ In the case \(n = 1\) this formula simplifies to
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;para&#34;&gt;$t_n$ = 1998&lt;div&gt;
-&lt;div class=&#34;para&#34;&gt;Below, the interactive calculator ascribes the values of `\(T_0\)`, `\(t_n\)`, `\(T\)` and `\(n\)` for &lt;i&gt;Plagiobothrys tenellus&lt;/i&gt; which was observed `\(n=3\)` times in 1980, 1982 and 1998, with an
+&lt;div class=&#34;para&#34;&gt;Below, the interactive calculator ascribes the values of \(T_0\), \(t_n\), \(T\) and \(n\) for &lt;i&gt;Plagiobothrys tenellus&lt;/i&gt; which was observed \(n=3\) times in 1980, 1982 and 1998, with an
 observation period bracketing these observations dating between 1958 and 2019—when our study began.&lt;/div&gt;
-&lt;div class=&#34;para&#34;&gt;The Bayes factor, `\(B(t)\)`, favours the null hypothesis that extinction has not occurred. We also report our prior probability of presence, `\(PP(T)\)`, and `\(EP(t) = 1 - PP(t)\)`, our prior probability of extinction—which feed into our subsequent analyses.&lt;/div&gt;
+&lt;div class=&#34;para&#34;&gt;The Bayes factor, \(B(t)\), favours the null hypothesis that extinction has not occurred. We also report our prior probability of presence, \(PP(T)\), and \(EP(t) = 1 - PP(t)\), our prior probability of extinction—which feed into our subsequent analyses.&lt;/div&gt;
 &lt;div class=&#34;solow-container&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;../../../css/solow.css&#34;&gt;
 &lt;div class=&#34;input-group&#34;&gt;
