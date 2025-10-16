@@ -25,6 +25,3 @@ small, transient, or non-viable—or the species may still be present but overlo
 due to rarity or limited sampling effort. 
 
 Sighting rates thus constitute informative prior knowledge that can be incorporated into models to estimate extinction probabilities.
-
-
-

@@ -16,13 +16,14 @@ Here we consider the sighting rate of one of our targets, *Plagiobothrys tenellu
 
 First, we assume 1958, the date of the first botanical collection on Galiano Island, as the earliest date that observations of this species might have been made, and 2019—the date that our study began—as the time frame bracketing our analysis.
 
-`\(T_0\)` = 1958
-`\(T\)` = 2019
+
+<div class="para">$T_0$ = 1958</div>
+<div>$T$ = 2019</div>
 
 How many times has this species been observed historically on Galiano Island?
 
 
-``` r
+```r
 records <- read.csv("Analysis_Inputs/Galiano_Island_vascular_plant_records_2024-10-09.csv")
 
 # Filter for Plagiobothrys tenellus records
@@ -46,12 +47,12 @@ cat("Plagiobothrys tenellus has been observed",
   </script>
 </div>
 
-`\(n\)` = 3
+<div class="para">$n$ = 3</div>
 
 When was the most recent sighting?
 
 
-``` r
+```r
 records <- read.csv("Analysis_Inputs/Galiano_Island_vascular_plant_records_2024-10-09.csv")
 
 # Identify the most recent sighting
@@ -65,13 +66,12 @@ cat("Plagiobothrys tenellus was last observed in",
 ## Plagiobothrys tenellus was last observed in 1998-04-10 .
 ```
 
-`\(t_n\)` = 1998
+<div class="para">$t_n$ = 1998<div>
 
+<div class="para">Below, the interactive calculator ascribes the values of `\(T_0\)`, `\(t_n\)`, `\(T\)` and `\(n\)` for <i>Plagiobothrys tenellus</i> which was observed `\(n=3\)` times in 1980, 1982 and 1998, with an
+observation period bracketing these observations dating between 1958 and 2019—when our study began.</div>
 
-Below, the interactive calculator ascribes the values of `\(T_0\)`, `\(t_n\)`, `\(T\)` and `\(n\)` for _Plagiobothrys tenellus_ which was observed `\(n=3\)` times in 1980, 1982 and 1998, with an
-observation period bracketing these observations dating between 1958 and 2019—when our study began.
-
-The Bayes factor, `\(B(t)\)`, favours the null hypothesis that extinction has not occurred. We also report our prior probability of presence, `\(PP(T)\)`, and `\(EP(t) = 1 - PP(t)\)`, our prior probability of extinction—which feed into our subsequent analyses.
+<div class="para">The Bayes factor, `\(B(t)\)`, favours the null hypothesis that extinction has not occurred. We also report our prior probability of presence, `\(PP(T)\)`, and `\(EP(t) = 1 - PP(t)\)`, our prior probability of extinction—which feed into our subsequent analyses.</div>
 
 <div class="solow-container">
 <link rel="stylesheet" href="../../../css/solow.css">
@@ -110,10 +110,7 @@ The Bayes factor, `\(B(t)\)`, favours the null hypothesis that extinction has no
         <span class="result-value" id="solow-ep">--</span>
     </div>
 </div>
-</div>
 
 </div>
 
 <script src="../../../js/solow.js"></script>
-
-</div>

@@ -22,7 +22,7 @@
 <meta itemprop="name" content="Solow calculation (Prior I)">
 <meta itemprop="description" content="Calculating extirpation probabilities based on sighting rates">
 
-<meta itemprop="wordCount" content="431">
+<meta itemprop="wordCount" content="306">
 <meta itemprop="keywords" content="test,docs," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Solow calculation (Prior I)"/>
 <meta name="twitter:description" content="Calculating extirpation probabilities based on sighting rates"/>
 
@@ -31,7 +31,7 @@
 
 
 
-  <link href="../../../css/custom.min.e79959b8931977e2df8180258427c022f7845b6d9a35cc3bcd6c2c95c564f0ad.css" rel="stylesheet" integrity="sha256-55lZuJMZd&#43;LfgYAlhCfAIveEW22aNcw7zWwslcVk8K0=" />
+  <link href="../../../css/custom.min.08189844c28b0c330abeade4d62b7d41be439eef4211f15dd0fc5260f655f09d.css" rel="stylesheet" integrity="sha256-CBiYRMKLDDMKvq3k1it9Qb5Dnu9CEfFd0PxSYPZV8J0=" />
 
 
   <script>
@@ -834,47 +834,6 @@ the start of the period of observation.
 In the case \(n = 1\) this formula simplifies to 
 \(B(t) = 1 / ln((T - T_0)/(t_n - T_0))\).
 </p>
-<p>Here is an interactive calculator with the values of $T_0$, $t_n$, $T$ and $n$ set to the values appropriate
-for our observations of <em>Plagiobothrys tenellus</em> which was observed $n=2$ times in 1982 and 1998, and our
-observation period bracketing these observations between 1958 and 2019. As well as $B(t)$, the Bayes factor in
-favour of the null hypothesis that extinction has not occurred, we also show $PP(T)$, our prior probability of
-presence and $EP(t) = 1 - PP(t)$, our prior probability of extinction which feeds into our wider analysis.</p>
-<div class="solow-container">
-<link rel="stylesheet" href="../../../css/solow.css">
-<div class="input-group">
-    <label for="solow-t0">T₀ (Beginning of record-keeping):</label>
-    <input type="number" id="solow-t0" value="1958">
-</div>
-<div class="input-group">
-    <label for="solow-tn">tₙ (Most recent sighting):</label>
-    <input type="number" id="solow-tn" value="1998">
-</div>
-<div class="input-group">
-    <label for="solow-T">T (Current time/study endpoint):</label>
-    <input type="number" id="solow-T" value="2019">
-</div>
-<div class="input-group">
-    <label for="solow-n">n (Number of observations):</label>
-    <input type="number" id="solow-n" value="2" min="1">
-</div>
-<div class="results" id="solow-results">
-    <div class="result-item">
-        <span class="result-label">Bayes factor in favour of presence B(t):</span>
-        <span class="result-value" id="solow-bt">--</span>
-    </div>
-    <div class="result-item">
-        <span class="result-label">Prior probability of presence PP(t):</span>
-        <span class="result-value" id="solow-pp">--</span>
-    </div>
-    <div class="result-item">
-        <span class="result-label">Prior probability of absence EP(t):</span>
-        <span class="result-value" id="solow-ep">--</span>
-    </div>
-</div>
-</div>
-</div>
-<script src="../../../js/solow.js"></script>
-</div>
 
         </div>
         <div class="hx-mt-16"></div>

@@ -50,4 +50,3 @@ the start of the period of observation.
 In the case \(n = 1\) this formula simplifies to 
 \(B(t) = 1 / ln((T - T_0)/(t_n - T_0))\).
 </p>
-

@@ -68,6 +68,7 @@ table {
 @media (min-width: 768px) {
     .imerss-navbar-cover .nav-link {
         text-shadow: 1px 1px 2px #403f4c;
+        color: white;
     }
 }
 
@@ -253,6 +254,10 @@ table {
     color: var(--bs-btn-hover-color);
     background-color: var(--bs-btn-hover-bg);
     border-color: var(--bs-btn-hover-border-color)
+}
+
+div.para {
+    margin-top: 1.5rem;
 }
 
 .pagedtable-header-name {
