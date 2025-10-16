@@ -66,12 +66,12 @@ cat("Plagiobothrys tenellus was last observed in",
 ## Plagiobothrys tenellus was last observed in 1998-04-10 .
 ```
 
-<div class="para">$t_n$ = 1998<div>
+<p>\(t_n = 1998\)<p>
 
-<div class="para">Below, the interactive calculator ascribes the values of \(T_0\), \(t_n\), \(T\) and \(n\) for <i>Plagiobothrys tenellus</i> which was observed \(n=3\) times in 1980, 1982 and 1998, with an
-observation period bracketing these observations dating between 1958 and 2019—when our study began.</div>
+<p>Below, the interactive calculator ascribes the values of \(T_0\), \(t_n\), \(T\) and \(n\) for <i>Plagiobothrys tenellus</i> which was observed \(n=3\) times in 1980, 1982 and 1998, with an
+observation period bracketing these observations dating between 1958 and 2019—when our study began.</p>
 
-<div class="para">The Bayes factor, \(B(t)\), favours the null hypothesis that extinction has not occurred. We also report our prior probability of presence, \(PP(T)\), and \(EP(t) = 1 - PP(t)\), our prior probability of extinction—which feed into our subsequent analyses.</div>
+<p>The Bayes factor, \(B(t)\), favours the null hypothesis that extinction has not occurred. We also report our prior probability of presence, \(PP(T)\), and \(EP(t) = 1 - PP(t)\), our prior probability of extinction—which feed into our subsequent analyses.</p>
 
 <div class="solow-container">
 <link rel="stylesheet" href="../../../css/solow.css">
