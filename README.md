@@ -4,6 +4,8 @@ This repository contains code and data supporting the paper
 _Detecting species extirpation: a localised approach to a global problem_ and
 its supplementary materials, accepted for publication by [Plants, People, Planet](https://nph.onlinelibrary.wiley.com/journal/25722611).
 
+Documentation for the algorithms can be browsed in the [GitHub Pages site](https://imerss.github.io/biodiversity-change-protocol) for this repository.
+
 ## Introduction 
 
 ### Prerequisites
